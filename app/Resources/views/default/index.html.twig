@@ -1,0 +1,96 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} - Home Page{% endblock %}
+
+{% block body %}
+
+
+    <header>
+        <div class="d-flex justify-content-center">
+            <h1>Un territoire phœnix Du noir au vert</h1>
+        </div>
+    </header>
+    <section class="d-flex flex-column align-items-center">
+        <div style="max-width:850PX;">
+            <p class="text-center"><em>Revitaliser un territoire relève de registres variés et échappe à l’habituelou/ou pour appréhender le et/et : la régénération urbaine, l’espace public,la mobilité, la qualité spatiale, environnementale et architecturale, maisaussi la dynamique culturelle, sociale, économique, ludique, … C’estaussi une articulation entre le top down et le bottom up, les actions descollectivités locales, la stimulation du privé et l’accueil d’initiativesrelevant de registres différents comme le démontre la labellisationEuralens qui salue tant une médiathèque originale qui relie un grandnombre d’actions, qu’un espace public dessiné par une artiste, ou un lieuimprobable dans une cité jardin qui offre des actions sociales,d’agriculture bio, d’accueil hôtelier spécifiques, … mais aussi unparcours VTT dans les terrils réaménagés ou encore et surtout lamobilisation de lycées techniques en lien avec le monde économique, laformation numérique, etc..</em><br></p>
+        </div>
+        {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+        <div style="margin-top:25px;">
+          <a class="btn btn-primary" role="button" href="{{ path('ticket_new') }}" style="font-size:27px;">RESERVEZ</a>
+        </div>
+        {% else %}
+        <div style="margin-top:25px;">
+          <a class="btn btn-primary" role="button" href="{{ path('fos_user_security_popup') }}" style="font-size:27px;">RESERVEZ</a>
+        </div>
+        {% block modal %}
+        {% endblock %}
+        {% endif %}
+    </section>
+    <div style="margin-top:100px;margin-bottom:20px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 d-flex justify-content-between"><img>
+                    <div>
+                        <h5>Conférences au&nbsp;<br>Louvre-Lens<br></h5>
+                        <p class="text-center">eaeaeaaeeaeaeaaeeaeaea<br>eaeaeaaeeaeaeaaeeaea<br>eaeaeaaeeaeaeaaeeaeaea<br>ea<br></p>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex justify-content-between"><img>
+                    <div>
+                        <h5>Une soirée d’exception<br></h5>
+                        <p class="text-center">eaeaeaaeeaeaeaaeeaeaea<br>eaeaeaaeeaeaeaaeeaea<br>eaeaeaaeeaeaeaaeeaeaea<br>ea<br></p>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex justify-content-between"><img>
+                    <div>
+                        <h5>Des visites inédites<br></h5>
+                        <p class="text-center">eaeaeaaeeaeaeaaeeaeaea<br>eaeaeaaeeaeaeaaeeaea<br>eaeaeaaeeaeaeaaeeaeaea<br>ea<br></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 d-flex justify-content-between"><img>
+                    <div>
+                        <h5>Villes invitées<br></h5>
+                        <p class="text-center">eaeaeaaeeaeaeaaeeaeaea<br>eaeaeaaeeaeaeaaeeaea<br>eaeaeaaeeaeaeaaeeaeaea<br>ea<br></p>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex justify-content-between"><img>
+                    <div>
+                        <h5>Tout un programme&nbsp;<br>de fêtes<br></h5>
+                        <p class="text-center">eaeaeaaeeaeaeaaeeaeaea<br>eaeaeaaeeaeaeaaeeaea<br>eaeaeaaeeaeaeaaeeaeaea<br>ea<br></p>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex justify-content-between"><img>
+                    <div>
+                        <h5>Des visites inédites<br></h5>
+                        <p class="text-center">eaeaeaaeeaeaeaaeeaeaea<br>eaeaeaaeeaeaeaaeeaea<br>eaeaeaaeeaeaeaaeeaeaea<br>ea<br></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="margin-top:100px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 d-flex justify-content-center align-items-center"><a class="btn btn-primary" role="button" href="#" style="margin-top:0px;font-size:25px;">VOIR TOUT LE PROGRAMME</a></div>
+            </div>
+        </div>
+    </div>
+    <div style="margin-top:100px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-xl-12 d-flex justify-content-center"><iframe width="560" height="315" allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/djasM0VS8uo"></iframe></div>
+            </div>
+        </div>
+    </div>
+    <footer style="margin-top:20px;">
+        <div>
+            <p class="text-center" style="font-size:60px;">FOOTER</p>
+        </div>
+    </footer>
+{% endblock %}

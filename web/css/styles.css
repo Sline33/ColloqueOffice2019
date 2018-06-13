@@ -1,0 +1,74 @@
+.reservation-link,.reservation-link:hover,.reservation-link-2 {
+  text-decoration:none;
+  color:inherit;
+}
+
+.reservation-link-color{
+  color:orange;
+}
+
+.container.container-form {
+  border:2px solid black;
+}
+
+.Formulaire-number {
+  position:relative;
+  left:34px;
+  bottom:89px;
+  color:orange;
+}
+
+.container.borderclient {
+ border:2px solid black;
+}
+
+.collapseclient {
+ width:100%;
+}
+
+.border-form-prix{
+  border:2px solid black;
+}
+
+.container.border-util {
+  border:1px solid black;
+}
+
+.row.d-flex.flex-row.border-util {
+  border-bottom:1px solid black;
+}
+
+border-column-admin {
+  border:1px solid black;
+}
+
+.col-md-4.col-xl-3.d-flex.flex-column.justify-content-around.align-items-center.border-column-admin {
+  border:1px solid black;
+}
+
+.container.d-flex.flex-column.ml-auto.bordercontainer {
+  border:1px solid black;
+}
+
+.container.d-flex.flex-column.bordercontainer {
+  border:1px solid black;
+}
+
+.row.d-flex.bordertitleadmin {
+  border:1px solid black;
+  border-top:none;
+  border-left:none;
+  border-right:none;
+}
+
+.col-xl-12.d-flex.justify-content-center.totalprix {
+  border-top:1px solid black;
+}
+
+.col.border-left-admin {
+  border-left:1px solid black;
+}
+
+.clear {
+  clear:both;
+}
