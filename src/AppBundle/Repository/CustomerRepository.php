@@ -17,7 +17,7 @@ class CustomerRepository extends EntityRepository
             ->from('Customer', 'c')
             ->innerJoin('c', 'User', 'u', 'c.user.id = :userid')
             ->setParameter('userid',$user->getId())
-            ->getSingleScalarResult();
+            ->getResult();
     
     } 
 }
@@ -25,3 +25,4 @@ class CustomerRepository extends EntityRepository
 // ->createQuery(
 //     'SELECT * FROM Customer c INNER JOIN User u WHERE c.user.id = :userid'
 // )     u.id = c.user_id
+// getSingleScalarResult
