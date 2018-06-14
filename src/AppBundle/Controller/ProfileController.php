@@ -11,6 +11,7 @@ use AppBundle\Entity\Ticket;
 use AppBundle\Entity\Facture;
 use AppBundle\Entity\Customer;
 use Doctrine\ORM\EntityRepository;
+use Doctrine\Common\Collections;
 
 class ProfileController extends Controller
 {
@@ -35,11 +36,13 @@ class ProfileController extends Controller
 
         $customer = $em->getRepository('AppBundle:Customer')->findByUser($user)[0];// @hack
         
-        $ticket = $em->getRepository('AppBundle:Ticket')->findByCustomer($customer)[0];// @hack
+        $ticket = $em->getRepository('AppBundle:Ticket')->findByCustomer($customer);
         
+        $tickets = new Collections\ArrayCollection($ticket);
+
         return $this->render('@FOSUser/Profile/show_content.html.twig', array(
             'customer' => $customer,
-            'ticket' => $ticket,
+            'tickets' => $tickets,
             'user' => $user,
         ));
     }
