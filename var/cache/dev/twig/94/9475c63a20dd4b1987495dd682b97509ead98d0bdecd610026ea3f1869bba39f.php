@@ -96,11 +96,12 @@ class __TwigTemplate_b3b52eb9053c310bb5c50dde5408ae5f9315655793fcdf91e9614970f62
                 <div class=\"form-group\">
                     <label for=\"appbundle_customer_phonenumber\" class=\"form-control-label required\">Phonenumber</label>
                     <input type=\"text\" id=\"appbundle_customer_phonenumber\" name=\"appbundle_customer[phonenumber]\" required=\"required\" maxlength=\"255\" class=\"form-control\"/>
+                </div>
             <input class=\"btn btn-primary float-right\" style=\"margin-top:30px;width:180px;\" type=\"submit\" value=\"Create\"/>
         </form>
     </div>
 </div>
-</div>
+
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -182,11 +183,12 @@ class __TwigTemplate_b3b52eb9053c310bb5c50dde5408ae5f9315655793fcdf91e9614970f62
                 <div class=\"form-group\">
                     <label for=\"appbundle_customer_phonenumber\" class=\"form-control-label required\">Phonenumber</label>
                     <input type=\"text\" id=\"appbundle_customer_phonenumber\" name=\"appbundle_customer[phonenumber]\" required=\"required\" maxlength=\"255\" class=\"form-control\"/>
+                </div>
             <input class=\"btn btn-primary float-right\" style=\"margin-top:30px;width:180px;\" type=\"submit\" value=\"Create\"/>
         </form>
     </div>
 </div>
-</div>
+
 {% endblock %}
 ", "customer/new.html.twig", "/var/www/html/ColloqueOfficeBen/app/Resources/views/customer/new.html.twig");
     }

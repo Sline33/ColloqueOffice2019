@@ -166,11 +166,6 @@ class __TwigTemplate_27153992e2224efaf1fa3012d5d6df1177990fa9830c6e03345ae0db708
             </div>
         </div>
     </div>
-    <footer style=\"margin-top:20px;\">
-        <div>
-            <p class=\"text-center\" style=\"font-size:60px;\">FOOTER</p>
-        </div>
-    </footer>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -211,7 +206,7 @@ class __TwigTemplate_27153992e2224efaf1fa3012d5d6df1177990fa9830c6e03345ae0db708
 
     public function getDebugInfo()
     {
-        return array (  193 => 26,  184 => 25,  106 => 28,  103 => 27,  101 => 25,  96 => 23,  93 => 22,  87 => 19,  84 => 18,  82 => 17,  69 => 6,  60 => 5,  42 => 3,  11 => 1,);
+        return array (  188 => 26,  179 => 25,  106 => 28,  103 => 27,  101 => 25,  96 => 23,  93 => 22,  87 => 19,  84 => 18,  82 => 17,  69 => 6,  60 => 5,  42 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -314,12 +309,7 @@ class __TwigTemplate_27153992e2224efaf1fa3012d5d6df1177990fa9830c6e03345ae0db708
             </div>
         </div>
     </div>
-    <footer style=\"margin-top:20px;\">
-        <div>
-            <p class=\"text-center\" style=\"font-size:60px;\">FOOTER</p>
-        </div>
-    </footer>
 {% endblock %}
-", "default/index.html.twig", "/var/www/html/ColloqueOffice/app/Resources/views/default/index.html.twig");
+", "default/index.html.twig", "/var/www/html/ColloqueOfficeBen/app/Resources/views/default/index.html.twig");
     }
 }

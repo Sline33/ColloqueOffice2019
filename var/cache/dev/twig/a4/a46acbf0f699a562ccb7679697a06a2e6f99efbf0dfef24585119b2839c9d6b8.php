@@ -27,96 +27,140 @@ class __TwigTemplate_20e0610c2f449405d6c2ac07357585c42706deb85ca7c032cb320a4d2f1
         echo "<!DOCTYPE html>
 <html>
     <head>
-        <meta charset=\"UTF-8\" />
+        <meta charset=\"UTF-8\"/>
         <title>Colloque Euralens 2019";
         // line 5
         $this->displayBlock('title', $context, $blocks);
-        echo "</title>
+        // line 6
+        echo "        </title>
         <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css\" integrity=\"sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4\" crossorigin=\"anonymous\">
         <link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700\">
         <link rel=\"stylesheet\" href=\"";
-        // line 8
+        // line 9
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("css/Header-Blue.css"), "html", null, true);
         echo "\">
         <link rel=\"stylesheet\" href=\"";
-        // line 9
+        // line 10
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("css/styles.css"), "html", null, true);
         echo "\">
         <link rel=\"stylesheet\" href=\"";
-        // line 10
+        // line 11
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("fonts/font-awesome.min.css"), "html", null, true);
         echo "\">
         <link rel=\"icon\" type=\"image/x-icon\" href=\"";
-        // line 11
+        // line 12
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("favicon.ico"), "html", null, true);
-        echo "\" />
+        echo "\"/>
     </head>
     <body>
-      <nav class=\"navbar navbar-light navbar-expand-md\">
-          <div class=\"container-fluid\"><a class=\"navbar-brand\" href=\"#\"></a><button class=\"navbar-toggler\" data-toggle=\"collapse\" data-target=\"#navcol-1\"><span class=\"sr-only\">Toggle navigation</span><span class=\"navbar-toggler-icon\"></span></button>
-              <div class=\"collapse navbar-collapse\"
-                  id=\"navcol-1\">
-  ";
-        // line 18
+        <nav class=\"navbar navbar-light navbar-expand-md\">
+            <div class=\"container-fluid\">
+                <a class=\"navbar-brand\" href=\"#\"></a>
+                <button class=\"navbar-toggler\" data-toggle=\"collapse\" data-target=\"#navcol-1\">
+                    <span class=\"sr-only\">Toggle navigation</span>
+                    <span class=\"navbar-toggler-icon\"></span></button>
+                <div class=\"collapse navbar-collapse\" id=\"navcol-1\">
+                    ";
+        // line 22
         if ($this->env->getExtension('Symfony\Bridge\Twig\Extension\SecurityExtension')->isGranted("ROLE_ADMIN")) {
-            // line 19
-            echo "                  <ul class=\"nav navbar-nav ml-auto\">
-                      <li class=\"nav-item\" role=\"presentation\"><a class=\"nav-link active\" href=\"";
-            // line 20
-            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("admin_page");
-            echo "\" style=\"font-size:25px;\">Espace Admin</a></li>
-                      <li class=\"nav-item\" role=\"presentation\"><a class=\"nav-link\" href=\"";
-            // line 21
-            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("fos_user_security_logout");
-            echo "\" style=\"font-size:25px;\">Se Deconnecter</a></li>
-                  </ul>        
-  ";
-        } elseif ($this->env->getExtension('Symfony\Bridge\Twig\Extension\SecurityExtension')->isGranted("IS_AUTHENTICATED_REMEMBERED")) {
-            // line 24
-            echo "                  <ul class=\"nav navbar-nav ml-auto\">
-                      <li class=\"nav-item\" role=\"presentation\"><a class=\"nav-link active\" href=\"";
+            // line 23
+            echo "                        <ul class=\"nav navbar-nav\">
+                            <li class=\"nav-item\" role=\"presentation\">
+                                <a class=\"nav-link active\" href=\"";
             // line 25
-            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("fos_user_profile_show");
-            echo "\" style=\"font-size:25px;\">Espace Client</a></li>
-                      <li class=\"nav-item\" role=\"presentation\"><a class=\"nav-link\" href=\"";
-            // line 26
-            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("fos_user_security_logout");
-            echo "\" style=\"font-size:25px;\">Se Deconnecter</a></li>
-                  </ul>
-  ";
-        } else {
-            // line 29
-            echo "                  <ul class=\"nav navbar-nav ml-auto\">
-                      <li class=\"nav-item\" role=\"presentation\"><a class=\"nav-link active\" href=\"";
+            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("fos_user_security_homepage");
+            echo "\" style=\"font-size:25px;\">Accueil</a>
+                            </li>
+                        </ul>
+                        <ul class=\"nav navbar-nav ml-auto\">
+                            <li class=\"nav-item\" role=\"presentation\">
+                                <a class=\"nav-link active\" href=\"";
             // line 30
+            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("admin_page");
+            echo "\" style=\"font-size:25px;\">Espace Admin</a>
+                            </li>
+                            <li class=\"nav-item\" role=\"presentation\">
+                                <a class=\"nav-link\" href=\"";
+            // line 33
+            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("fos_user_security_logout");
+            echo "\" style=\"font-size:25px;\">Se Deconnecter</a>
+                            </li>
+                        </ul>
+                    ";
+        } elseif ($this->env->getExtension('Symfony\Bridge\Twig\Extension\SecurityExtension')->isGranted("IS_AUTHENTICATED_REMEMBERED")) {
+            // line 37
+            echo "                        <ul class=\"nav navbar-nav\">
+                            <li class=\"nav-item\" role=\"presentation\">
+                                <a class=\"nav-link active\" href=\"";
+            // line 39
+            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("fos_user_security_homepage");
+            echo "\" style=\"font-size:25px;\">Accueil</a>
+                            </li>
+                        </ul>
+                        <ul class=\"nav navbar-nav ml-auto\">
+                            <li class=\"nav-item\" role=\"presentation\">
+                                <a class=\"nav-link active\" href=\"";
+            // line 44
+            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("fos_user_profile_show");
+            echo "\" style=\"font-size:25px;\">Espace Client</a>
+                            </li>
+                            <li class=\"nav-item\" role=\"presentation\">
+                                <a class=\"nav-link\" href=\"";
+            // line 47
+            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("fos_user_security_logout");
+            echo "\" style=\"font-size:25px;\">Se Deconnecter</a>
+                            </li>
+                        </ul>
+                    ";
+        } else {
+            // line 51
+            echo "                        <ul class=\"nav navbar-nav\">
+                            <li class=\"nav-item\" role=\"presentation\">
+                                <a class=\"nav-link active\" href=\"";
+            // line 53
+            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("fos_user_security_homepage");
+            echo "\" style=\"font-size:25px;\">Accueil</a>
+                            </li>
+                        </ul>
+                        <ul class=\"nav navbar-nav ml-auto\">
+                            <li class=\"nav-item\" role=\"presentation\">
+                                <a class=\"nav-link active\" href=\"";
+            // line 58
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("fos_user_security_login");
-            echo "\" style=\"font-size:25px;\">Se connecter</a></li>
-                      <li class=\"nav-item\" role=\"presentation\"><a class=\"nav-link\" href=\"";
-            // line 31
+            echo "\" style=\"font-size:25px;\">Se connecter</a>
+                            </li>
+                            <li class=\"nav-item\" role=\"presentation\">
+                                <a class=\"nav-link\" href=\"";
+            // line 61
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("fos_user_registration_register");
-            echo "\" style=\"font-size:25px;\">S'incrire</a></li>
-                  </ul>
-  ";
+            echo "\" style=\"font-size:25px;\">S'incrire</a>
+                            </li>
+                        </ul>
+                    ";
         }
-        // line 34
-        echo "              </div>
-          </div>
-      </nav>
+        // line 65
+        echo "                </div>
+            </div>
+        </nav>
 
         ";
-        // line 38
+        // line 69
         $this->displayBlock('body', $context, $blocks);
-        // line 39
-        echo "
+        // line 70
+        echo "        <footer style=\"margin-top:20px;\">
+            <div>
+                <p class=\"text-center\" style=\"font-size:60px;\">FOOTER</p>
+            </div>
+        </footer>
         <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js\" integrity=\"sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ\" crossorigin=\"anonymous\"></script>
         <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js\" integrity=\"sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm\" crossorigin=\"anonymous\"></script>
         <script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\" integrity=\"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo\" crossorigin=\"anonymous\"></script>
         <script src=\"";
-        // line 43
+        // line 78
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/admin4.js"), "html", null, true);
         echo "\"></script>
         <script src=\"";
-        // line 44
+        // line 79
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/admin3.js"), "html", null, true);
         echo "\"></script>
     </body>
@@ -147,7 +191,7 @@ class __TwigTemplate_20e0610c2f449405d6c2ac07357585c42706deb85ca7c032cb320a4d2f1
 
     }
 
-    // line 38
+    // line 69
     public function block_body($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
@@ -176,7 +220,7 @@ class __TwigTemplate_20e0610c2f449405d6c2ac07357585c42706deb85ca7c032cb320a4d2f1
 
     public function getDebugInfo()
     {
-        return array (  151 => 38,  134 => 5,  120 => 44,  116 => 43,  110 => 39,  108 => 38,  102 => 34,  96 => 31,  92 => 30,  89 => 29,  83 => 26,  79 => 25,  76 => 24,  70 => 21,  66 => 20,  63 => 19,  61 => 18,  51 => 11,  47 => 10,  43 => 9,  39 => 8,  33 => 5,  27 => 1,);
+        return array (  195 => 69,  178 => 5,  164 => 79,  160 => 78,  150 => 70,  148 => 69,  142 => 65,  135 => 61,  129 => 58,  121 => 53,  117 => 51,  110 => 47,  104 => 44,  96 => 39,  92 => 37,  85 => 33,  79 => 30,  71 => 25,  67 => 23,  65 => 22,  52 => 12,  48 => 11,  44 => 10,  40 => 9,  35 => 6,  33 => 5,  27 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -192,42 +236,77 @@ class __TwigTemplate_20e0610c2f449405d6c2ac07357585c42706deb85ca7c032cb320a4d2f1
         return new Twig_Source("<!DOCTYPE html>
 <html>
     <head>
-        <meta charset=\"UTF-8\" />
-        <title>Colloque Euralens 2019{% block title %}{% endblock %}</title>
+        <meta charset=\"UTF-8\"/>
+        <title>Colloque Euralens 2019{% block title %}{% endblock %}
+        </title>
         <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css\" integrity=\"sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4\" crossorigin=\"anonymous\">
         <link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700\">
         <link rel=\"stylesheet\" href=\"{{ asset('css/Header-Blue.css') }}\">
         <link rel=\"stylesheet\" href=\"{{ asset('css/styles.css') }}\">
         <link rel=\"stylesheet\" href=\"{{ asset('fonts/font-awesome.min.css') }}\">
-        <link rel=\"icon\" type=\"image/x-icon\" href=\"{{ asset('favicon.ico') }}\" />
+        <link rel=\"icon\" type=\"image/x-icon\" href=\"{{ asset('favicon.ico') }}\"/>
     </head>
     <body>
-      <nav class=\"navbar navbar-light navbar-expand-md\">
-          <div class=\"container-fluid\"><a class=\"navbar-brand\" href=\"#\"></a><button class=\"navbar-toggler\" data-toggle=\"collapse\" data-target=\"#navcol-1\"><span class=\"sr-only\">Toggle navigation</span><span class=\"navbar-toggler-icon\"></span></button>
-              <div class=\"collapse navbar-collapse\"
-                  id=\"navcol-1\">
-  {% if is_granted(\"ROLE_ADMIN\") %}
-                  <ul class=\"nav navbar-nav ml-auto\">
-                      <li class=\"nav-item\" role=\"presentation\"><a class=\"nav-link active\" href=\"{{ path('admin_page') }}\" style=\"font-size:25px;\">Espace Admin</a></li>
-                      <li class=\"nav-item\" role=\"presentation\"><a class=\"nav-link\" href=\"{{ path('fos_user_security_logout') }}\" style=\"font-size:25px;\">Se Deconnecter</a></li>
-                  </ul>        
-  {% elseif is_granted(\"IS_AUTHENTICATED_REMEMBERED\") %}
-                  <ul class=\"nav navbar-nav ml-auto\">
-                      <li class=\"nav-item\" role=\"presentation\"><a class=\"nav-link active\" href=\"{{ path('fos_user_profile_show') }}\" style=\"font-size:25px;\">Espace Client</a></li>
-                      <li class=\"nav-item\" role=\"presentation\"><a class=\"nav-link\" href=\"{{ path('fos_user_security_logout') }}\" style=\"font-size:25px;\">Se Deconnecter</a></li>
-                  </ul>
-  {% else %}
-                  <ul class=\"nav navbar-nav ml-auto\">
-                      <li class=\"nav-item\" role=\"presentation\"><a class=\"nav-link active\" href=\"{{ path('fos_user_security_login') }}\" style=\"font-size:25px;\">Se connecter</a></li>
-                      <li class=\"nav-item\" role=\"presentation\"><a class=\"nav-link\" href=\"{{ path('fos_user_registration_register') }}\" style=\"font-size:25px;\">S'incrire</a></li>
-                  </ul>
-  {% endif %}
-              </div>
-          </div>
-      </nav>
+        <nav class=\"navbar navbar-light navbar-expand-md\">
+            <div class=\"container-fluid\">
+                <a class=\"navbar-brand\" href=\"#\"></a>
+                <button class=\"navbar-toggler\" data-toggle=\"collapse\" data-target=\"#navcol-1\">
+                    <span class=\"sr-only\">Toggle navigation</span>
+                    <span class=\"navbar-toggler-icon\"></span></button>
+                <div class=\"collapse navbar-collapse\" id=\"navcol-1\">
+                    {% if is_granted(\"ROLE_ADMIN\") %}
+                        <ul class=\"nav navbar-nav\">
+                            <li class=\"nav-item\" role=\"presentation\">
+                                <a class=\"nav-link active\" href=\"{{ path('fos_user_security_homepage') }}\" style=\"font-size:25px;\">Accueil</a>
+                            </li>
+                        </ul>
+                        <ul class=\"nav navbar-nav ml-auto\">
+                            <li class=\"nav-item\" role=\"presentation\">
+                                <a class=\"nav-link active\" href=\"{{ path('admin_page') }}\" style=\"font-size:25px;\">Espace Admin</a>
+                            </li>
+                            <li class=\"nav-item\" role=\"presentation\">
+                                <a class=\"nav-link\" href=\"{{ path('fos_user_security_logout') }}\" style=\"font-size:25px;\">Se Deconnecter</a>
+                            </li>
+                        </ul>
+                    {% elseif is_granted(\"IS_AUTHENTICATED_REMEMBERED\") %}
+                        <ul class=\"nav navbar-nav\">
+                            <li class=\"nav-item\" role=\"presentation\">
+                                <a class=\"nav-link active\" href=\"{{ path('fos_user_security_homepage') }}\" style=\"font-size:25px;\">Accueil</a>
+                            </li>
+                        </ul>
+                        <ul class=\"nav navbar-nav ml-auto\">
+                            <li class=\"nav-item\" role=\"presentation\">
+                                <a class=\"nav-link active\" href=\"{{ path('fos_user_profile_show') }}\" style=\"font-size:25px;\">Espace Client</a>
+                            </li>
+                            <li class=\"nav-item\" role=\"presentation\">
+                                <a class=\"nav-link\" href=\"{{ path('fos_user_security_logout') }}\" style=\"font-size:25px;\">Se Deconnecter</a>
+                            </li>
+                        </ul>
+                    {% else %}
+                        <ul class=\"nav navbar-nav\">
+                            <li class=\"nav-item\" role=\"presentation\">
+                                <a class=\"nav-link active\" href=\"{{ path('fos_user_security_homepage') }}\" style=\"font-size:25px;\">Accueil</a>
+                            </li>
+                        </ul>
+                        <ul class=\"nav navbar-nav ml-auto\">
+                            <li class=\"nav-item\" role=\"presentation\">
+                                <a class=\"nav-link active\" href=\"{{ path('fos_user_security_login') }}\" style=\"font-size:25px;\">Se connecter</a>
+                            </li>
+                            <li class=\"nav-item\" role=\"presentation\">
+                                <a class=\"nav-link\" href=\"{{ path('fos_user_registration_register') }}\" style=\"font-size:25px;\">S'incrire</a>
+                            </li>
+                        </ul>
+                    {% endif %}
+                </div>
+            </div>
+        </nav>
 
         {% block body %}{% endblock %}
-
+        <footer style=\"margin-top:20px;\">
+            <div>
+                <p class=\"text-center\" style=\"font-size:60px;\">FOOTER</p>
+            </div>
+        </footer>
         <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js\" integrity=\"sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ\" crossorigin=\"anonymous\"></script>
         <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js\" integrity=\"sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm\" crossorigin=\"anonymous\"></script>
         <script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\" integrity=\"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo\" crossorigin=\"anonymous\"></script>
@@ -235,6 +314,6 @@ class __TwigTemplate_20e0610c2f449405d6c2ac07357585c42706deb85ca7c032cb320a4d2f1
         <script src=\"{{ asset('js/admin3.js') }}\"></script>
     </body>
 </html>
-", "base.html.twig", "/var/www/html/ColloqueOffice/app/Resources/views/base.html.twig");
+", "base.html.twig", "/var/www/html/ColloqueOfficeBen/app/Resources/views/base.html.twig");
     }
 }

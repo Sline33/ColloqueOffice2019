@@ -35,7 +35,7 @@ class ProfileController extends Controller
 
         $customer = $em->getRepository('AppBundle:Customer')->findByUser($user)[0];// @hack
         
-        $ticket = $em->getRepository('AppBundle:Ticket')->findByCustomer($customer)[1];// @hack
+        $ticket = $em->getRepository('AppBundle:Ticket')->findByCustomer($customer)[0];// @hack
         
         return $this->render('@FOSUser/Profile/show_content.html.twig', array(
             'customer' => $customer,

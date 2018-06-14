@@ -189,42 +189,218 @@ class __TwigTemplate_30e02951b20eeb7af504e22b19d45fd783aef7b1df133ddc83897ec6203
         }
         // line 83
         echo "                                    <p><strong>Matin 9h-12h : allocutions en salle à la Scène du Louvre-Lens.</strong><br></p>
-                                    <p>Midi Pique Nique : ";
-        // line 84
+                                    <p>Midi Pique Nique :
+                                     ";
+        // line 85
         if (($this->getAttribute(($context["ticket"] ?? $this->getContext($context, "ticket")), "day1Breakfast", array()) == 1)) {
-            echo "Repas null";
-        } elseif (($this->getAttribute(($context["ticket"] ?? $this->getContext($context, "ticket")), "day1Breakfast", array()) == 2)) {
-            echo "Repas moyen ";
+            // line 86
+            echo "                                        <strong>choix 1</strong>
+                                    ";
+        } elseif (($this->getAttribute(        // line 87
+($context["ticket"] ?? $this->getContext($context, "ticket")), "day1Breakfast", array()) == 2)) {
+            // line 88
+            echo "                                        <strong>choix 2</strong>
+                                     ";
         } else {
-            echo "Repas légendaire";
+            // line 90
+            echo "                                        <strong>choix 3</strong>
+                                    ";
         }
+        // line 91
         echo "<br></p>
-                                    <p>Apres-Midi : Visites XXXX<br></p>
+                                    <p>Apres-Midi : 
+                                     ";
+        // line 93
+        if (($this->getAttribute(($context["ticket"] ?? $this->getContext($context, "ticket")), "day1Visite", array()) == 1)) {
+            // line 94
+            echo "                                        <strong>Visite 1</strong>
+                                    ";
+        } elseif (($this->getAttribute(        // line 95
+($context["ticket"] ?? $this->getContext($context, "ticket")), "day1Visite", array()) == 2)) {
+            // line 96
+            echo "                                        <strong>Visite 2</strong>
+                                     ";
+        } else {
+            // line 98
+            echo "                                        <strong>Visite 3</strong>
+                                    ";
+        }
+        // line 100
+        echo "                                    <br></p>
+                                     ";
+        // line 101
+        if (($this->getAttribute(($context["ticket"] ?? $this->getContext($context, "ticket")), "day1TransportBus", array()) == true)) {
+            echo "    
                                     <p>Vous avez souhaitez beneficier du transport aller-retour vers votre hebergements<br></p>
-                                </div>
+                               ";
+        } else {
+            // line 104
+            echo "                                        <p> </p>
+                                    ";
+        }
+        // line 106
+        echo "                                </div>
                                 <div class=\"col-xl-4\" style=\"padding:0px;padding:5px;\">
                                     <h5 style=\"margin-top:5px;\">Jour 2</h5>
+                                     ";
+        // line 109
+        if (($this->getAttribute(($context["ticket"] ?? $this->getContext($context, "ticket")), "day2TransportBus", array()) == true)) {
+            echo "                            
                                     <p>Vous avez souhaiter beneficier du transport aller-retour vers votre hebergements.<br></p>
-                                    <p>Matin 9h-12h: Visites XXXX<br></p>
-                                    <p>Midi Pique Nique : XXXX<br></p>
-                                    <p><strong>Après-midi : allocutions en salle à La Scène du Louvre-Lens</strong><br></p>
-                                    <p>Vous avez souhaitez beneficier du transport de la gare SNCF a la scene du louvre lens<br></p>
-                                    <p>Vous avez choisi de participer a la Soirée au louvre-lens de 19h30 a 00:30 : Prix 40€<br></p>
+                                   ";
+        } else {
+            // line 112
+            echo "                                        <p> </p>
+                                    ";
+        }
+        // line 114
+        echo "                                    <p>Matin 9h-12h:  ";
+        if (($this->getAttribute(($context["ticket"] ?? $this->getContext($context, "ticket")), "day2Visite", array()) == 1)) {
+            // line 115
+            echo "                                        <strong>Visite 1</strong>
+                                    ";
+        } elseif (($this->getAttribute(        // line 116
+($context["ticket"] ?? $this->getContext($context, "ticket")), "day2Visite", array()) == 2)) {
+            // line 117
+            echo "                                        <strong>Visite 2</strong>
+                                     ";
+        } else {
+            // line 119
+            echo "                                        <strong>Visite 3</strong>
+                                    ";
+        }
+        // line 121
+        echo "                                    <br></p>
+                                    <p>Midi Pique Nique : 
+                                    ";
+        // line 123
+        if (($this->getAttribute(($context["ticket"] ?? $this->getContext($context, "ticket")), "day2Breakfast", array()) == 1)) {
+            // line 124
+            echo "                                         <strong>choix 1</strong>
+                                    ";
+        } elseif (($this->getAttribute(        // line 125
+($context["ticket"] ?? $this->getContext($context, "ticket")), "day2Breakfast", array()) == 2)) {
+            // line 126
+            echo "                                         <strong>choix 2</strong>
+                                    ";
+        } else {
+            // line 128
+            echo "                                         <strong>choix 3</strong>
+                                    ";
+        }
+        // line 129
+        echo "<br></p>
+                                    <p><strong> Après-midi : allocutions en salle à La Scène du Louvre-Lens</strong><br></p>
+                                   ";
+        // line 131
+        if (($this->getAttribute(($context["ticket"] ?? $this->getContext($context, "ticket")), "day2TransportTrain", array()) == true)) {
+            echo "    
+                                         <p>Vous avez souhaitez beneficier du transport de la gare SNCF a la scene du louvre lens<br></p>
+                                    ";
+        } else {
+            // line 134
+            echo "                                        <p> </p>
+                                    ";
+        }
+        // line 136
+        echo "                                    ";
+        if (($this->getAttribute(($context["ticket"] ?? $this->getContext($context, "ticket")), "day2Night", array()) == true)) {
+            echo "  
+                                          <p>Vous avez choisi de participer a la Soirée au louvre-lens de 19h30 a 00:30 : Prix 40€<br></p>
+                                     ";
+        } else {
+            // line 139
+            echo "                                        <p> </p>
+                                    ";
+        }
+        // line 141
+        echo "                                   ";
+        if (($this->getAttribute(($context["ticket"] ?? $this->getContext($context, "ticket")), "day2TransportBusNight", array()) == true)) {
+            echo "  
                                     <p>Vous avez souhaitez beneficier du transport aller-retour vers votre hebergements.<br></p>
-                                </div>
+                                     ";
+        } else {
+            // line 144
+            echo "                                        <p> </p>
+                                    ";
+        }
+        // line 146
+        echo "                                </div>
                                 <div class=\"col-xl-4\" style=\"padding:0px 0px;padding:5px;\">
                                     <h5 style=\"margin-top:5px;\">Options</h5>
-                                    <p>Vous avez choisi de participer a la visite (Choix X) du samedi matin.<br></p>
-                                    <p>Vous avez choisi de participer a l'exposition temporaire du Louvre-Lens du Samedi 8/Dimanche 9 Juin 2019 : Prix 9€.<br></p>
-                                    <p>Vous avez choisi de participer a la visite guidée de la mine d'art deco
-                                        <br>de lens du Samedi 8/Dimanche 9 Juin 2019 a 14h30 : Prix 6€.<br></p>
-                                    <p>Vous avez choisi de participer a la Visite guidée \"A la découverte des
+                                    <p>Vous avez choisi de participer a la ";
+        // line 149
+        if (($this->getAttribute(($context["ticket"] ?? $this->getContext($context, "ticket")), "optionVisite", array()) == 1)) {
+            // line 150
+            echo "                                        <strong>Visite 1</strong>
+                                    ";
+        } elseif (($this->getAttribute(        // line 151
+($context["ticket"] ?? $this->getContext($context, "ticket")), "optionVisite", array()) == 2)) {
+            // line 152
+            echo "                                        <strong>Visite 2</strong>
+                                     ";
+        } else {
+            // line 154
+            echo "                                       <strong>Visite 3</strong>
+                                    ";
+        }
+        // line 155
+        echo " du samedi matin.<br></p>
+                                  
+                                    ";
+        // line 157
+        if (($this->getAttribute(($context["ticket"] ?? $this->getContext($context, "ticket")), "optionArtDeco", array()) == false)) {
+            // line 158
+            echo "                                    <p>Vous avez choisi de participer a l'exposition temporaire du Louvre-Lens du Samedi 8 : Prix 9€.
+                                     ";
+        } else {
+            // line 160
+            echo "                                        <p>Vous avez choisi de participer a l'exposition temporaire du Louvre-Lens du Dimanche 9 Juin 2019 : Prix 9€ </p>
+                                    ";
+        }
+        // line 162
+        echo "                                    </p>
+                                  ";
+        // line 163
+        if (($this->getAttribute(($context["ticket"] ?? $this->getContext($context, "ticket")), "optionExpo", array()) == true)) {
+            // line 164
+            echo "                                 <p>Vous avez choisi de participer a la visite guidée de la mine d'art deco
+                                        <br>de lens du Samedi 8 a 14h30 : Prix 6€.<br></p>
+                                         ";
+        } else {
+            // line 167
+            echo "                                        <p> Vous avez choisi de participer a la visite guidée de la mine d'art deco
+                                        de lens du Dimanche 9 Juin 2019 a 14h30 : Prix 6€</p>
+                                    ";
+        }
+        // line 170
+        echo "                                        ";
+        if (($this->getAttribute(($context["ticket"] ?? $this->getContext($context, "ticket")), "optionDecouverte", array()) == true)) {
+            // line 171
+            echo "                                    <p>Vous avez choisi de participer a la Visite guidée \"A la découverte des
                                         <br>Terrils, trésors du Patrimoine mondial\"&nbsp; du Dimanche 9 Juin 2019 a 14h30<br>
                                         : Prix 9 €<br></p>
-                                    <p>Vous avez choisi de participer a la Visite guidée
+                                          ";
+        } else {
+            // line 175
+            echo "                                        <p> </p>
+                                    ";
+        }
+        // line 177
+        echo "                                         ";
+        if (($this->getAttribute(($context["ticket"] ?? $this->getContext($context, "ticket")), "optionGrandSite", array()) == true)) {
+            echo "  
+                                         <p>Vous avez choisi de participer a la Visite guidée
                                         <br>\"Notre-Dame-de-Lorette, grand site de la Mémoire\"&nbsp; du Dimanche 9 Juin
                                         <br>2019 a 15H : Prix 6 €<br></p>
-                                </div>
+                                         ";
+        } else {
+            // line 182
+            echo "                                        <p> </p>
+                                    ";
+        }
+        // line 184
+        echo "                                </div>
                             </div>
                         </div>
                     </div>
@@ -248,9 +424,6 @@ class __TwigTemplate_30e02951b20eeb7af504e22b19d45fd783aef7b1df133ddc83897ec6203
         </div>
     </div>
 </div>
-<footer>
-    <p class=\"text-center\" style=\"font-size:45px;margin-top:100PX;\">FOOTER</p>
-</footer>
 
         <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js\" integrity=\"sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ\" crossorigin=\"anonymous\"></script>
         <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js\" integrity=\"sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm\" crossorigin=\"anonymous\"></script>
@@ -277,7 +450,7 @@ class __TwigTemplate_30e02951b20eeb7af504e22b19d45fd783aef7b1df133ddc83897ec6203
 
     public function getDebugInfo()
     {
-        return array (  194 => 84,  191 => 83,  187 => 81,  183 => 79,  181 => 78,  164 => 72,  144 => 55,  140 => 54,  134 => 51,  130 => 50,  123 => 46,  118 => 44,  114 => 43,  108 => 40,  102 => 37,  98 => 36,  94 => 35,  84 => 30,  75 => 26,  55 => 9,  49 => 5,  40 => 4,  11 => 2,);
+        return array (  403 => 184,  399 => 182,  390 => 177,  386 => 175,  380 => 171,  377 => 170,  372 => 167,  367 => 164,  365 => 163,  362 => 162,  358 => 160,  354 => 158,  352 => 157,  348 => 155,  344 => 154,  340 => 152,  338 => 151,  335 => 150,  333 => 149,  328 => 146,  324 => 144,  317 => 141,  313 => 139,  306 => 136,  302 => 134,  296 => 131,  292 => 129,  288 => 128,  284 => 126,  282 => 125,  279 => 124,  277 => 123,  273 => 121,  269 => 119,  265 => 117,  263 => 116,  260 => 115,  257 => 114,  253 => 112,  247 => 109,  242 => 106,  238 => 104,  232 => 101,  229 => 100,  225 => 98,  221 => 96,  219 => 95,  216 => 94,  214 => 93,  210 => 91,  206 => 90,  202 => 88,  200 => 87,  197 => 86,  195 => 85,  191 => 83,  187 => 81,  183 => 79,  181 => 78,  164 => 72,  144 => 55,  140 => 54,  134 => 51,  130 => 50,  123 => 46,  118 => 44,  114 => 43,  108 => 40,  102 => 37,  98 => 36,  94 => 35,  84 => 30,  75 => 26,  55 => 9,  49 => 5,  40 => 4,  11 => 2,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -373,32 +546,106 @@ class __TwigTemplate_30e02951b20eeb7af504e22b19d45fd783aef7b1df133ddc83897ec6203
                                         <p> </p>
                                     {% endif %}
                                     <p><strong>Matin 9h-12h : allocutions en salle à la Scène du Louvre-Lens.</strong><br></p>
-                                    <p>Midi Pique Nique : {% if ticket.day1Breakfast == 1 %}Repas null{% elseif ticket.day1Breakfast == 2  %}Repas moyen {% else %}Repas légendaire{% endif %}<br></p>
-                                    <p>Apres-Midi : Visites XXXX<br></p>
+                                    <p>Midi Pique Nique :
+                                     {% if ticket.day1Breakfast == 1 %}
+                                        <strong>choix 1</strong>
+                                    {% elseif ticket.day1Breakfast == 2  %}
+                                        <strong>choix 2</strong>
+                                     {% else %}
+                                        <strong>choix 3</strong>
+                                    {% endif %}<br></p>
+                                    <p>Apres-Midi : 
+                                     {% if ticket.day1Visite == 1 %}
+                                        <strong>Visite 1</strong>
+                                    {% elseif ticket.day1Visite == 2  %}
+                                        <strong>Visite 2</strong>
+                                     {% else %}
+                                        <strong>Visite 3</strong>
+                                    {% endif %}
+                                    <br></p>
+                                     {% if ticket.day1TransportBus == true %}    
                                     <p>Vous avez souhaitez beneficier du transport aller-retour vers votre hebergements<br></p>
+                               {% else %}
+                                        <p> </p>
+                                    {% endif %}
                                 </div>
                                 <div class=\"col-xl-4\" style=\"padding:0px;padding:5px;\">
                                     <h5 style=\"margin-top:5px;\">Jour 2</h5>
+                                     {% if ticket.day2TransportBus == true %}                            
                                     <p>Vous avez souhaiter beneficier du transport aller-retour vers votre hebergements.<br></p>
-                                    <p>Matin 9h-12h: Visites XXXX<br></p>
-                                    <p>Midi Pique Nique : XXXX<br></p>
-                                    <p><strong>Après-midi : allocutions en salle à La Scène du Louvre-Lens</strong><br></p>
-                                    <p>Vous avez souhaitez beneficier du transport de la gare SNCF a la scene du louvre lens<br></p>
-                                    <p>Vous avez choisi de participer a la Soirée au louvre-lens de 19h30 a 00:30 : Prix 40€<br></p>
+                                   {% else %}
+                                        <p> </p>
+                                    {% endif %}
+                                    <p>Matin 9h-12h:  {% if ticket.day2Visite == 1 %}
+                                        <strong>Visite 1</strong>
+                                    {% elseif ticket.day2Visite == 2  %}
+                                        <strong>Visite 2</strong>
+                                     {% else %}
+                                        <strong>Visite 3</strong>
+                                    {% endif %}
+                                    <br></p>
+                                    <p>Midi Pique Nique : 
+                                    {% if ticket.day2Breakfast == 1 %}
+                                         <strong>choix 1</strong>
+                                    {% elseif ticket.day2Breakfast == 2  %}
+                                         <strong>choix 2</strong>
+                                    {% else %}
+                                         <strong>choix 3</strong>
+                                    {% endif %}<br></p>
+                                    <p><strong> Après-midi : allocutions en salle à La Scène du Louvre-Lens</strong><br></p>
+                                   {% if ticket.day2TransportTrain == true %}    
+                                         <p>Vous avez souhaitez beneficier du transport de la gare SNCF a la scene du louvre lens<br></p>
+                                    {% else %}
+                                        <p> </p>
+                                    {% endif %}
+                                    {% if ticket.day2Night == true %}  
+                                          <p>Vous avez choisi de participer a la Soirée au louvre-lens de 19h30 a 00:30 : Prix 40€<br></p>
+                                     {% else %}
+                                        <p> </p>
+                                    {% endif %}
+                                   {% if ticket.day2TransportBusNight == true %}  
                                     <p>Vous avez souhaitez beneficier du transport aller-retour vers votre hebergements.<br></p>
+                                     {% else %}
+                                        <p> </p>
+                                    {% endif %}
                                 </div>
                                 <div class=\"col-xl-4\" style=\"padding:0px 0px;padding:5px;\">
                                     <h5 style=\"margin-top:5px;\">Options</h5>
-                                    <p>Vous avez choisi de participer a la visite (Choix X) du samedi matin.<br></p>
-                                    <p>Vous avez choisi de participer a l'exposition temporaire du Louvre-Lens du Samedi 8/Dimanche 9 Juin 2019 : Prix 9€.<br></p>
-                                    <p>Vous avez choisi de participer a la visite guidée de la mine d'art deco
-                                        <br>de lens du Samedi 8/Dimanche 9 Juin 2019 a 14h30 : Prix 6€.<br></p>
+                                    <p>Vous avez choisi de participer a la {% if ticket.optionVisite == 1 %}
+                                        <strong>Visite 1</strong>
+                                    {% elseif ticket.optionVisite == 2  %}
+                                        <strong>Visite 2</strong>
+                                     {% else %}
+                                       <strong>Visite 3</strong>
+                                    {% endif %} du samedi matin.<br></p>
+                                  
+                                    {% if ticket.optionArtDeco == false %}
+                                    <p>Vous avez choisi de participer a l'exposition temporaire du Louvre-Lens du Samedi 8 : Prix 9€.
+                                     {% else %}
+                                        <p>Vous avez choisi de participer a l'exposition temporaire du Louvre-Lens du Dimanche 9 Juin 2019 : Prix 9€ </p>
+                                    {% endif %}
+                                    </p>
+                                  {% if ticket.optionExpo == true %}
+                                 <p>Vous avez choisi de participer a la visite guidée de la mine d'art deco
+                                        <br>de lens du Samedi 8 a 14h30 : Prix 6€.<br></p>
+                                         {% else %}
+                                        <p> Vous avez choisi de participer a la visite guidée de la mine d'art deco
+                                        de lens du Dimanche 9 Juin 2019 a 14h30 : Prix 6€</p>
+                                    {% endif %}
+                                        {% if ticket.optionDecouverte == true %}
                                     <p>Vous avez choisi de participer a la Visite guidée \"A la découverte des
                                         <br>Terrils, trésors du Patrimoine mondial\"&nbsp; du Dimanche 9 Juin 2019 a 14h30<br>
                                         : Prix 9 €<br></p>
-                                    <p>Vous avez choisi de participer a la Visite guidée
+                                          {% else %}
+                                        <p> </p>
+                                    {% endif %}
+                                         {% if ticket.optionGrandSite == true %}  
+                                         <p>Vous avez choisi de participer a la Visite guidée
                                         <br>\"Notre-Dame-de-Lorette, grand site de la Mémoire\"&nbsp; du Dimanche 9 Juin
                                         <br>2019 a 15H : Prix 6 €<br></p>
+                                         {% else %}
+                                        <p> </p>
+                                    {% endif %}
                                 </div>
                             </div>
                         </div>
@@ -423,15 +670,12 @@ class __TwigTemplate_30e02951b20eeb7af504e22b19d45fd783aef7b1df133ddc83897ec6203
         </div>
     </div>
 </div>
-<footer>
-    <p class=\"text-center\" style=\"font-size:45px;margin-top:100PX;\">FOOTER</p>
-</footer>
 
         <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js\" integrity=\"sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ\" crossorigin=\"anonymous\"></script>
         <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js\" integrity=\"sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm\" crossorigin=\"anonymous\"></script>
         <script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\" integrity=\"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo\" crossorigin=\"anonymous\"></script>
 
 {% endblock %}
-", "@FOSUser/Profile/show_content.html.twig", "/var/www/html/ColloqueOffice/app/Resources/FOSUserBundle/views/Profile/show_content.html.twig");
+", "@FOSUser/Profile/show_content.html.twig", "/var/www/html/ColloqueOfficeBen/app/Resources/FOSUserBundle/views/Profile/show_content.html.twig");
     }
 }
