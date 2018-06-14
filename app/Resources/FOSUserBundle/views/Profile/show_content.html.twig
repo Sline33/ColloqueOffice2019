@@ -65,13 +65,14 @@
                     <h4>Mes récapitulatifs</h4>
                 </div>
             </div>
+            {% for ticket in tickets %}
             <div class="row">
-                <div class="col-md-12 col-xl-12" style="padding-left:0px;padding-right:0px;">
+                <div class="col-md-12 col-xl-12" style="padding-left:0px;padding-right:0px;margin-bottom:10px;">
                     <div class="collapseclient">
-                        <a class="btn btn-primary collapseclient" data-toggle="collapse" aria-expanded="false" aria-controls="collapse-1" role="button" href="#collapse-1">
+                        <a class="btn btn-primary collapseclient" data-toggle="collapse" aria-expanded="false" aria-controls="collapse-1" role="button" href="#collapse-{{ ticket.id }}">
                         Recapitulatif de réservation : N°{{ ticket.ticketNumber }} &nbsp; &nbsp; &nbsp; &nbsp;Nom: {{ ticket.lastName }} &nbsp; &nbsp; &nbsp;Prénom: {{ ticket.firstName }} &nbsp; &nbsp; &nbsp; &nbsp; ST/ADM: {{ ticket.society }} &nbsp; &nbsp;Montant TTC : {{ ticket.price }}€<br>
                         </a>
-                        <div class="collapse" id="collapse-1">
+                        <div class="collapse" id="collapse-{{ ticket.id }}">
                             <div class="d-flex">
                                 <div class="col-xl-4" style="padding:0px;margin-left:3px;padding:5px;">
                                     <h5 style="margin-top:5px;">Jour 1</h5>
@@ -187,6 +188,7 @@
                     </div>
                 </div>
             </div>
+            {% endfor %}
         </div>
     </div>
 </div>
