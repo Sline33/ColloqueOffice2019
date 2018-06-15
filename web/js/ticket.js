@@ -15,6 +15,11 @@ var day2breakfast1 = document.getElementById('appbundle_ticket_day2Breakfast1');
 var day2breakfast2 = document.getElementById('appbundle_ticket_day2Breakfast2');
 var day2breakfast3 = document.getElementById('appbundle_ticket_day2Breakfast3');
 
+var opExpo1 = document.getElementById('appbundle_ticket_optionExpo1');
+var opExpo2 = document.getElementById('appbundle_ticket_optionExpo2');
+
+var opArtDeco1 = document.getElementById('appbundle_ticket_optionArtDeco1');
+var opArtDeco2 = document.getElementById('appbundle_ticket_optionArtDeco2');
 
 day1visite1.addEventListener('click', d1visite1)
 day1visite2.addEventListener('click', d1visite2)
@@ -33,7 +38,13 @@ day2breakfast1.addEventListener('click', d2breakfast1)
 day2breakfast2.addEventListener('click', d2breakfast2)
 day2breakfast3.addEventListener('click', d2breakfast3)
 
+opExpo1.addEventListener('click', opE1)
+opExpo2.addEventListener('click', opE2)
 
+opArtDeco1.addEventListener('click', opAD1)
+opArtDeco2.addEventListener('click', opAD2)
+
+// function pour les visites
 function d1visite1(event){
     if(day1visite1.checked == true){
 
@@ -119,7 +130,6 @@ function d2visite1(event){
     }
   
 }
-
 function d2visite2(event){
 
     if(day2visite2.checked == true){
@@ -141,7 +151,6 @@ function d2visite2(event){
     }
   
 }
-
 function d2visite3(event){
 
     if(day2visite3.checked == true){
@@ -163,7 +172,6 @@ function d2visite3(event){
     }
   
 }
-
 function op1visite1(event){
 
     if(optionvisite1.checked == true){
@@ -205,7 +213,6 @@ function op2visite2(event){
         day2visite2.disabled = false;
     }
 }
-
 function op3visite3(event){
 
     if(optionvisite3.checked == true){
@@ -280,5 +287,35 @@ function d2breakfast3(event){
     }else{
         day2breakfast1.disabled = false;
         day2breakfast2.disabled = false;
+    }
+}
+// function pour choisir l'expo
+function opE1(event){
+    if(opExpo1.checked == true){
+        opExpo2.disabled = true;
+    }else{
+        opExpo2.disabled = false;
+    }
+}
+function opE2(event){
+    if(opExpo2.checked == true){
+        opExpo1.disabled = true;
+    }else{
+        opExpo1.disabled = false;
+    }
+}
+// function pour choisir l'artDeco
+function opAD1(event){
+    if(opArtDeco1.checked == true){
+        opArtDeco2.disabled = true;
+    }else{
+        opArtDeco2.disabled = false;
+    }
+}
+function opAD2(event){
+    if(opArtDeco2.checked == true){
+        opArtDeco1.disabled = true;
+    }else{
+        opArtDeco1.disabled = false;
     }
 }

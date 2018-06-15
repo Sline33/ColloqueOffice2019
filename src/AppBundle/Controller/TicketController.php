@@ -85,7 +85,7 @@ class TicketController extends Controller
              $em->persist($ticket);
              $em->flush();
 
-             return $this->redirectToRoute('ticket_show', array('id' => $ticket->getId()));
+             return $this->redirectToRoute('ticket_new');
          }
 
 

@@ -171,7 +171,7 @@ class __TwigTemplate_acfe4e3ae63f2c44e06fdc71e1b3304d805528f247436e2b2c08e936956
                     <p>Entrée à l’exposition temporaire du Louvre-Lens (9 €)</p>
                     <div class=\"field\">
                         <label for=\"appbundle_ticket_optionExpo\">Samedi 8 juin 2019</label>
-                        <input class=\"form\" type=\"checkbox\" id=\"appbundle_ticket_optionExpo\" name=\"appbundle_ticket[optionExpo]\" value=\"1\"/>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input class=\"form\" type=\"checkbox\" id=\"appbundle_ticket_optionExpo1\" name=\"appbundle_ticket[optionExpo]\" value=\"1\"/>&nbsp;&nbsp;&nbsp;&nbsp;
                         <label for=\"appbundle_ticket_optionExpo\">Dimanche 9 juin 2019</label>
                         <input class=\"form\" type=\"checkbox\" id=\"appbundle_ticket_optionExpo2\" name=\"appbundle_ticket[optionExpo]\" value=\"2\"/>
                     </div>
@@ -179,7 +179,7 @@ class __TwigTemplate_acfe4e3ae63f2c44e06fdc71e1b3304d805528f247436e2b2c08e936956
                     <p>Visite guidée Lens, mine d’Art déco à 14h30 (6 €)</p>
                     <div class=\"field\">
                         <label for=\"fos_user_registration_form_optionArtDeco\">Samedi 8 juin 2019</label>
-                        <input class=\"form\" type=\"checkbox\" id=\"appbundle_ticket_optionArtDeco\" name=\"appbundle_ticket[optionArtDeco]\" value=\"1\"/>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input class=\"form\" type=\"checkbox\" id=\"appbundle_ticket_optionArtDeco1\" name=\"appbundle_ticket[optionArtDeco]\" value=\"1\"/>&nbsp;&nbsp;&nbsp;&nbsp;
                         <label for=\"fos_user_registration_form_optionArtDeco\">Dimanche 9 juin 2019</label>
                         <input class=\"form\" type=\"checkbox\" id=\"appbundle_ticket_optionArtDeco2\" name=\"appbundle_ticket[optionArtDeco]\" value=\"2\"/>
                     </div>
@@ -195,19 +195,20 @@ class __TwigTemplate_acfe4e3ae63f2c44e06fdc71e1b3304d805528f247436e2b2c08e936956
                             dimanche 9 juin à 15h (6 €)</label>
                         <input class=\"form\" type=\"checkbox\" id=\"appbundle_ticket_optionGrandSite\" name=\"appbundle_ticket[optionGrandSite]\" value=\"\"/>
                     </div>
-                    <div class=\"col-xl-4 offset-xl-8\" style=\"margin-bottom:0px;margin-top:70px;\">
+                    <div class=\"col-sm-12\" style=\"margin-bottom:0px;margin-top:70px;\">
                         <div class=\"border-form-prix\">
                             <p class=\"text-center\" style=\"font-size:35px;margin-bottom:10px;\">PRIX :
                                 <span id=\"prixreservation\">300</span>€</p>
                         </div>
                     </div>
-                    <input type=\"submit\" class=\"btn btn-primary float-right\" style=\"margin-top:30px;width:180px;\" value=\"Suivant\"/>
+                    <input type=\"submit\" class=\"btn btn-primary float-left\" style=\"margin-top:30px;\" value=\"Ajouter une réservation\"/>
+                    <input type=\"submit\" class=\"btn btn-primary float-right\" style=\"margin-top:30px;\" value=\"Suivant\"/>
                 </form>
             </div>
         </div>
     </div>
 <script src=\"";
-        // line 158
+        // line 159
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/ticket.js"), "html", null, true);
         echo "\"></script>
 ";
@@ -231,7 +232,7 @@ class __TwigTemplate_acfe4e3ae63f2c44e06fdc71e1b3304d805528f247436e2b2c08e936956
 
     public function getDebugInfo()
     {
-        return array (  211 => 158,  60 => 10,  55 => 8,  49 => 4,  40 => 3,  11 => 1,);
+        return array (  212 => 159,  60 => 10,  55 => 8,  49 => 4,  40 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -366,7 +367,7 @@ class __TwigTemplate_acfe4e3ae63f2c44e06fdc71e1b3304d805528f247436e2b2c08e936956
                     <p>Entrée à l’exposition temporaire du Louvre-Lens (9 €)</p>
                     <div class=\"field\">
                         <label for=\"appbundle_ticket_optionExpo\">Samedi 8 juin 2019</label>
-                        <input class=\"form\" type=\"checkbox\" id=\"appbundle_ticket_optionExpo\" name=\"appbundle_ticket[optionExpo]\" value=\"1\"/>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input class=\"form\" type=\"checkbox\" id=\"appbundle_ticket_optionExpo1\" name=\"appbundle_ticket[optionExpo]\" value=\"1\"/>&nbsp;&nbsp;&nbsp;&nbsp;
                         <label for=\"appbundle_ticket_optionExpo\">Dimanche 9 juin 2019</label>
                         <input class=\"form\" type=\"checkbox\" id=\"appbundle_ticket_optionExpo2\" name=\"appbundle_ticket[optionExpo]\" value=\"2\"/>
                     </div>
@@ -374,7 +375,7 @@ class __TwigTemplate_acfe4e3ae63f2c44e06fdc71e1b3304d805528f247436e2b2c08e936956
                     <p>Visite guidée Lens, mine d’Art déco à 14h30 (6 €)</p>
                     <div class=\"field\">
                         <label for=\"fos_user_registration_form_optionArtDeco\">Samedi 8 juin 2019</label>
-                        <input class=\"form\" type=\"checkbox\" id=\"appbundle_ticket_optionArtDeco\" name=\"appbundle_ticket[optionArtDeco]\" value=\"1\"/>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input class=\"form\" type=\"checkbox\" id=\"appbundle_ticket_optionArtDeco1\" name=\"appbundle_ticket[optionArtDeco]\" value=\"1\"/>&nbsp;&nbsp;&nbsp;&nbsp;
                         <label for=\"fos_user_registration_form_optionArtDeco\">Dimanche 9 juin 2019</label>
                         <input class=\"form\" type=\"checkbox\" id=\"appbundle_ticket_optionArtDeco2\" name=\"appbundle_ticket[optionArtDeco]\" value=\"2\"/>
                     </div>
@@ -390,13 +391,14 @@ class __TwigTemplate_acfe4e3ae63f2c44e06fdc71e1b3304d805528f247436e2b2c08e936956
                             dimanche 9 juin à 15h (6 €)</label>
                         <input class=\"form\" type=\"checkbox\" id=\"appbundle_ticket_optionGrandSite\" name=\"appbundle_ticket[optionGrandSite]\" value=\"\"/>
                     </div>
-                    <div class=\"col-xl-4 offset-xl-8\" style=\"margin-bottom:0px;margin-top:70px;\">
+                    <div class=\"col-sm-12\" style=\"margin-bottom:0px;margin-top:70px;\">
                         <div class=\"border-form-prix\">
                             <p class=\"text-center\" style=\"font-size:35px;margin-bottom:10px;\">PRIX :
                                 <span id=\"prixreservation\">300</span>€</p>
                         </div>
                     </div>
-                    <input type=\"submit\" class=\"btn btn-primary float-right\" style=\"margin-top:30px;width:180px;\" value=\"Suivant\"/>
+                    <input type=\"submit\" class=\"btn btn-primary float-left\" style=\"margin-top:30px;\" value=\"Ajouter une réservation\"/>
+                    <input type=\"submit\" class=\"btn btn-primary float-right\" style=\"margin-top:30px;\" value=\"Suivant\"/>
                 </form>
             </div>
         </div>
