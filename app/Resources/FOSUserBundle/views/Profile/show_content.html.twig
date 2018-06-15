@@ -2,18 +2,6 @@
 {% extends '::base.html.twig' %}
 
 {% block body %}
-    <header>
-        <div class="d-flex justify-content-center" style="margin-top:0px;">
-            <div class="d-flex flex-row-reverse justify-content-center align-items-center">
-                <i class="fa fa-long-arrow-left d-flex align-items-center" style="font-size:83px;width:69px;"></i>
-                <a href="{{ path("fos_user_security_homepage") }}" class="reservation-link" style="font-size:25px;">ACCUEUIL</a>
-            </div>
-            <div>
-                <i class="fa fa-circle-o" style="font-size:200px;height:71px;"></i>
-            </div>
-            <div class="d-flex align-items-center"></div>
-        </div>
-    </header>
     <div class="container" style="padding-left:0px;">
         <h4 style="font-size:25px;margin-top:4px;height:23px;">Mes coordonnées</h4>
     </div>
@@ -72,6 +60,7 @@
                         <a class="btn btn-primary collapseclient" data-toggle="collapse" aria-expanded="false" aria-controls="collapse-1" role="button" href="#collapse-{{ ticket.id }}">
                         Recapitulatif de réservation : N°{{ ticket.ticketNumber }} &nbsp; &nbsp; &nbsp; &nbsp;Nom: {{ ticket.lastName }} &nbsp; &nbsp; &nbsp;Prénom: {{ ticket.firstName }} &nbsp; &nbsp; &nbsp; &nbsp; ST/ADM: {{ ticket.society }} &nbsp; &nbsp;Montant TTC : {{ ticket.price }}€<br>
                         </a>
+
                         <div class="collapse" id="collapse-{{ ticket.id }}">
                             <div class="d-flex">
                                 <div class="col-xl-4" style="padding:0px;margin-left:3px;padding:5px;">
