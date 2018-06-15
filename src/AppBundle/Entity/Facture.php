@@ -34,6 +34,13 @@ class Facture
      * @ORM\Column(name="price", type="integer", nullable=false, unique=false)
      */
     private $price;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="status", type="integer", nullable=false, unique=false)
+     */
+    private $status;
     
     /**
      * @var \AppBundle\Entity\Customer
@@ -174,5 +181,29 @@ class Facture
     public function getPrice()
     {
         return $this->price;
+    }
+
+    /**
+     * Set status
+     *
+     * @param integer $status
+     *
+     * @return Facture
+     */
+    public function setStatus($status)
+    {
+        $this->status = $status;
+
+        return $this;
+    }
+
+    /**
+     * Get status
+     *
+     * @return integer
+     */
+    public function getStatus()
+    {
+        return $this->status;
     }
 }

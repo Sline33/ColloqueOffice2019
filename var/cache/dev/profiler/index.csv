@@ -832,3 +832,13 @@ f2decf,127.0.0.1,GET,http://127.0.0.1/ColloqueOfficeBen/web/app_dev.php/ticket/n
 1af6d2,127.0.0.1,GET,http://127.0.0.1/ColloqueOfficeBen/web/app_dev.php/,1529046278,,200
 aa7fb0,127.0.0.1,GET,http://127.0.0.1/ColloqueOfficeBen/web/app_dev.php/ticket/new,1529046279,,200
 beccdc,127.0.0.1,GET,http://127.0.0.1/ColloqueOfficeBen/web/app_dev.php/,1529046402,,200
+a9aad4,127.0.0.1,GET,http://127.0.0.1/ColloqueOfficeBen/web/app_dev.php/ticket/,1529047498,,200
+7ce121,127.0.0.1,GET,http://127.0.0.1/ColloqueOfficeBen/web/app_dev.php/ticket/2,1529047502,,200
+113768,127.0.0.1,GET,http://127.0.0.1/ColloqueOfficeBen/web/app_dev.php/ticket/20,1529047560,,200
+773cbf,127.0.0.1,GET,http://127.0.0.1/ColloqueOfficeBen/web/app_dev.php/ticket/20/edit,1529047562,,200
+940c69,127.0.0.1,GET,http://127.0.0.1/ColloqueOfficeBen/web/app_dev.php/profile/,1529047578,,200
+a0e6fe,127.0.0.1,GET,http://127.0.0.1/ColloqueOfficeBen/web/app_dev.php/profile/ticket,1529048817,6bf1ed,200
+6bf1ed,127.0.0.1,GET,http://127.0.0.1/ColloqueOfficeBen/web/app_dev.php/profile/ticket,1529048817,,404
+7da94f,127.0.0.1,GET,http://127.0.0.1/ColloqueOfficeBen/web/app_dev.php/ticket/,1529048822,,200
+970db1,127.0.0.1,GET,http://127.0.0.1/ColloqueOfficeBen/web/app_dev.php/ticket/3,1529048824,,200
+187808,127.0.0.1,GET,http://127.0.0.1/ColloqueOfficeBen/web/app_dev.php/ticket/3/edit,1529048828,,200
