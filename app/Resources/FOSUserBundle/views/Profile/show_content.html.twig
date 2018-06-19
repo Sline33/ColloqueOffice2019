@@ -188,12 +188,14 @@
                 <h4>Mes Factures</h4>
             </div>
         </div>
+        {% for facture in factures %}
         <div class="row">
             <div class="col d-flex" style="padding:0px;">
-                <p style="margin-bottom:0px;">Facture : XXXXX &nbsp;&nbsp;</p>
+                <p style="margin-bottom:0px;">Facture : {{ facture.number }} &nbsp;&nbsp;</p>
                 <a href="#">Télécharger votre facture</a>
             </div>
         </div>
+        {% endfor %}
     </div>
 </div>
 

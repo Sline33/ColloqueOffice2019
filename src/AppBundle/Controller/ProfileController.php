@@ -35,14 +35,17 @@ class ProfileController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $customer = $em->getRepository('AppBundle:Customer')->findByUser($user)[0];// @hack
-        $facture = $em->getRepository('AppBundle:Facture')->findByFacture($customer);
+        $facture = $em->getRepository('AppBundle:Facture')->findByTickets($customer);
         $factures = new Collections\ArrayCollection($facture);
         dump($factures);
+        
+
         $ticket = $em->getRepository('AppBundle:Ticket')->findByCustomer($customer);
-        dump($ticket);
+
         $tickets = new Collections\ArrayCollection($ticket);
 
         return $this->render('@FOSUser/Profile/show_content.html.twig', array(
+            'factures' => $factures,
             'customer' => $customer,
             'tickets' => $tickets,
             'user' => $user,

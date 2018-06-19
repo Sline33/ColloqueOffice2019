@@ -1,6 +1,6 @@
 <?php
 
-/* ::base.html.twig */
+/* base.html.twig */
 class __TwigTemplate_20e0610c2f449405d6c2ac07357585c42706deb85ca7c032cb320a4d2f127d5a extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -18,10 +18,10 @@ class __TwigTemplate_20e0610c2f449405d6c2ac07357585c42706deb85ca7c032cb320a4d2f1
     protected function doDisplay(array $context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "::base.html.twig"));
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "base.html.twig"));
 
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "::base.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "base.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -52,7 +52,7 @@ class __TwigTemplate_20e0610c2f449405d6c2ac07357585c42706deb85ca7c032cb320a4d2f1
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("favicon.ico"), "html", null, true);
         echo "\"/>
     </head>
-    <body>
+    <body style=\"display:flex;min-height:100vh;flex-direction:column;\">
         <nav class=\"navbar navbar-light navbar-expand-md\">
             <div class=\"container-fluid\">
                 <a class=\"navbar-brand\" href=\"#\"></a>
@@ -142,12 +142,13 @@ class __TwigTemplate_20e0610c2f449405d6c2ac07357585c42706deb85ca7c032cb320a4d2f1
         echo "                </div>
             </div>
         </nav>
-
-        ";
+        <div style=\"flex:1;\">
+            ";
         // line 69
         $this->displayBlock('body', $context, $blocks);
         // line 70
-        echo "        <footer style=\"margin-top:20px;\">
+        echo "        </div>
+        <footer style=\"margin-top:20px;\">
             <div>
                 <p class=\"text-center\" style=\"font-size:60px;\">FOOTER</p>
             </div>
@@ -156,11 +157,11 @@ class __TwigTemplate_20e0610c2f449405d6c2ac07357585c42706deb85ca7c032cb320a4d2f1
         <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js\" integrity=\"sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm\" crossorigin=\"anonymous\"></script>
         <script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\" integrity=\"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo\" crossorigin=\"anonymous\"></script>
         <script src=\"";
-        // line 78
+        // line 79
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/admin4.js"), "html", null, true);
         echo "\"></script>
         <script src=\"";
-        // line 79
+        // line 80
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/admin3.js"), "html", null, true);
         echo "\"></script>
     </body>
@@ -210,7 +211,7 @@ class __TwigTemplate_20e0610c2f449405d6c2ac07357585c42706deb85ca7c032cb320a4d2f1
 
     public function getTemplateName()
     {
-        return "::base.html.twig";
+        return "base.html.twig";
     }
 
     public function isTraitable()
@@ -220,7 +221,7 @@ class __TwigTemplate_20e0610c2f449405d6c2ac07357585c42706deb85ca7c032cb320a4d2f1
 
     public function getDebugInfo()
     {
-        return array (  195 => 69,  178 => 5,  164 => 79,  160 => 78,  150 => 70,  148 => 69,  142 => 65,  135 => 61,  129 => 58,  121 => 53,  117 => 51,  110 => 47,  104 => 44,  96 => 39,  92 => 37,  85 => 33,  79 => 30,  71 => 25,  67 => 23,  65 => 22,  52 => 12,  48 => 11,  44 => 10,  40 => 9,  35 => 6,  33 => 5,  27 => 1,);
+        return array (  196 => 69,  179 => 5,  165 => 80,  161 => 79,  150 => 70,  148 => 69,  142 => 65,  135 => 61,  129 => 58,  121 => 53,  117 => 51,  110 => 47,  104 => 44,  96 => 39,  92 => 37,  85 => 33,  79 => 30,  71 => 25,  67 => 23,  65 => 22,  52 => 12,  48 => 11,  44 => 10,  40 => 9,  35 => 6,  33 => 5,  27 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -246,7 +247,7 @@ class __TwigTemplate_20e0610c2f449405d6c2ac07357585c42706deb85ca7c032cb320a4d2f1
         <link rel=\"stylesheet\" href=\"{{ asset('fonts/font-awesome.min.css') }}\">
         <link rel=\"icon\" type=\"image/x-icon\" href=\"{{ asset('favicon.ico') }}\"/>
     </head>
-    <body>
+    <body style=\"display:flex;min-height:100vh;flex-direction:column;\">
         <nav class=\"navbar navbar-light navbar-expand-md\">
             <div class=\"container-fluid\">
                 <a class=\"navbar-brand\" href=\"#\"></a>
@@ -300,8 +301,9 @@ class __TwigTemplate_20e0610c2f449405d6c2ac07357585c42706deb85ca7c032cb320a4d2f1
                 </div>
             </div>
         </nav>
-
-        {% block body %}{% endblock %}
+        <div style=\"flex:1;\">
+            {% block body %}{% endblock %}
+        </div>
         <footer style=\"margin-top:20px;\">
             <div>
                 <p class=\"text-center\" style=\"font-size:60px;\">FOOTER</p>
@@ -314,6 +316,6 @@ class __TwigTemplate_20e0610c2f449405d6c2ac07357585c42706deb85ca7c032cb320a4d2f1
         <script src=\"{{ asset('js/admin3.js') }}\"></script>
     </body>
 </html>
-", "::base.html.twig", "/var/www/html/ColloqueOfficeBen/app/Resources/views/base.html.twig");
+", "base.html.twig", "/var/www/html/ColloqueOfficeBen/app/Resources/views/base.html.twig");
     }
 }

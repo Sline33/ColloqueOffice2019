@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="{{ asset('fonts/font-awesome.min.css') }}">
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
     </head>
-    <body>
+    <body style="display:flex;min-height:100vh;flex-direction:column;">
         <nav class="navbar navbar-light navbar-expand-md">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#"></a>
@@ -65,8 +65,9 @@
                 </div>
             </div>
         </nav>
-
-        {% block body %}{% endblock %}
+        <div style="flex:1;">
+            {% block body %}{% endblock %}
+        </div>
         <footer style="margin-top:20px;">
             <div>
                 <p class="text-center" style="font-size:60px;">FOOTER</p>

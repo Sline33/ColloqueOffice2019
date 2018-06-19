@@ -1,6 +1,6 @@
 <?php
 
-/* FOSUserBundle:Profile:show_content.html.twig */
+/* @FOSUser/Profile/show_content.html.twig */
 class __TwigTemplate_30e02951b20eeb7af504e22b19d45fd783aef7b1df133ddc83897ec620337054 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -8,7 +8,7 @@ class __TwigTemplate_30e02951b20eeb7af504e22b19d45fd783aef7b1df133ddc83897ec6203
         parent::__construct($env);
 
         // line 2
-        $this->parent = $this->loadTemplate("::base.html.twig", "FOSUserBundle:Profile:show_content.html.twig", 2);
+        $this->parent = $this->loadTemplate("::base.html.twig", "@FOSUser/Profile/show_content.html.twig", 2);
         $this->blocks = array(
             'body' => array($this, 'block_body'),
         );
@@ -22,10 +22,10 @@ class __TwigTemplate_30e02951b20eeb7af504e22b19d45fd783aef7b1df133ddc83897ec6203
     protected function doDisplay(array $context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FOSUserBundle:Profile:show_content.html.twig"));
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@FOSUser/Profile/show_content.html.twig"));
 
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FOSUserBundle:Profile:show_content.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@FOSUser/Profile/show_content.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
@@ -420,13 +420,28 @@ $context["ticket"], "optionVisite", array()) == 2)) {
                 <h4>Mes Factures</h4>
             </div>
         </div>
-        <div class=\"row\">
+        ";
+        // line 191
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(($context["factures"] ?? $this->getContext($context, "factures")));
+        foreach ($context['_seq'] as $context["_key"] => $context["facture"]) {
+            // line 192
+            echo "        <div class=\"row\">
             <div class=\"col d-flex\" style=\"padding:0px;\">
-                <p style=\"margin-bottom:0px;\">Facture : XXXXX &nbsp;&nbsp;</p>
+                <p style=\"margin-bottom:0px;\">Facture : ";
+            // line 194
+            echo twig_escape_filter($this->env, $this->getAttribute($context["facture"], "number", array()), "html", null, true);
+            echo " &nbsp;&nbsp;</p>
                 <a href=\"#\">Télécharger votre facture</a>
             </div>
         </div>
-    </div>
+        ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['facture'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 199
+        echo "    </div>
 </div>
 
         <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js\" integrity=\"sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ\" crossorigin=\"anonymous\"></script>
@@ -444,7 +459,7 @@ $context["ticket"], "optionVisite", array()) == 2)) {
 
     public function getTemplateName()
     {
-        return "FOSUserBundle:Profile:show_content.html.twig";
+        return "@FOSUser/Profile/show_content.html.twig";
     }
 
     public function isTraitable()
@@ -454,7 +469,7 @@ $context["ticket"], "optionVisite", array()) == 2)) {
 
     public function getDebugInfo()
     {
-        return array (  413 => 181,  401 => 174,  397 => 172,  388 => 167,  384 => 165,  378 => 161,  375 => 160,  370 => 157,  365 => 154,  363 => 153,  360 => 152,  356 => 150,  352 => 148,  350 => 147,  346 => 145,  342 => 144,  338 => 142,  336 => 141,  333 => 140,  331 => 139,  326 => 136,  322 => 134,  315 => 131,  311 => 129,  304 => 126,  300 => 124,  294 => 121,  290 => 119,  286 => 118,  282 => 116,  280 => 115,  277 => 114,  275 => 113,  271 => 111,  267 => 109,  263 => 107,  261 => 106,  258 => 105,  255 => 104,  251 => 102,  245 => 99,  240 => 96,  236 => 94,  230 => 91,  227 => 90,  223 => 88,  219 => 86,  217 => 85,  214 => 84,  212 => 83,  208 => 81,  204 => 80,  200 => 78,  198 => 77,  195 => 76,  193 => 75,  189 => 73,  185 => 71,  181 => 69,  179 => 68,  172 => 64,  158 => 61,  154 => 60,  149 => 57,  145 => 56,  129 => 43,  125 => 42,  119 => 39,  115 => 38,  108 => 34,  103 => 32,  99 => 31,  93 => 28,  87 => 25,  83 => 24,  79 => 23,  69 => 18,  60 => 14,  49 => 5,  40 => 4,  11 => 2,);
+        return array (  444 => 199,  433 => 194,  429 => 192,  425 => 191,  413 => 181,  401 => 174,  397 => 172,  388 => 167,  384 => 165,  378 => 161,  375 => 160,  370 => 157,  365 => 154,  363 => 153,  360 => 152,  356 => 150,  352 => 148,  350 => 147,  346 => 145,  342 => 144,  338 => 142,  336 => 141,  333 => 140,  331 => 139,  326 => 136,  322 => 134,  315 => 131,  311 => 129,  304 => 126,  300 => 124,  294 => 121,  290 => 119,  286 => 118,  282 => 116,  280 => 115,  277 => 114,  275 => 113,  271 => 111,  267 => 109,  263 => 107,  261 => 106,  258 => 105,  255 => 104,  251 => 102,  245 => 99,  240 => 96,  236 => 94,  230 => 91,  227 => 90,  223 => 88,  219 => 86,  217 => 85,  214 => 84,  212 => 83,  208 => 81,  204 => 80,  200 => 78,  198 => 77,  195 => 76,  193 => 75,  189 => 73,  185 => 71,  181 => 69,  179 => 68,  172 => 64,  158 => 61,  154 => 60,  149 => 57,  145 => 56,  129 => 43,  125 => 42,  119 => 39,  115 => 38,  108 => 34,  103 => 32,  99 => 31,  93 => 28,  87 => 25,  83 => 24,  79 => 23,  69 => 18,  60 => 14,  49 => 5,  40 => 4,  11 => 2,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -657,12 +672,14 @@ $context["ticket"], "optionVisite", array()) == 2)) {
                 <h4>Mes Factures</h4>
             </div>
         </div>
+        {% for facture in factures %}
         <div class=\"row\">
             <div class=\"col d-flex\" style=\"padding:0px;\">
-                <p style=\"margin-bottom:0px;\">Facture : XXXXX &nbsp;&nbsp;</p>
+                <p style=\"margin-bottom:0px;\">Facture : {{ facture.number }} &nbsp;&nbsp;</p>
                 <a href=\"#\">Télécharger votre facture</a>
             </div>
         </div>
+        {% endfor %}
     </div>
 </div>
 
@@ -671,6 +688,6 @@ $context["ticket"], "optionVisite", array()) == 2)) {
         <script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\" integrity=\"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo\" crossorigin=\"anonymous\"></script>
 
 {% endblock %}
-", "FOSUserBundle:Profile:show_content.html.twig", "/var/www/html/ColloqueOfficeBen/app/Resources/FOSUserBundle/views/Profile/show_content.html.twig");
+", "@FOSUser/Profile/show_content.html.twig", "/var/www/html/ColloqueOfficeBen/app/Resources/FOSUserBundle/views/Profile/show_content.html.twig");
     }
 }

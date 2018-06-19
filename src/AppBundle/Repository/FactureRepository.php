@@ -10,7 +10,20 @@ use Doctrine\ORM\EntityRepository;
 
 class FactureRepository extends EntityRepository
 {
-    public function findByFacture(Customer $customer)
+    public function findOneByCustomer(Customer $customer)
+    {
+        
+        $queryBuilder = $this->createQueryBuilder('f')
+                ->where('f.customer = :customerid')
+                ->andWhere('f.status = 0')
+                ->setParameter('customerid',$customer->getId())
+                ->getQuery();
+
+        
+        return $queryBuilder->getOneOrNullResult();
+
+    }
+    public function findByTickets(Customer $customer)
     {
         
         $queryBuilder = $this->createQueryBuilder('f')

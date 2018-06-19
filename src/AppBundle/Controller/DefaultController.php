@@ -7,6 +7,11 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use AppBundle\Entity\User;
+use AppBundle\Entity\Ticket;
+use AppBundle\Entity\Facture;
+use AppBundle\Entity\Customer;
+use Doctrine\ORM\EntityRepository;
+use Doctrine\Common\Collections;
 
 class DefaultController extends Controller
 {
@@ -70,7 +75,9 @@ class DefaultController extends Controller
      * 
      */
     public function adminPageAction(Request $request)
-    {
+    {   
+
+        
         return $this->render('admin/admin.html.twig');
     }
 }

@@ -27,13 +27,18 @@ class TicketRepository extends EntityRepository
         ->select('SUM(t.price) as prixtotal')
         ->getQuery();
 
-        return $queryBuilder->getSingleScalarResult();
+        return $queryBuilder->getSingleScalarResult();    
+    }
 
-        // return $this->getEntityManager()
-        //     ->queryBuilder
-        //     ->innerJoin('t', 'Customer', 'c', 't.customer_id = :customerid')
-        //     ->setParameter('customerid',$customer->getId())
-        //     ->getResult();
+    public function findByTicket(Facture $facture)
+    {
+        $queryBuilder = $this->createQueryBuilder('t')
+        ->where('t.facture = :fid')
+        ->setParameter('fid',$facture->getid())
+        ->groupBy('f.id')
+        ->getQuery();
+
+        return $queryBuilder->getResult();
     
     }
 }

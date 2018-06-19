@@ -30,8 +30,10 @@ class PaiementController extends Controller
         $prixtotal =  $em->getRepository('AppBundle:Ticket')->findByPrice($customer);
         $prixPayzen = $prixtotal * 100;
 
+        $random = random_int(100000,999999);
+
         date_default_timezone_set('Europe/Paris');
-        $date = date('Ymdhis');
+        $date = date('YmdHis');
 
         $vads_action_mode = "INTERACTIVE";
         $vads_capture_delay = "0";
@@ -48,7 +50,7 @@ class PaiementController extends Controller
         $vads_payment_config = "SINGLE";
         $vads_site_id = "34880966";
         $vads_trans_date = $date;
-        $vads_trans_id = "123454";
+        $vads_trans_id = "$random";
         $vads_url_return ="http://localhost/ColloqueOfficeBen/web/app_dev.php";
         $vads_version ="V2";
         $certificate = "2532840209385675";

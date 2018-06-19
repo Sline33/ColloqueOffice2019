@@ -28,6 +28,8 @@ class RecapController extends Controller
         $tickets = new Collections\ArrayCollection($ticket);
 
         $prixtotal =  $em->getRepository('AppBundle:Ticket')->findByPrice($customer);
+        $facture = $em->getRepository('AppBundle:Facture')->findOneByCustomer($customer);
+        $facture->setPrice($prixtotal);
 
 
         return $this->render('recap/new.html.twig', array(

@@ -88,37 +88,69 @@ class TicketController extends Controller
             $random = random_int(1,999999);
             $ticket->setTicketNumber($random);
             $ticket->setPrice($prixTotal);
+
+            
             $em = $this->getDoctrine()->getManager();
             $em->persist($ticket);
             $em->flush();
-
+            
             if ($request->request->has('add')) {
+
+                $watchFacture = $em->getRepository('AppBundle:Facture')->findOneByCustomer($customer);
+                
+                if(!$watchFacture) {
+
+                    $facture = new Facture();
+                    $facture->setCustomer($customer);
+                    $ticket->setFacture($facture);
+                    $prixtotal =  $em->getRepository('AppBundle:Ticket')->findByPrice($customer);
+                    $facture->setPrice($prixtotal);
+                    $facture->setStatus(0);
+                    $facture->setNumber($random);
+                    $em = $this->getDoctrine()->getManager();
+                    $em->persist($facture);
+                    $em->flush();
+
+                }else{
+                    $prixtotal =  $em->getRepository('AppBundle:Ticket')->findByPrice($customer);
+                    $ticket->setFacture($watchFacture);
+                    $watchFacture->setPrice($prixtotal);
+                    $em = $this->getDoctrine()->getManager();
+                    $em->persist($watchFacture);
+                    $em->flush();
+
+                }
+
                 return $this->redirectToRoute('ticket_new');
             }
 
             if ($request->request->has('next')) {
 
-
-                // if exists($facture.status = 0)  {
-                //     add all ticket -> t.facture = null
-                // }else{
-                $facture = new Facture();
-                //     add ticket.facture == null
+                $watchFacture = $em->getRepository('AppBundle:Facture')->findOneByCustomer($customer);
                 
-                $facture->setCustomer($customer);
+                if(!$watchFacture) {
 
-                // }                
-                // // $facture->addTicket();
+                    $facture = new Facture();
+                    $facture->setCustomer($customer);
+                    $ticket->setFacture($facture);
+                    $prixtotal =  $em->getRepository('AppBundle:Ticket')->findByPrice($customer);
+                    $facture->setPrice($prixtotal);
+                    $facture->setStatus(0);
+                    $facture->setNumber($random);
+                    $em = $this->getDoctrine()->getManager();
+                    $em->persist($facture);
+                    $em->flush();
 
+                }else{
+                    $prixtotal =  $em->getRepository('AppBundle:Ticket')->findByPrice($customer);
+                    $ticket->setFacture($watchFacture);
+                    $watchFacture->setPrice($prixtotal);
+                    $em = $this->getDoctrine()->getManager();
+                    $em->persist($watchFacture);
+                    $em->flush();
 
-                $prixtotal =  $em->getRepository('AppBundle:Ticket')->findByPrice($customer);
-                $facture->setPrice($prixtotal);
-                $facture->setStatus(0);
-                $facture->setNumber($random);
-                $em = $this->getDoctrine()->getManager();
-                $em->persist($facture);
-                $em->flush();
-
+                }
+                
                 return $this->redirectToRoute('recap_new');
             }
         

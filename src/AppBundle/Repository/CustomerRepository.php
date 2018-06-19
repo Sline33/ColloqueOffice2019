@@ -20,21 +20,8 @@ class CustomerRepository extends EntityRepository
             ->from('Customer', 'c')
             ->innerJoin('c', 'User', 'u', 'c.user.id = :userid')
             ->setParameter('userid',$user->getId())
-            ->getSingleScalarResult();
+            ->getSingleResult();
     
-    } 
-
-    public function findByFacture(Customer $customer, Ticket $ticket)
-    {
-      
-        return $this->getEntityManager()
-            ->queryBuilder
-            ->select('*')
-            ->from('Facture', 'f')
-            ->innerJoin('f', 'Ticket', 't', 't.facture_id = facture.id')
-            ->where('t.customer_id = :customerid')
-            ->setParameter('customerid',$customer->getId())
-            ->getSingleScalarResult();
     }
 }
 
