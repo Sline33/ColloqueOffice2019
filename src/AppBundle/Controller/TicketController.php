@@ -3,6 +3,7 @@
 namespace AppBundle\Controller;
 
 use AppBundle\Entity\Ticket;
+use AppBundle\Entity\Facture;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -38,62 +39,94 @@ class TicketController extends Controller
      * @Route("/new", name="ticket_new")
      * @Method({"GET", "POST"})
      */
-     public function newActionAction(Request $request)
-     {
+    public function newActionAction(Request $request)
+    {
 
-         $prixExpotemporaire = 9;
-         $prixBase = 300;
-         $prixArtdeco = 6;
-         $prixDecouverte = 9;
-         $prixGrandsite = 6;
-         $prixGala = 40;
-         $prixTotal = $prixBase;
+        $prixExpotemporaire = 9;
+        $prixBase = 300;
+        $prixArtdeco = 6;
+        $prixDecouverte = 9;
+        $prixGrandsite = 6;
+        $prixGala = 40;
+        $prixTotal = $prixBase;
 
-         $ticket = new Ticket();
-         $form = $this->createForm('AppBundle\Form\TicketType', $ticket);
-         $form->handleRequest($request);
+        $ticket = new Ticket();
+        $form = $this->createForm('AppBundle\Form\TicketType', $ticket);
+        $form->handleRequest($request);
 
-         $user = $this->getUser();
-         $em = $this->getDoctrine()->getManager();
-         $customer = $em->getRepository('AppBundle:Customer')->findByUser($user)[0];// @hack
+        $user = $this->getUser();
+        $em = $this->getDoctrine()->getManager();
+        $customer = $em->getRepository('AppBundle:Customer')->findByUser($user)[0];// @hack
 
-         $ticket->setCustomer($customer);         
+        $ticket->setCustomer($customer);
 
+        $result = false;
 
-         if ($form->isSubmitted() && $form->isValid()) {
-           $data = $form->getData();
-          if($data->getoptionDecouverte() === true) {
+        if ($form->isSubmitted() && $form->isValid()) {
+            $result = true;
+            $data = $form->getData();
+            if($data->getoptionDecouverte() === true) {
                 $prixTotal += $prixDecouverte ;
-              }
-          if($data->getoptionGrandSite() === true) {
+            }
+            if($data->getoptionGrandSite() === true) {
                 $prixTotal += $prixGrandsite ;
-              }
-          if($data->getoptionArtDeco() == 1 || $data->getoptionArtDeco() == 2) {
+            }
+            if($data->getoptionArtDeco() == 1 || $data->getoptionArtDeco() == 2) {
                 $prixTotal += $prixArtdeco ;
-              }
-          if($data->getoptionExpo() == 1 || $data->getoptionExpo() == 2) {
+            }
+            if($data->getoptionExpo() == 1 || $data->getoptionExpo() == 2) {
                 $prixTotal += $prixExpotemporaire ;
-              }
-          if($data->getday2Night() === true) {
+            }
+            if($data->getday2Night() === true) {
                 $prixTotal += $prixGala ;
-              }
+            }
 
-             $ticket->setPrice($prixTotal);
+            $random = random_int(1,999999);
+            $ticket->setTicketNumber($random);
+            $ticket->setPrice($prixTotal);
+
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($ticket);
+            $em->flush();
+
+            if ($request->request->has('add')) {
+                return $this->redirectToRoute('ticket_new');
+            }
+
+            if ($request->request->has('next')) {
 
 
-             $em = $this->getDoctrine()->getManager();
-             $em->persist($ticket);
-             $em->flush();
+                // if exists($facture.status = 0)  {
+                //     add all ticket -> t.facture = null
+                // }else{
+                $facture = new Facture();
+                //     add ticket.facture == null
+                $newFacture = $em->getRepository('AppBundle:Facture')->findByFacture($customer)[0]; //@hack
+                $newFacture->setCustomer($customer);
 
-             return $this->redirectToRoute('ticket_new');
-         }
+                // }                
+                // // $facture->addTicket();
 
 
-         return $this->render('ticket/new.html.twig', array(
-             'ticket' => $ticket,
-             'form' => $form->createView(),
-         ));
-     }
+                $prixtotal =  $em->getRepository('AppBundle:Ticket')->findByPrice($customer);
+                $facture->setPrice($prixtotal);
+                $facture->setStatus(0);
+                $facture->setNumber($random);
+                $em = $this->getDoctrine()->getManager();
+                $em->persist($facture);
+                $em->flush();
+
+                return $this->redirectToRoute('recap_new');
+            }
+        
+        }
+ 
+        return $this->render('ticket/new.html.twig', array(
+            'ticket' => $ticket,
+            'form' => $form->createView(),
+        ));
+    }
+
 
     /**
      * Finds and displays a ticket entity.

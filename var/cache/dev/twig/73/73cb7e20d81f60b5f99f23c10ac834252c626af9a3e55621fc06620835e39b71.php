@@ -1,6 +1,6 @@
 <?php
 
-/* admin/admin.html.twig */
+/* :admin:admin.html.twig */
 class __TwigTemplate_d1e203bc873bacedbfc66b0aa28cc356d9a1ed06539194b8efa4afb5df68c881 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -8,7 +8,7 @@ class __TwigTemplate_d1e203bc873bacedbfc66b0aa28cc356d9a1ed06539194b8efa4afb5df6
         parent::__construct($env);
 
         // line 1
-        $this->parent = $this->loadTemplate("base.html.twig", "admin/admin.html.twig", 1);
+        $this->parent = $this->loadTemplate("base.html.twig", ":admin:admin.html.twig", 1);
         $this->blocks = array(
             'body' => array($this, 'block_body'),
         );
@@ -22,10 +22,10 @@ class __TwigTemplate_d1e203bc873bacedbfc66b0aa28cc356d9a1ed06539194b8efa4afb5df6
     protected function doDisplay(array $context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "admin/admin.html.twig"));
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":admin:admin.html.twig"));
 
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "admin/admin.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":admin:admin.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
@@ -81,7 +81,7 @@ class __TwigTemplate_d1e203bc873bacedbfc66b0aa28cc356d9a1ed06539194b8efa4afb5df6
 
     public function getTemplateName()
     {
-        return "admin/admin.html.twig";
+        return ":admin:admin.html.twig";
     }
 
     public function isTraitable()
@@ -122,6 +122,6 @@ class __TwigTemplate_d1e203bc873bacedbfc66b0aa28cc356d9a1ed06539194b8efa4afb5df6
         </div>
     </div>
 </div>
-{% endblock %}", "admin/admin.html.twig", "/var/www/html/ColloqueOfficeBen/app/Resources/views/admin/admin.html.twig");
+{% endblock %}", ":admin:admin.html.twig", "/var/www/html/ColloqueOfficeBen/app/Resources/views/admin/admin.html.twig");
     }
 }

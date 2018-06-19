@@ -159,6 +159,6 @@ class __TwigTemplate_2b2118a086d00c77c8f93cf4125355ba7c4e8aadb202cf437cf94f49fd5
     {% block fos_user_content %}
     {% endblock fos_user_content %}
 </div>
-{% endblock %}", "@FOSUser/layout.html.twig", "/var/www/html/ColloqueOffice/app/Resources/FOSUserBundle/views/layout.html.twig");
+{% endblock %}", "@FOSUser/layout.html.twig", "/var/www/html/ColloqueOfficeBen/app/Resources/FOSUserBundle/views/layout.html.twig");
     }
 }

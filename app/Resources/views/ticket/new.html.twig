@@ -23,10 +23,7 @@
                         <label for="fos_user_registration_form_societe">Societe(*)</label>
                         <input class="form-control" type="text" id="appbundle_ticket_society" name="appbundle_ticket[society]" required="required" value=""/>
                     </div>
-                    <div class="field">
-                        <label for="fos_user_registration_form_ticket">Ticket Number</label>
-                        <input class="form-control" type="text" id="appbundle_ticket_ticketNumber" name="appbundle_ticket[ticketNumber]" value=""/>
-                    </div>
+                    
                     <br/>
                     <p class="text-center" style="font-size:20px;font-weight:600;">Jour 1 :</p>
                     <div class="field">
@@ -150,10 +147,9 @@
                                 <span id="prixreservation">300</span>€</p>
                         </div>
                     </div>
-                    <input type="submit" class="btn btn-primary float-left" style="margin-top:30px;" value="Ajouter une réservation"/>
-                    
+                    <input type="submit" name="add" class="btn btn-primary float-left" style="margin-top:30px;" value="Ajouter une réservation"/>
+                    <input type="submit" name="next" class="btn btn-primary float-right" style="margin-top:30px;" value="Suivant"/>
                 </form>
-                <a href="{{ path('fos_user_security_homepage') }}"><input type="submit" class="btn btn-primary float-right" style="margin-top:30px;" value="Suivant"/></a>
             </div>
         </div>
     </div>

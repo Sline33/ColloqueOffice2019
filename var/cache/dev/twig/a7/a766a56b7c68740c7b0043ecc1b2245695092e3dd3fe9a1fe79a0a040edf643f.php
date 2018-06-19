@@ -74,10 +74,7 @@ class __TwigTemplate_acfe4e3ae63f2c44e06fdc71e1b3304d805528f247436e2b2c08e936956
                         <label for=\"fos_user_registration_form_societe\">Societe(*)</label>
                         <input class=\"form-control\" type=\"text\" id=\"appbundle_ticket_society\" name=\"appbundle_ticket[society]\" required=\"required\" value=\"\"/>
                     </div>
-                    <div class=\"field\">
-                        <label for=\"fos_user_registration_form_ticket\">Ticket Number</label>
-                        <input class=\"form-control\" type=\"text\" id=\"appbundle_ticket_ticketNumber\" name=\"appbundle_ticket[ticketNumber]\" value=\"\"/>
-                    </div>
+                    
                     <br/>
                     <p class=\"text-center\" style=\"font-size:20px;font-weight:600;\">Jour 1 :</p>
                     <div class=\"field\">
@@ -201,14 +198,14 @@ class __TwigTemplate_acfe4e3ae63f2c44e06fdc71e1b3304d805528f247436e2b2c08e936956
                                 <span id=\"prixreservation\">300</span>€</p>
                         </div>
                     </div>
-                    <input type=\"submit\" class=\"btn btn-primary float-left\" style=\"margin-top:30px;\" value=\"Ajouter une réservation\"/>
-                    <input type=\"submit\" class=\"btn btn-primary float-right\" style=\"margin-top:30px;\" value=\"Suivant\"/>
+                    <input type=\"submit\" name=\"add\" class=\"btn btn-primary float-left\" style=\"margin-top:30px;\" value=\"Ajouter une réservation\"/>
+                    <input type=\"submit\" name=\"next\" class=\"btn btn-primary float-right\" style=\"margin-top:30px;\" value=\"Suivant\"/>
                 </form>
             </div>
         </div>
     </div>
 <script src=\"";
-        // line 159
+        // line 156
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/ticket.js"), "html", null, true);
         echo "\"></script>
 ";
@@ -232,7 +229,7 @@ class __TwigTemplate_acfe4e3ae63f2c44e06fdc71e1b3304d805528f247436e2b2c08e936956
 
     public function getDebugInfo()
     {
-        return array (  212 => 159,  60 => 10,  55 => 8,  49 => 4,  40 => 3,  11 => 1,);
+        return array (  209 => 156,  60 => 10,  55 => 8,  49 => 4,  40 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -270,10 +267,7 @@ class __TwigTemplate_acfe4e3ae63f2c44e06fdc71e1b3304d805528f247436e2b2c08e936956
                         <label for=\"fos_user_registration_form_societe\">Societe(*)</label>
                         <input class=\"form-control\" type=\"text\" id=\"appbundle_ticket_society\" name=\"appbundle_ticket[society]\" required=\"required\" value=\"\"/>
                     </div>
-                    <div class=\"field\">
-                        <label for=\"fos_user_registration_form_ticket\">Ticket Number</label>
-                        <input class=\"form-control\" type=\"text\" id=\"appbundle_ticket_ticketNumber\" name=\"appbundle_ticket[ticketNumber]\" value=\"\"/>
-                    </div>
+                    
                     <br/>
                     <p class=\"text-center\" style=\"font-size:20px;font-weight:600;\">Jour 1 :</p>
                     <div class=\"field\">
@@ -397,8 +391,8 @@ class __TwigTemplate_acfe4e3ae63f2c44e06fdc71e1b3304d805528f247436e2b2c08e936956
                                 <span id=\"prixreservation\">300</span>€</p>
                         </div>
                     </div>
-                    <input type=\"submit\" class=\"btn btn-primary float-left\" style=\"margin-top:30px;\" value=\"Ajouter une réservation\"/>
-                    <input type=\"submit\" class=\"btn btn-primary float-right\" style=\"margin-top:30px;\" value=\"Suivant\"/>
+                    <input type=\"submit\" name=\"add\" class=\"btn btn-primary float-left\" style=\"margin-top:30px;\" value=\"Ajouter une réservation\"/>
+                    <input type=\"submit\" name=\"next\" class=\"btn btn-primary float-right\" style=\"margin-top:30px;\" value=\"Suivant\"/>
                 </form>
             </div>
         </div>

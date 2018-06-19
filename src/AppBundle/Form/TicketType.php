@@ -20,7 +20,6 @@ class TicketType extends AbstractType
           ->add('lastName')
           ->add('firstName')
           ->add('society')
-          ->add('ticketNumber')
           ->add('day1TransportTrain')
           ->add('day1Breakfast')
           ->add('day1Visite')

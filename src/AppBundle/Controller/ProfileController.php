@@ -35,7 +35,7 @@ class ProfileController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $customer = $em->getRepository('AppBundle:Customer')->findByUser($user)[0];// @hack
-                
+
         $ticket = $em->getRepository('AppBundle:Ticket')->findByCustomer($customer);
         
         $tickets = new Collections\ArrayCollection($ticket);

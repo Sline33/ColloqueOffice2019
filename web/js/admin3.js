@@ -31,9 +31,9 @@ function textChange(eventID){
 
 
 var prixreservation = document.getElementById('prixreservation');
-var expotemporaire = document.getElementById('appbundle_ticket_optionExpo');
+var expotemporaire = document.getElementById('appbundle_ticket_optionExpo1');
 var expotemporaire2 = document.getElementById('appbundle_ticket_optionExpo2');
-var artdeco = document.getElementById('appbundle_ticket_optionArtDeco');
+var artdeco = document.getElementById('appbundle_ticket_optionArtDeco1');
 var artdeco2 = document.getElementById('appbundle_ticket_optionArtDeco2');
 var decouverte = document.getElementById('appbundle_ticket_optionDecouverte');
 var grandsite = document.getElementById('appbundle_ticket_optionGrandSite');
