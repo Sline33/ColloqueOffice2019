@@ -21,46 +21,83 @@ class PaiementController extends Controller
      *
      * @Route("/paiement", name="paiement_facture")
      */
-    public function paiementAction()
-    {
-        // $vads_action_mode = $form["vads_action_mode"]->getData();
-        // dump($vads_action_mode);
-        // exit();
-        // $vads_amount =$form["vads_amount"]->getData();
-        // $vads_capture_delay =$form["vads_capture_delay"]->getData();
-        // $vads_ctx_mode =$form["vads_ctx_mode"]->getData();
-        // $vads_currency =$form["vads_currency"]->getData();
-        // $vads_cust_cell_phone =$form[""]->getData();
-        // $vads_cust_city =$form[""]->getData();
-        // $vads_cust_email =$form[""]->getData();
-        // $vads_cust_first_name =$form[""]->getData();
-        // $vads_cust_id =$form[""]->getData();
-        // $vads_cust_last_name =$form[""]->getData();
-        // $vads_cust_title =$form[""]->getData();
-        // $vads_page_action =$form[""]->getData();
-        // $vads_payment_config =$form[""]->getData();
-        // $vads_site_id =$form[""]->getData();
-        // $vads_trans_date =$form[""]->getData();
-        // $vads_trans_id =$form[""]->getData();
-        // $vads_url_return =$form[""]->getData();
-        // $vads_version =$form[""]->getData();
-
-        // $signature = sha1($str);
-
+    public function paiementAction(Request $request)
+    {    
         $user = $this->getUser();
         $em = $this->getDoctrine()->getManager();
 
         $customer =   $em->getRepository('AppBundle:Customer')->findByUser($user)[0];// @hack
+        $prixtotal =  $em->getRepository('AppBundle:Ticket')->findByPrice($customer);
+        $prixPayzen = $prixtotal * 100;
 
-        $ticket   =   $em->getRepository('AppBundle:Ticket')->findByCustomer($customer);
+        date_default_timezone_set('Europe/Paris');
+        $date = date('Ymdhis');
 
-        $tickets = new Collections\ArrayCollection($ticket);
+        $vads_action_mode = "INTERACTIVE";
+        $vads_capture_delay = "0";
+        $vads_ctx_mode = "TEST";
+        $vads_currency = "978";
+        $vads_cust_cell_phone = "978";
+        $vads_cust_city = "978";
+        $vads_cust_email = "salb_du62@outlook.fr";
+        $vads_cust_first_name = "978";
+        $vads_cust_id = "978";
+        $vads_cust_last_name = "978";
+        $vads_cust_title = "978";
+        $vads_page_action = "PAYMENT";
+        $vads_payment_config = "SINGLE";
+        $vads_site_id = "34880966";
+        $vads_trans_date = $date;
+        $vads_trans_id = "123454";
+        $vads_url_return ="http://localhost/ColloqueOfficeBen/web/app_dev.php";
+        $vads_version ="V2";
+        $certificate = "2532840209385675";
 
-        $prixtotal =  $em->getRepository('AppBundle:Ticket')->findByCustomer($customer)[0];
-        // $prixtotals = new Collections\ArrayCollection($prixtotal);
+        $rawData = $vads_action_mode."+".
+        $prixPayzen."+".
+        $vads_capture_delay."+".
+        $vads_ctx_mode."+".
+        $vads_currency."+".
+        $vads_cust_cell_phone."+".
+        $vads_cust_city."+".
+        $vads_cust_email."+".
+        $vads_cust_first_name."+".
+        $vads_cust_id."+".
+        $vads_cust_last_name."+".
+        $vads_cust_title."+".
+        $vads_page_action."+".
+        $vads_payment_config."+".
+        $vads_site_id."+".
+        $vads_trans_date."+".
+        $vads_trans_id."+".
+        $vads_url_return."+".
+        $vads_version."+".
+        $certificate;
+
+        $signature = sha1($rawData);
 
         return $this->render('paiement/new.html.twig',array(
             'prixtotal' => $prixtotal,
+            'prixPayzen' => $prixPayzen,
+            'vads_action_mode' => $vads_action_mode,
+            'vads_capture_delay' => $vads_capture_delay,
+            'vads_ctx_mode' => $vads_ctx_mode,
+            'vads_currency' => $vads_currency,
+            'vads_cust_cell_phone' => $vads_cust_cell_phone,
+            'vads_cust_city' => $vads_cust_city,
+            'vads_cust_email' => $vads_cust_email,
+            'vads_cust_first_name' => $vads_cust_first_name,
+            'vads_cust_id' => $vads_cust_id,
+            'vads_cust_last_name' => $vads_cust_last_name,
+            'vads_cust_title' => $vads_cust_title,
+            'vads_page_action' => $vads_page_action,
+            'vads_payment_config' => $vads_payment_config,
+            'vads_site_id' => $vads_site_id,
+            'vads_trans_date' => $vads_trans_date,
+            'vads_trans_id' => $vads_trans_id,
+            'vads_url_return' => $vads_url_return,
+            'vads_version' => $vads_version,
+            'signature' => $signature
         ));
     }
 }

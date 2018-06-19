@@ -65,29 +65,86 @@ class __TwigTemplate_2c2a24f25788e576cf3243492710db05489b7aa8ce773837213c07cfc08
         </div>
     </form>
     <form method=\"POST\" action=\"https://secure.payzen.eu/vads-payment/\">
-        <input type=\"hidden\" name=\"vads_action_mode\" value=\"INTERACTIVE\" />
+        <input type=\"hidden\" name=\"vads_action_mode\" value=\"";
+        // line 23
+        echo twig_escape_filter($this->env, ($context["vads_action_mode"] ?? $this->getContext($context, "vads_action_mode")), "html", null, true);
+        echo "\" />
         <input type=\"hidden\" name=\"vads_amount\" value=\"";
         // line 24
-        echo twig_escape_filter($this->env, $this->getAttribute(($context["prixtotal"] ?? $this->getContext($context, "prixtotal")), "price", array()), "html", null, true);
+        echo twig_escape_filter($this->env, ($context["prixPayzen"] ?? $this->getContext($context, "prixPayzen")), "html", null, true);
         echo "\" />
-        <input type=\"hidden\" name=\"vads_capture_delay\" value=\"0\" />
-        <input type=\"hidden\" name=\"vads_ctx_mode\" value=\"TEST\" />
-        <input type=\"hidden\" name=\"vads_currency\" value=\"978\" />
-        <input type=\"hidden\" name=\"vads_cust_cell_phone\" value=\"978\" />
-        <input type=\"hidden\" name=\"vads_cust_city\" value=\"978\" />
-        <input type=\"hidden\" name=\"vads_cust_email\" value=\"salb_du62@outlook.fr\" />
-        <input type=\"hidden\" name=\"vads_cust_first_name\" value=\"978\" />
-        <input type=\"hidden\" name=\"vads_cust_id\" value=\"978\" />
-        <input type=\"hidden\" name=\"vads_cust_last_name\" value=\"978\" />
-        <input type=\"hidden\" name=\"vads_cust_title\" value=\"978\" />
-        <input type=\"hidden\" name=\"vads_page_action\" value=\"PAYMENT\" />
-        <input type=\"hidden\" name=\"vads_payment_config\" value=\"SINGLE\" />
-        <input type=\"hidden\" name=\"vads_site_id\" value=\"34880966\" />
-        <input type=\"hidden\" name=\"vads_trans_date\" value=\"20180618104225\" />
-        <input type=\"hidden\" name=\"vads_trans_id\" value=\"123450\" />
-        <input type=\"hidden\" name=\"vads_url_return\" value=\"http://127.0.0.1/ColloqueOfficeBen/web/app_dev.php/\" />
-        <input type=\"hidden\" name=\"vads_version\" value=\"V2\" />
-        <input type=\"hidden\" name=\"signature\" value=\"ee2da5158df6b7492e69b401f7c24a74cc6df339\" />
+        <input type=\"hidden\" name=\"vads_capture_delay\" value=\"";
+        // line 25
+        echo twig_escape_filter($this->env, ($context["vads_capture_delay"] ?? $this->getContext($context, "vads_capture_delay")), "html", null, true);
+        echo "\" />
+        <input type=\"hidden\" name=\"vads_ctx_mode\" value=\"";
+        // line 26
+        echo twig_escape_filter($this->env, ($context["vads_ctx_mode"] ?? $this->getContext($context, "vads_ctx_mode")), "html", null, true);
+        echo "\" />
+        <input type=\"hidden\" name=\"vads_currency\" value=\"";
+        // line 27
+        echo twig_escape_filter($this->env, ($context["vads_currency"] ?? $this->getContext($context, "vads_currency")), "html", null, true);
+        echo "\" />
+        <input type=\"hidden\" name=\"vads_cust_cell_phone\" value=\"";
+        // line 28
+        echo twig_escape_filter($this->env, ($context["vads_cust_cell_phone"] ?? $this->getContext($context, "vads_cust_cell_phone")), "html", null, true);
+        echo "\" />
+        <input type=\"hidden\" name=\"vads_cust_city\" value=\"";
+        // line 29
+        echo twig_escape_filter($this->env, ($context["vads_cust_city"] ?? $this->getContext($context, "vads_cust_city")), "html", null, true);
+        echo "\" />
+        <input type=\"hidden\" name=\"vads_cust_email\" value=\"";
+        // line 30
+        echo twig_escape_filter($this->env, ($context["vads_cust_email"] ?? $this->getContext($context, "vads_cust_email")), "html", null, true);
+        echo "\" />
+        <input type=\"hidden\" name=\"vads_cust_first_name\" value=\"";
+        // line 31
+        echo twig_escape_filter($this->env, ($context["vads_cust_first_name"] ?? $this->getContext($context, "vads_cust_first_name")), "html", null, true);
+        echo "\" />
+        <input type=\"hidden\" name=\"vads_cust_id\" value=\"";
+        // line 32
+        echo twig_escape_filter($this->env, ($context["vads_cust_id"] ?? $this->getContext($context, "vads_cust_id")), "html", null, true);
+        echo "\" />
+        <input type=\"hidden\" name=\"vads_cust_last_name\" value=\"";
+        // line 33
+        echo twig_escape_filter($this->env, ($context["vads_cust_last_name"] ?? $this->getContext($context, "vads_cust_last_name")), "html", null, true);
+        echo "\" />
+        <input type=\"hidden\" name=\"vads_cust_title\" value=\"";
+        // line 34
+        echo twig_escape_filter($this->env, ($context["vads_cust_title"] ?? $this->getContext($context, "vads_cust_title")), "html", null, true);
+        echo "\" />
+        <input type=\"hidden\" name=\"vads_page_action\" value=\"";
+        // line 35
+        echo twig_escape_filter($this->env, ($context["vads_page_action"] ?? $this->getContext($context, "vads_page_action")), "html", null, true);
+        echo "\" />
+        <input type=\"hidden\" name=\"vads_payment_config\" value=\"";
+        // line 36
+        echo twig_escape_filter($this->env, ($context["vads_payment_config"] ?? $this->getContext($context, "vads_payment_config")), "html", null, true);
+        echo "\" />
+        <input type=\"hidden\" name=\"vads_site_id\" value=\"";
+        // line 37
+        echo twig_escape_filter($this->env, ($context["vads_site_id"] ?? $this->getContext($context, "vads_site_id")), "html", null, true);
+        echo "\" />
+        <input type=\"hidden\" name=\"vads_trans_date\" value=\"";
+        // line 38
+        echo twig_escape_filter($this->env, ($context["vads_trans_date"] ?? $this->getContext($context, "vads_trans_date")), "html", null, true);
+        echo "\" />
+        <input type=\"hidden\" name=\"vads_trans_id\" value=\"";
+        // line 39
+        echo twig_escape_filter($this->env, ($context["vads_trans_id"] ?? $this->getContext($context, "vads_trans_id")), "html", null, true);
+        echo "\" />
+        <input type=\"hidden\" name=\"vads_url_return\" value=\"";
+        // line 40
+        echo twig_escape_filter($this->env, ($context["vads_url_return"] ?? $this->getContext($context, "vads_url_return")), "html", null, true);
+        echo "\" />
+        <input type=\"hidden\" name=\"vads_version\" value=\"";
+        // line 41
+        echo twig_escape_filter($this->env, ($context["vads_version"] ?? $this->getContext($context, "vads_version")), "html", null, true);
+        echo "\" />
+        <input type=\"hidden\" name=\"signature\" value=\"";
+        // line 42
+        echo twig_escape_filter($this->env, ($context["signature"] ?? $this->getContext($context, "signature")), "html", null, true);
+        echo "\" />
         <input type=\"submit\" name=\"payer\" value=\"Payer\"/>
     </form>
     <div class=\"row\">
@@ -105,7 +162,7 @@ class __TwigTemplate_2c2a24f25788e576cf3243492710db05489b7aa8ce773837213c07cfc08
             <p class=\"text-center\" style=\"font-size:35px;margin-bottom:10px;\">PRIX :
             <span id=\"prixreservation\"></span>";
         // line 58
-        echo twig_escape_filter($this->env, $this->getAttribute(($context["prixtotal"] ?? $this->getContext($context, "prixtotal")), "price", array()), "html", null, true);
+        echo twig_escape_filter($this->env, ($context["prixtotal"] ?? $this->getContext($context, "prixtotal")), "html", null, true);
         echo "€</p>
         </div>
         </div>
@@ -135,7 +192,7 @@ class __TwigTemplate_2c2a24f25788e576cf3243492710db05489b7aa8ce773837213c07cfc08
 
     public function getDebugInfo()
     {
-        return array (  108 => 58,  71 => 24,  49 => 4,  40 => 3,  11 => 1,);
+        return array (  165 => 58,  146 => 42,  142 => 41,  138 => 40,  134 => 39,  130 => 38,  126 => 37,  122 => 36,  118 => 35,  114 => 34,  110 => 33,  106 => 32,  102 => 31,  98 => 30,  94 => 29,  90 => 28,  86 => 27,  82 => 26,  78 => 25,  74 => 24,  70 => 23,  49 => 4,  40 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -170,26 +227,26 @@ class __TwigTemplate_2c2a24f25788e576cf3243492710db05489b7aa8ce773837213c07cfc08
         </div>
     </form>
     <form method=\"POST\" action=\"https://secure.payzen.eu/vads-payment/\">
-        <input type=\"hidden\" name=\"vads_action_mode\" value=\"INTERACTIVE\" />
-        <input type=\"hidden\" name=\"vads_amount\" value=\"{{prixtotal.price}}\" />
-        <input type=\"hidden\" name=\"vads_capture_delay\" value=\"0\" />
-        <input type=\"hidden\" name=\"vads_ctx_mode\" value=\"TEST\" />
-        <input type=\"hidden\" name=\"vads_currency\" value=\"978\" />
-        <input type=\"hidden\" name=\"vads_cust_cell_phone\" value=\"978\" />
-        <input type=\"hidden\" name=\"vads_cust_city\" value=\"978\" />
-        <input type=\"hidden\" name=\"vads_cust_email\" value=\"salb_du62@outlook.fr\" />
-        <input type=\"hidden\" name=\"vads_cust_first_name\" value=\"978\" />
-        <input type=\"hidden\" name=\"vads_cust_id\" value=\"978\" />
-        <input type=\"hidden\" name=\"vads_cust_last_name\" value=\"978\" />
-        <input type=\"hidden\" name=\"vads_cust_title\" value=\"978\" />
-        <input type=\"hidden\" name=\"vads_page_action\" value=\"PAYMENT\" />
-        <input type=\"hidden\" name=\"vads_payment_config\" value=\"SINGLE\" />
-        <input type=\"hidden\" name=\"vads_site_id\" value=\"34880966\" />
-        <input type=\"hidden\" name=\"vads_trans_date\" value=\"20180618104225\" />
-        <input type=\"hidden\" name=\"vads_trans_id\" value=\"123450\" />
-        <input type=\"hidden\" name=\"vads_url_return\" value=\"http://127.0.0.1/ColloqueOfficeBen/web/app_dev.php/\" />
-        <input type=\"hidden\" name=\"vads_version\" value=\"V2\" />
-        <input type=\"hidden\" name=\"signature\" value=\"ee2da5158df6b7492e69b401f7c24a74cc6df339\" />
+        <input type=\"hidden\" name=\"vads_action_mode\" value=\"{{ vads_action_mode }}\" />
+        <input type=\"hidden\" name=\"vads_amount\" value=\"{{ prixPayzen }}\" />
+        <input type=\"hidden\" name=\"vads_capture_delay\" value=\"{{ vads_capture_delay }}\" />
+        <input type=\"hidden\" name=\"vads_ctx_mode\" value=\"{{ vads_ctx_mode }}\" />
+        <input type=\"hidden\" name=\"vads_currency\" value=\"{{ vads_currency }}\" />
+        <input type=\"hidden\" name=\"vads_cust_cell_phone\" value=\"{{ vads_cust_cell_phone }}\" />
+        <input type=\"hidden\" name=\"vads_cust_city\" value=\"{{ vads_cust_city }}\" />
+        <input type=\"hidden\" name=\"vads_cust_email\" value=\"{{ vads_cust_email }}\" />
+        <input type=\"hidden\" name=\"vads_cust_first_name\" value=\"{{ vads_cust_first_name }}\" />
+        <input type=\"hidden\" name=\"vads_cust_id\" value=\"{{ vads_cust_id }}\" />
+        <input type=\"hidden\" name=\"vads_cust_last_name\" value=\"{{ vads_cust_last_name }}\" />
+        <input type=\"hidden\" name=\"vads_cust_title\" value=\"{{ vads_cust_title }}\" />
+        <input type=\"hidden\" name=\"vads_page_action\" value=\"{{ vads_page_action }}\" />
+        <input type=\"hidden\" name=\"vads_payment_config\" value=\"{{ vads_payment_config }}\" />
+        <input type=\"hidden\" name=\"vads_site_id\" value=\"{{ vads_site_id }}\" />
+        <input type=\"hidden\" name=\"vads_trans_date\" value=\"{{ vads_trans_date }}\" />
+        <input type=\"hidden\" name=\"vads_trans_id\" value=\"{{ vads_trans_id}}\" />
+        <input type=\"hidden\" name=\"vads_url_return\" value=\"{{ vads_url_return }}\" />
+        <input type=\"hidden\" name=\"vads_version\" value=\"{{ vads_version }}\" />
+        <input type=\"hidden\" name=\"signature\" value=\"{{ signature }}\" />
         <input type=\"submit\" name=\"payer\" value=\"Payer\"/>
     </form>
     <div class=\"row\">
@@ -205,7 +262,7 @@ class __TwigTemplate_2c2a24f25788e576cf3243492710db05489b7aa8ce773837213c07cfc08
         <div class=\"col-md-6\">
             <div class=\"border-form-prix\">
             <p class=\"text-center\" style=\"font-size:35px;margin-bottom:10px;\">PRIX :
-            <span id=\"prixreservation\"></span>{{prixtotal.price}}€</p>
+            <span id=\"prixreservation\"></span>{{prixtotal}}€</p>
         </div>
         </div>
     </div>

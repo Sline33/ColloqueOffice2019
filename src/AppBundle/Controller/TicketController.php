@@ -2,12 +2,16 @@
 
 namespace AppBundle\Controller;
 
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
+use AppBundle\Entity\User;
 use AppBundle\Entity\Ticket;
 use AppBundle\Entity\Facture;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
-use Symfony\Component\HttpFoundation\Request;
+use AppBundle\Entity\Customer;
+use Doctrine\ORM\EntityRepository;
+use Doctrine\Common\Collections;
 
 /**
  * Ticket controller.
@@ -84,7 +88,6 @@ class TicketController extends Controller
             $random = random_int(1,999999);
             $ticket->setTicketNumber($random);
             $ticket->setPrice($prixTotal);
-
             $em = $this->getDoctrine()->getManager();
             $em->persist($ticket);
             $em->flush();
@@ -101,8 +104,8 @@ class TicketController extends Controller
                 // }else{
                 $facture = new Facture();
                 //     add ticket.facture == null
-                $newFacture = $em->getRepository('AppBundle:Facture')->findByFacture($customer)[0]; //@hack
-                $newFacture->setCustomer($customer);
+                
+                $facture->setCustomer($customer);
 
                 // }                
                 // // $facture->addTicket();
