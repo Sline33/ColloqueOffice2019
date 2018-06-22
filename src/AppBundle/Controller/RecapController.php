@@ -21,14 +21,13 @@ class RecapController extends Controller
         $user = $this->getUser();
         $em = $this->getDoctrine()->getManager();
 
-        $customer =   $em->getRepository('AppBundle:Customer')->findByUser($user)[0];// @hack
+        $customer  =  $em->getRepository('AppBundle:Customer')->findByUser($user)[0];
 
-        $ticket   =   $em->getRepository('AppBundle:Ticket')->findByCustomer($customer);
+        $tickets   =  $em->getRepository('AppBundle:Ticket')->findTicketsByStatusCommandeEnCours($customer);
 
-        $tickets = new Collections\ArrayCollection($ticket);
-
-        $prixtotal =  $em->getRepository('AppBundle:Ticket')->findByPrice($customer);
-        $facture = $em->getRepository('AppBundle:Facture')->findOneByCustomer($customer);
+        $facture   =  $em->getRepository('AppBundle:Facture')->findOneByCustomer($customer);
+        $prixtotal =  $em->getRepository('AppBundle:Ticket')->computeSum($facture);
+       
         $facture->setPrice($prixtotal);
 
 

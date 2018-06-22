@@ -159,6 +159,7 @@
   ':default:index.html.twig' => __DIR__.'/../../../app/Resources/views/default/index.html.twig',
   ':default:js.html.twig' => __DIR__.'/../../../app/Resources/views/default/js.html.twig',
   ':recap:new.html.twig' => __DIR__.'/../../../app/Resources/views/recap/new.html.twig',
+  ':paiement:new.html.twig' => __DIR__.'/../../../app/Resources/views/paiement/new.html.twig',
   '::base.html.twig' => __DIR__.'/../../../app/Resources/views/base.html.twig',
   ':ticket:show.html.twig' => __DIR__.'/../../../app/Resources/views/ticket/show.html.twig',
   ':ticket:new.html.twig' => __DIR__.'/../../../app/Resources/views/ticket/new.html.twig',

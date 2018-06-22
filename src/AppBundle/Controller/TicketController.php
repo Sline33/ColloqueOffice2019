@@ -112,9 +112,10 @@ class TicketController extends Controller
                     $em->flush();
 
                 }else{
-                    $prixtotal =  $em->getRepository('AppBundle:Ticket')->findByPrice($customer);
+                    $prixTicketNull =  $em->getRepository('AppBundle:Ticket')->findByPrice($customer);
+                    $prixtotal =  $em->getRepository('AppBundle:Ticket')->findPriceByStatus($customer);
                     $ticket->setFacture($watchFacture);
-                    $watchFacture->setPrice($prixtotal);
+                    $watchFacture->setPrice($prixtotal + $prixTicketNull);
                     $em = $this->getDoctrine()->getManager();
                     $em->persist($watchFacture);
                     $em->flush();
@@ -142,9 +143,10 @@ class TicketController extends Controller
                     $em->flush();
 
                 }else{
-                    $prixtotal =  $em->getRepository('AppBundle:Ticket')->findByPrice($customer);
+                    $prixTicketNull =  $em->getRepository('AppBundle:Ticket')->findByPrice($customer);
+                    $prixtotal =  $em->getRepository('AppBundle:Ticket')->findPriceByStatus($customer);
                     $ticket->setFacture($watchFacture);
-                    $watchFacture->setPrice($prixtotal);
+                    $watchFacture->setPrice($prixtotal + $prixTicketNull);
                     $em = $this->getDoctrine()->getManager();
                     $em->persist($watchFacture);
                     $em->flush();

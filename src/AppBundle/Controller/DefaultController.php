@@ -20,7 +20,28 @@ class DefaultController extends Controller
      */
     public function indexAction(Request $request)
     {
-        // replace this example code with whatever you need
+        // $factureId = 22;
+
+        // $facture = $this->getDoctrine()
+        // ->getRepository(Facture::class)
+        // ->find($factureId);
+
+        // $repository = $this->getDoctrine()
+        // ->getRepository(Ticket::class);
+
+        // $query = $repository->createQueryBuilder('t')
+        // ->select('SUM(t.price) AS ticket_price')
+        // ->join('t.facture', 'f')
+        // ->where('f.id = :factureId')
+        // ->andWhere('f.status = 0')
+        // ->setParameter('factureId', $factureId)
+        // ->getQuery();
+
+        // $sum = $query->getSingleScalarResult();
+
+        // dump($sum);
+        // exit();
+
         return $this->render('default/index.html.twig', [
             'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
         ]);
@@ -76,8 +97,6 @@ class DefaultController extends Controller
      */
     public function adminPageAction(Request $request)
     {   
-
-        
         return $this->render('admin/admin.html.twig');
     }
 }

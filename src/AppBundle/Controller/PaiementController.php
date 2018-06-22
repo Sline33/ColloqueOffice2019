@@ -26,8 +26,9 @@ class PaiementController extends Controller
         $user = $this->getUser();
         $em = $this->getDoctrine()->getManager();
 
-        $customer =   $em->getRepository('AppBundle:Customer')->findByUser($user)[0];// @hack
-        $prixtotal =  $em->getRepository('AppBundle:Ticket')->findByPrice($customer);
+        $customer =   $em->getRepository('AppBundle:Customer')->findByUser($user)[0];
+        $facture = $em->getRepository('AppBundle:Facture')->findOneByCustomer($customer);
+        $prixtotal =  $em->getRepository('AppBundle:Ticket')->computeSum($facture);
         $prixPayzen = $prixtotal * 100;
 
         $random = random_int(100000,999999);

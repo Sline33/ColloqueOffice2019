@@ -34,5 +34,17 @@ class FactureRepository extends EntityRepository
         return $queryBuilder->getResult();
 
     }
+    public function findByFacture(Customer $customer) {
+
+        $query = $this->createQueryBuilder('f')
+        ->join('t.facture', 'f')
+        ->where('f.id = :factureId')
+        ->setParameter('factureId', $factureId)
+        ->getQuery();
+
+        return $query->getSingleScalarResult();
+    } 
+
+  
 
 }

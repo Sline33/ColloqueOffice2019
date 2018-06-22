@@ -1,6 +1,6 @@
 <?php
 
-/* paiement/new.html.twig */
+/* :paiement:new.html.twig */
 class __TwigTemplate_2c2a24f25788e576cf3243492710db05489b7aa8ce773837213c07cfc085be34 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -8,7 +8,7 @@ class __TwigTemplate_2c2a24f25788e576cf3243492710db05489b7aa8ce773837213c07cfc08
         parent::__construct($env);
 
         // line 1
-        $this->parent = $this->loadTemplate("::base.html.twig", "paiement/new.html.twig", 1);
+        $this->parent = $this->loadTemplate("::base.html.twig", ":paiement:new.html.twig", 1);
         $this->blocks = array(
             'body' => array($this, 'block_body'),
         );
@@ -22,10 +22,10 @@ class __TwigTemplate_2c2a24f25788e576cf3243492710db05489b7aa8ce773837213c07cfc08
     protected function doDisplay(array $context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "paiement/new.html.twig"));
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":paiement:new.html.twig"));
 
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "paiement/new.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":paiement:new.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
@@ -182,7 +182,7 @@ class __TwigTemplate_2c2a24f25788e576cf3243492710db05489b7aa8ce773837213c07cfc08
 
     public function getTemplateName()
     {
-        return "paiement/new.html.twig";
+        return ":paiement:new.html.twig";
     }
 
     public function isTraitable()
@@ -270,6 +270,6 @@ class __TwigTemplate_2c2a24f25788e576cf3243492710db05489b7aa8ce773837213c07cfc08
 <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js\" integrity=\"sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ\" crossorigin=\"anonymous\"></script>
 <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js\" integrity=\"sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm\" crossorigin=\"anonymous\"></script>
 <script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\" integrity=\"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo\" crossorigin=\"anonymous\"></script>
-{% endblock %}", "paiement/new.html.twig", "/var/www/html/ColloqueOfficeBen/app/Resources/views/paiement/new.html.twig");
+{% endblock %}", ":paiement:new.html.twig", "/var/www/html/ColloqueOfficeBen/app/Resources/views/paiement/new.html.twig");
     }
 }

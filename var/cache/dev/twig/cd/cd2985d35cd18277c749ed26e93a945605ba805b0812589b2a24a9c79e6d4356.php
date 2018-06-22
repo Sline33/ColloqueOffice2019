@@ -188,11 +188,6 @@ class __TwigTemplate_0bbaed5110b0569fafb005994c357eec4a2f89ee8a9379c086182c88574
     </div>
     </div>
     </div>
-    <footer style=\"margin-top:118px;\">
-        <div>
-            <p class=\"text-center\" style=\"font-size:49px;\">FOOTER</p>
-        </div>
-    </footer>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -346,11 +341,6 @@ class __TwigTemplate_0bbaed5110b0569fafb005994c357eec4a2f89ee8a9379c086182c88574
     </div>
     </div>
     </div>
-    <footer style=\"margin-top:118px;\">
-        <div>
-            <p class=\"text-center\" style=\"font-size:49px;\">FOOTER</p>
-        </div>
-    </footer>
 {% endblock %}
 ", ":default:recapitulatif.html.twig", "/var/www/html/ColloqueOfficeBen/app/Resources/views/default/recapitulatif.html.twig");
     }

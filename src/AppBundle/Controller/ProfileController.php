@@ -23,21 +23,16 @@ class ProfileController extends Controller
      */
     public function profileActionAction()
     {
-        // if(){
-
-        //     $message = "Merci de remplir de formulaire afin d'accéder à votre espace client";
-            
-        //     return $this->redirectToRoute('customer_new', array(
-        //         'message' => $message,
-        //     ));
-        // }
         $user = $this->getUser();
         $em = $this->getDoctrine()->getManager();
 
-        $customer = $em->getRepository('AppBundle:Customer')->findByUser($user)[0];// @hack
+        $customer = $em->getRepository('AppBundle:Customer')->findByUser($user)[0];
+        if (!$customer){
+            return $this->redirectToRoute('customer_new');
+        }
+
         $facture = $em->getRepository('AppBundle:Facture')->findByTickets($customer);
         $factures = new Collections\ArrayCollection($facture);
-        dump($factures);
         
 
         $ticket = $em->getRepository('AppBundle:Ticket')->findByCustomer($customer);

@@ -183,11 +183,6 @@ class __TwigTemplate_092f173c7e4c9e3415b7b6ded73fea72b032cade5963950ee0d083bae1e
         </div>
     </div>
     </div>
-  <footer style=\"margin-top:118px;\">
-      <div>
-          <p class=\"text-center\" style=\"font-size:49px;\">FOOTER</p>
-      </div>
-  </footer>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -331,11 +326,6 @@ class __TwigTemplate_092f173c7e4c9e3415b7b6ded73fea72b032cade5963950ee0d083bae1e
         </div>
     </div>
     </div>
-  <footer style=\"margin-top:118px;\">
-      <div>
-          <p class=\"text-center\" style=\"font-size:49px;\">FOOTER</p>
-      </div>
-  </footer>
 {% endblock %}
 ", ":default:reservation.html.twig", "/var/www/html/ColloqueOfficeBen/app/Resources/views/default/reservation.html.twig");
     }
