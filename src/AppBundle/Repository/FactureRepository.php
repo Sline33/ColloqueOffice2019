@@ -12,25 +12,25 @@ class FactureRepository extends EntityRepository
 {
     public function findOneByCustomer(Customer $customer)
     {
-        
+
         $queryBuilder = $this->createQueryBuilder('f')
                 ->where('f.customer = :customerid')
                 ->andWhere('f.status = 0')
                 ->setParameter('customerid',$customer->getId())
                 ->getQuery();
 
-        
+
         return $queryBuilder->getOneOrNullResult();
 
     }
     public function findByTickets(Customer $customer)
     {
-        
+
         $queryBuilder = $this->createQueryBuilder('f')
                 ->where('f.customer = :customerid')
                 ->setParameter('customerid',$customer->getId())
                 ->getQuery();
-        
+
         return $queryBuilder->getResult();
 
     }
@@ -43,8 +43,22 @@ class FactureRepository extends EntityRepository
         ->getQuery();
 
         return $query->getSingleScalarResult();
-    } 
+    }
 
-  
+
+    public function findFactureStatus2(Customer $customer)
+    {
+
+        $queryBuilder = $this->createQueryBuilder('f')
+                ->where('f.status = 2')
+                ->getQuery();
+
+
+        return $queryBuilder->getResult();
+
+    }
+
+
+
 
 }

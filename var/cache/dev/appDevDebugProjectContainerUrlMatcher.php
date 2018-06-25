@@ -397,9 +397,24 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         not_new:
 
         if (0 === strpos($pathinfo, '/ticket')) {
-            // paiement_facture
-            if ('/ticket/paiement' === $pathinfo) {
-                return array (  '_controller' => 'AppBundle\\Controller\\PaiementController::paiementAction',  '_route' => 'paiement_facture',);
+            if (0 === strpos($pathinfo, '/ticket/paiement')) {
+                // paiement_facture
+                if ('/ticket/paiement' === $pathinfo) {
+                    return array (  '_controller' => 'AppBundle\\Controller\\PaiementController::paiementAction',  '_route' => 'paiement_facture',);
+                }
+
+                // postpaiement_facture
+                if ('/ticket/paiement/test' === $pathinfo) {
+                    $ret = array (  '_controller' => 'AppBundle\\Controller\\PostPaiementController::paiementAction',  '_route' => 'postpaiement_facture',);
+                    if (!in_array($requestMethod, array('POST'))) {
+                        $allow = array_merge($allow, array('POST'));
+                        goto not_postpaiement_facture;
+                    }
+
+                    return $ret;
+                }
+                not_postpaiement_facture:
+
             }
 
             // ticket_index
@@ -512,7 +527,7 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
             // fos_user_change_password
             if ('/profile/change-password' === $pathinfo) {
-                $ret = array (  '_controller' => 'fos_user.change_password.controller:changePasswordAction',  '_route' => 'fos_user_change_password',);
+                $ret = array (  '_controller' => 'AppBundle:ChangeController:changePasswordAction',  '_route' => 'fos_user_change_password',);
                 if (!in_array($canonicalMethod, array('GET', 'POST'))) {
                     $allow = array_merge($allow, array('GET', 'POST'));
                     goto not_fos_user_change_password;

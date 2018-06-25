@@ -10,7 +10,7 @@ use Doctrine\ORM\EntityRepository;
 class TicketRepository extends EntityRepository
 {
     public function findByCustomer(Customer $customer)
-    {   
+    {
         $queryBuilder = $this->createQueryBuilder('t')
             ->join('t.facture', 'f')
             ->where('t.customer = :customerid')
@@ -21,7 +21,7 @@ class TicketRepository extends EntityRepository
         return $queryBuilder->getResult();
     }
     // public function findTicketByCustomer(Customer $customer)
-    // {   
+    // {
     //     $queryBuilder = $this->createQueryBuilder('t')
 
     //         ->where('t.customer = :customerid')
@@ -39,7 +39,7 @@ class TicketRepository extends EntityRepository
         ->andWhere('t.facture is null')
         ->getQuery();
 
-        return $queryBuilder->getSingleScalarResult();    
+        return $queryBuilder->getSingleScalarResult();
     }
 
     public function findPriceByStatus(Customer $customer)
@@ -52,11 +52,11 @@ class TicketRepository extends EntityRepository
         ->andWhere('f.status = 0')
         ->getQuery();
 
-        return $queryBuilder->getSingleScalarResult();    
+        return $queryBuilder->getSingleScalarResult();
     }
-    
+
     public function findTicketsByStatusCommandeEnCours(Customer $customer)
-    {   
+    {
         $queryBuilder = $this->createQueryBuilder('t')
             ->join('t.facture', 'f')
             ->where('t.customer = :customerid')
@@ -79,4 +79,41 @@ class TicketRepository extends EntityRepository
 
         return $query->getSingleScalarResult();
     }
+
+
+        public function findTicketsByStatus2(Customer $customer)
+        {
+            $queryBuilder = $this->createQueryBuilder('t')
+                ->join('t.facture', 'f')
+                ->where('f.status = 2')
+                ->getQuery();
+
+            return $queryBuilder->getResult();
+        }
+
+        public function computeSumStatus2(Customer $customer) {
+
+            $query = $this->createQueryBuilder('t')
+            ->select('SUM(t.price) AS ticket_price')
+            ->join('t.facture', 'f')
+            ->where('f.status = 2')
+            ->getQuery();
+
+            return $query->getSingleScalarResult();
+        }
+
+
+        public function computeCountPersonNumber(Customer $customer) {
+
+            $query = $this->createQueryBuilder('t')
+            ->select('COUNT(t) AS tickets')
+            ->join('t.facture', 'f')
+            ->where('f.status = 2')
+            ->getQuery();
+
+            return $query->getSingleScalarResult();
+        }
+
+
+
 }

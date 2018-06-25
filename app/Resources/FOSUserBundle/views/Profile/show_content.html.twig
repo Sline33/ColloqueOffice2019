@@ -49,17 +49,35 @@
     <div>
         <div class="container">
             <div class="row">
-                <div class="col-md-12" style="padding-right:0px;padding-left:0px;margin-top:9px;">
+                <div class="col-md-12 d-flex justify-content-between" style="padding-right:0px;padding-left:0px;margin-top:9px;margin-bottom:25px;">
                     <h4>Mes récapitulatifs</h4>
+                    <div class="d-flex">
+                      <p><strong>Paiement En Attente</strong></p>
+                      <div class="foo blue"></div>
+                      <p><strong>Paiement Effectué</strong></p>
+                      <div class="foo green"></div>
+                      <p><strong>Commande En Cours</strong></p>
+                      <div class="foo red"></div>
+                    </div>
                 </div>
             </div>
             {% for ticket in tickets %}
             <div class="row">
                 <div class="col-md-12 col-xl-12" style="padding-left:0px;padding-right:0px;margin-bottom:10px;">
                     <div class="collapseclient">
+                      {% if ticket.facture.status == 2 %}
+                        <a class="btn btn-success collapseclient" data-toggle="collapse" aria-expanded="false" aria-controls="collapse-1" role="button" href="#collapse-{{ ticket.id }}">
+                        Recapitulatif de réservation : N°{{ ticket.ticketNumber }} &nbsp; &nbsp; &nbsp; &nbsp;Nom: {{ ticket.lastName }} &nbsp; &nbsp; &nbsp;Prénom: {{ ticket.firstName }} &nbsp; &nbsp; &nbsp; &nbsp; ST/ADM: {{ ticket.society }} &nbsp; &nbsp;Montant TTC : {{ ticket.price }}€<br>
+                        </a>
+                        {% elseif ticket.facture.status == 1 %}
                         <a class="btn btn-primary collapseclient" data-toggle="collapse" aria-expanded="false" aria-controls="collapse-1" role="button" href="#collapse-{{ ticket.id }}">
                         Recapitulatif de réservation : N°{{ ticket.ticketNumber }} &nbsp; &nbsp; &nbsp; &nbsp;Nom: {{ ticket.lastName }} &nbsp; &nbsp; &nbsp;Prénom: {{ ticket.firstName }} &nbsp; &nbsp; &nbsp; &nbsp; ST/ADM: {{ ticket.society }} &nbsp; &nbsp;Montant TTC : {{ ticket.price }}€<br>
                         </a>
+                        {% else %}
+                        <a class="btn btn-danger collapseclient" data-toggle="collapse" aria-expanded="false" aria-controls="collapse-1" role="button" href="#collapse-{{ ticket.id }}">
+                        Recapitulatif de réservation : N°{{ ticket.ticketNumber }} &nbsp; &nbsp; &nbsp; &nbsp;Nom: {{ ticket.lastName }} &nbsp; &nbsp; &nbsp;Prénom: {{ ticket.firstName }} &nbsp; &nbsp; &nbsp; &nbsp; ST/ADM: {{ ticket.society }} &nbsp; &nbsp;Montant TTC : {{ ticket.price }}€<br>
+                        </a>
+                        {% endif %}
 
                         <div class="collapse" id="collapse-{{ ticket.id }}">
                             <div class="d-flex">
@@ -79,7 +97,7 @@
                                      {% else %}
                                         <strong>choix 3</strong>
                                     {% endif %}<br></p>
-                                    <p>Apres-Midi : 
+                                    <p>Apres-Midi :
                                      {% if ticket.day1Visite == 1 %}
                                         <strong>Visite 1</strong>
                                     {% elseif ticket.day1Visite == 2  %}
@@ -88,7 +106,7 @@
                                         <strong>Visite 3</strong>
                                     {% endif %}
                                     <br></p>
-                                     {% if ticket.day1TransportBus == true %}    
+                                     {% if ticket.day1TransportBus == true %}
                                     <p>Vous avez souhaitez beneficier du transport aller-retour vers votre hebergements<br></p>
                                {% else %}
                                         <p> </p>
@@ -96,7 +114,7 @@
                                 </div>
                                 <div class="col-xl-4" style="padding:0px;padding:5px;">
                                     <h5 style="margin-top:5px;">Jour 2</h5>
-                                     {% if ticket.day2TransportBus == true %}                            
+                                     {% if ticket.day2TransportBus == true %}
                                     <p>Vous avez souhaiter beneficier du transport aller-retour vers votre hebergements.<br></p>
                                    {% else %}
                                         <p> </p>
@@ -109,7 +127,7 @@
                                         <strong>Visite 3</strong>
                                     {% endif %}
                                     <br></p>
-                                    <p>Midi Pique Nique : 
+                                    <p>Midi Pique Nique :
                                     {% if ticket.day2Breakfast == 1 %}
                                          <strong>choix 1</strong>
                                     {% elseif ticket.day2Breakfast == 2  %}
@@ -118,17 +136,17 @@
                                          <strong>choix 3</strong>
                                     {% endif %}<br></p>
                                     <p><strong> Après-midi : allocutions en salle à La Scène du Louvre-Lens</strong><br></p>
-                                   {% if ticket.day2TransportTrain == true %}    
+                                   {% if ticket.day2TransportTrain == true %}
                                          <p>Vous avez souhaitez beneficier du transport de la gare SNCF a la scene du louvre lens<br></p>
                                     {% else %}
                                         <p> </p>
                                     {% endif %}
-                                    {% if ticket.day2Night == true %}  
+                                    {% if ticket.day2Night == true %}
                                           <p>Vous avez choisi de participer a la Soirée au louvre-lens de 19h30 a 00:30 : Prix 40€<br></p>
                                      {% else %}
                                         <p> </p>
                                     {% endif %}
-                                   {% if ticket.day2TransportBusNight == true %}  
+                                   {% if ticket.day2TransportBusNight == true %}
                                     <p>Vous avez souhaitez beneficier du transport aller-retour vers votre hebergements.<br></p>
                                      {% else %}
                                         <p> </p>
@@ -143,7 +161,7 @@
                                      {% else %}
                                        <strong>Visite 3</strong>
                                     {% endif %} du samedi matin.<br></p>
-                                  
+
                                     {% if ticket.optionArtDeco == false %}
                                     <p>Vous avez choisi de participer a l'exposition temporaire du Louvre-Lens du Samedi 8 : Prix 9€.
                                      {% else %}
@@ -164,7 +182,7 @@
                                           {% else %}
                                         <p> </p>
                                     {% endif %}
-                                         {% if ticket.optionGrandSite == true %}  
+                                         {% if ticket.optionGrandSite == true %}
                                          <p>Vous avez choisi de participer a la Visite guidée
                                         <br>"Notre-Dame-de-Lorette, grand site de la Mémoire"&nbsp; du Dimanche 9 Juin
                                         <br>2019 a 15H : Prix 6 €<br></p>
@@ -192,7 +210,7 @@
         <div class="row">
             <div class="col d-flex" style="padding:0px;">
                 <p style="margin-bottom:0px;">Facture : {{ facture.number }} &nbsp;&nbsp;</p>
-                <a href="#">Télécharger votre facture</a>
+                <a href="http://localhost/ColloqueOffice2019/web/files/{{facture.number}}.pdf" target="_blank">Télécharger votre facture</a>
             </div>
         </div>
         {% endfor %}

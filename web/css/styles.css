@@ -3,6 +3,27 @@
   color:inherit;
 }
 
+.foo {
+  float: left;
+  width: 20px;
+  height: 20px;
+  margin: 5px;
+  border: 1px solid rgba(0, 0, 0, .2);
+}
+
+.blue {
+  background: #007bff;
+}
+
+.green {
+  background: #1e7e34;
+}
+
+.red {
+  background: #dc3545;
+}
+
+
 .reservation-link-color{
   color:orange;
 }
@@ -32,6 +53,15 @@
 
 .container.border-util {
   border:1px solid black;
+}
+
+.user_form {
+  text-transform: uppercase;
+  cursor:pointer;
+}
+
+.user_form2 {
+  padding-top:10px;
 }
 
 .row.d-flex.flex-row.border-util {

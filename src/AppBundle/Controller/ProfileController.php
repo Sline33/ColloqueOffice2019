@@ -21,7 +21,7 @@ class ProfileController extends Controller
      * @Route("profile", name="customer_show")
      *
      */
-    public function profileActionAction()
+    public function profileActionAction(Request $request)
     {
         $user = $this->getUser();
         $em = $this->getDoctrine()->getManager();
@@ -33,7 +33,7 @@ class ProfileController extends Controller
 
         $facture = $em->getRepository('AppBundle:Facture')->findByTickets($customer);
         $factures = new Collections\ArrayCollection($facture);
-        
+
 
         $ticket = $em->getRepository('AppBundle:Ticket')->findByCustomer($customer);
 

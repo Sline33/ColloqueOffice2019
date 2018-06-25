@@ -22,7 +22,7 @@ class PaiementController extends Controller
      * @Route("/paiement", name="paiement_facture")
      */
     public function paiementAction(Request $request)
-    {    
+    {
         $user = $this->getUser();
         $em = $this->getDoctrine()->getManager();
 

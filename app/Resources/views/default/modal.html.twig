@@ -23,10 +23,13 @@
           <a class="btn btn-primary" role="button" href="{{ path('fos_user_security_popup') }}" style="font-size:27px;">RESERVEZ</a>
         </div>
         {% block modal %}
-
-        <div class="alert alert-danger" style ="margin-top:20px;">
-          <strong>Merci</strong> de vous <strong><a href="{{ path('fos_user_registration_register') }}">inscrire</a></strong> ou de vous <a href="{{ path('fos_user_security_login') }}"><strong>connecter</strong></a> pour acceder au formulaire.
-        </div>
+        {% if app.session.flashBag.has('erreur') %}
+          <div class="d-flex justify-content-center" style ="margin-top:20px;">
+              {% for msg in app.session.flashBag.get('erreur') %}
+                  <p class="alert alert-danger"><strong>{{msg}}</strong> de vous <strong><a href="{{ path('fos_user_registration_register') }}">inscrire</a></strong> ou de vous <a href="{{ path('fos_user_security_login') }}"><strong>connecter</strong></a> pour acceder au formulaire.</p>
+              {% endfor %}
+          </div>
+          {% endif %}
         {% endblock %}
         {% endif %}
 

@@ -13,20 +13,13 @@ class CustomerRepository extends EntityRepository
 {
     public function findByUser(User $user)
     {
-      
-        return $this->getEntityManager()
-            ->queryBuilder
-            ->select('*')
-            ->from('Customer', 'c')
-            ->innerJoin('c', 'User', 'u', 'c.user.id = :userid')
-            ->setParameter('userid',$user->getId())
-            ->getOneOrNullResult();
-    
+            $queryBuilder = $this->createQueryBuilder('c')
+                    ->where('c.user = :userid')
+                    ->setParameter('userid',$user->getId())
+                    ->getQuery();
+
+            return $queryBuilder->getResult();
+
+
     }
 }
-
-
-// ->createQuery(
-//     'SELECT * FROM Customer c INNER JOIN User u WHERE c.user.id = :userid'
-// )     u.id = c.user_id
-// getSingleScalarResult

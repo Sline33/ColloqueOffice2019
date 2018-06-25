@@ -6,6 +6,9 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
+use Doctrine\Common\Collections;
+use Doctrine\ORM\EntityRepository;
+use AppBundle\Repository\TicketRepository;
 
 class AdminController extends Controller
 {
@@ -14,8 +17,26 @@ class AdminController extends Controller
      */
     public function colloqueAction()
     {
-        // replace this example code with whatever you need
-        return $this->render('admin/adminColloque.html.twig');
+
+
+      $em = $this->getDoctrine()->getManager();
+
+
+      $user = $this->getUser();
+      $customer  =  $em->getRepository('AppBundle:Customer')->findAll($user)[0];
+
+      $tickets   =  $em->getRepository('AppBundle:Ticket')->findTicketsByStatus2($customer);
+
+      $prixTotal   =  $em->getRepository('AppBundle:Ticket')->computeSumStatus2($customer);
+
+      $personNumber = $em->getRepository('AppBundle:Ticket')->computeCountPersonNumber($customer);
+
+      return $this->render('admin/adminColloque.html.twig', array(
+          'tickets' => $tickets,
+          'prixTotal' => $prixTotal,
+          'personNumber' => $personNumber,
+
+      ));
     }
 
     /**
@@ -23,8 +44,15 @@ class AdminController extends Controller
      */
     public function utilisateursAction()
     {
-        // replace this example code with whatever you need
-        return $this->render('admin/adminUtilisateurs.html.twig');
+
+
+      $em = $this->getDoctrine()->getManager();
+      $customers = $em->getRepository('AppBundle:Customer')->findAll();
+
+      return $this->render('admin/adminUtilisateurs.html.twig', array(
+          'customers' => $customers,
+
+      ));
     }
 
     /**

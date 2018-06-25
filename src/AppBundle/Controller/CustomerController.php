@@ -51,9 +51,14 @@ class CustomerController extends Controller
             $em->persist($customer);
             $em->flush();
 
+            $request->getSession()
+            ->getFlashBag()
+            ->add('welcome', 'Bienvenue sur notre site!')
+    ;
+
             return $this->redirectToRoute('fos_user_security_homepage');
         }
-        
+
         return $this->render('customer/new.html.twig', array(
             'customer' => $customer,
             'form' => $form->createView(),

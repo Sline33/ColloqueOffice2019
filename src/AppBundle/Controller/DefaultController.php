@@ -71,10 +71,11 @@ class DefaultController extends Controller
      */
     public function popupAction(Request $request)
     {
-        // replace this example code with whatever you need
-        return $this->render('default/modal.html.twig', [
-            'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
-        ]);
+
+      $request->getSession()
+      ->getFlashBag()
+      ->add('erreur', 'Merci');
+        return $this->render('default/modal.html.twig');
     }
     /**
      * @Route("../customer/new", name="new")
@@ -93,11 +94,10 @@ class DefaultController extends Controller
     }
     /**
      * @Route("/admin/", name="admin_page")
-     * 
+     *
      */
     public function adminPageAction(Request $request)
-    {   
+    {
         return $this->render('admin/admin.html.twig');
     }
 }
-    
