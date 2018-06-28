@@ -2,6 +2,14 @@
 
 {% block body %}
 
+{% if app.session.flashBag.has('promo') %}
+  <div class="d-flex justify-content-center">
+      {% for msg in app.session.flashBag.get('promo') %}
+          <p class="alert alert-danger">{{ msg }}</p>
+      {% endfor %}
+  </div>
+{% endif %}
+
 <div class="container">
         <div class="row">
             <div class="col-md-12" style="padding-right:0px;padding-left:0px;margin-top:9px;">
@@ -37,25 +45,27 @@
                 </div>
             </div>
               </div>
-              <input class="" style="display:none;" type="submit" name="suivant" value="Suivant" id="suivant"/>
+              <div class="d-flex justify-content-end" style="margin-top:25px;">
+                <input class="btn btn-primary" type="submit" name="paiement" value="Payer" id="suivant"/>
+              </div>
         </form>
 
 
         <div class="row">
             <div class="col-md-6">
-                <form>
+                <form action="{{ path('postpaiement_facture') }}" method="post" action="">
                     <div class="field">
                         <label>Code Promotionel :</label>
                         <input class="form" type="text" id="" name="code_promo" value=""/>
                     </div>
-                    <input type="submit" class="btn btn-primary" value="Valider Code"/>
+                    <input type="submit" class="btn btn-primary" name="codepromo" value="Valider Code"/>
                 </form>
 
             </div>
             <div class="col-md-6">
-                <div class="border-form-prix">
+                <div class="border-form-prix" style="margin-top:25px;">
                 <p class="text-center" style="font-size:35px;margin-bottom:10px;">PRIX :
-                <span id="prixreservation"></span>{{prixtotal}}€</p>
+                <span id="prixreservation"></span>{{test}}€</p>
             </div>
             </div>
         </div>

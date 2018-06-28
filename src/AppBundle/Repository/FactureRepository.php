@@ -58,6 +58,18 @@ class FactureRepository extends EntityRepository
 
     }
 
+    public function test(Customer $customer) {
+
+        $query = $this->createQueryBuilder('f')
+        ->select('f.price AS ticket_price')
+        ->where('f.customer = :customerid')
+        ->andWhere('f.status = 0')
+        ->setParameter('customerid',$customer->getId())
+        ->getQuery();
+
+        return $query->getSingleScalarResult();
+    }
+
 
 
 

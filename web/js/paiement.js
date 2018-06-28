@@ -14,7 +14,9 @@ var cheque = document.getElementById("paiement_cheque");
 var mandat = document.getElementById("paiement_mandat");
 var buttonpayer = document.getElementById("payer");
 var buttonsuivant = document.getElementById("suivant");
+var codepromo = document.getElementById("paiement_codepromo");
 
 cb.addEventListener("click" , test)
 cheque.addEventListener("click" , test2)
 mandat.addEventListener("click" , test2)
+codepromo.addEventListener("click" , test2)

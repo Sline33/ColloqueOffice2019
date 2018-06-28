@@ -9,6 +9,8 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Doctrine\Common\Collections;
 use Doctrine\ORM\EntityRepository;
 use AppBundle\Repository\TicketRepository;
+use AppBundle\Entity\CodePromo;
+use Doctrine\ORM\EntityManagerInterface;
 
 /**
  * Ticket controller.
@@ -30,11 +32,56 @@ class PostPaiementController extends Controller
       $customer =   $em->getRepository('AppBundle:Customer')->findByUser($user)[0];
       $facture = $em->getRepository('AppBundle:Facture')->findOneByCustomer($customer);
       $prixtotal =  $em->getRepository('AppBundle:Ticket')->computeSum($facture);
+      $test =  $em->getRepository('AppBundle:Facture')->test($customer);
       $prixPayzen = $prixtotal * 100;
 
+      if ($request->request->has('codepromo')) {
 
-      return $this->redirectToRoute('fos_user_security_homepage');
+        $codePromo = $request->request->get('code_promo' , null);
+        $code = $em->getRepository('AppBundle:CodePromo')->findOneBy(['code' => $codePromo]);
 
+        if($code){
 
+        $facture->setPrice(0);
+        $facture->setStatus(1);
+        $em->remove($code);
+        $em->persist($facture);
+
+        $em->flush();
+
+        $request->getSession()
+        ->getFlashBag()
+        ->add('promovalide', 'Votre code promo a etait valider , le montant de votre facture est de
+        0€ , Cependant vous recevrez vos billets lors de la validation par l\'organisateur.');
+
+        return $this->redirectToRoute('fos_user_security_homepage');
+
+      }else{
+
+        $request->getSession()
+        ->getFlashBag()
+        ->add('promo', 'Ce Code Promo n\'existe pas!');
+        return $this->redirectToRoute('paiement_facture');
+
+      }
+      }
+
+      if ($request->request->has('paiement')) {
+
+        $paiement = $_POST['paiement'];
+
+        if ($paiement == 2 || $paiement == 3 || $paiement == 4 || $paiement = "Suivant" ){
+
+        $facture->setStatus(1);
+        $em = $this->getDoctrine()->getManager();
+        $em->persist($facture);
+        $em->flush();
+        $request->getSession()
+                ->getFlashBag()
+                ->add('paiement', 'Votre Commande est en cours de validation par l\'organisateur!');
+
+          return $this->redirectToRoute('fos_user_security_homepage');
+        }
+      }
     }
 }

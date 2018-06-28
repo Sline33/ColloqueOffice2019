@@ -29,7 +29,11 @@ class PaiementController extends Controller
         $customer =   $em->getRepository('AppBundle:Customer')->findByUser($user)[0];
         $facture = $em->getRepository('AppBundle:Facture')->findOneByCustomer($customer);
         $prixtotal =  $em->getRepository('AppBundle:Ticket')->computeSum($facture);
-        $prixPayzen = $prixtotal * 100;
+        $test =  $em->getRepository('AppBundle:Facture')->test($customer);
+        $prixPayzen = $test * 100;
+
+
+
 
         $random = random_int(100000,999999);
 
@@ -52,7 +56,7 @@ class PaiementController extends Controller
         $vads_site_id = "34880966";
         $vads_trans_date = $date;
         $vads_trans_id = "$random";
-        $vads_url_return ="http://localhost/ColloqueOfficeBen/web/app_dev.php";
+        $vads_url_return ="http://saaammmmm.com/Symfony/web";
         $vads_version ="V2";
         $certificate = "2532840209385675";
 
@@ -80,7 +84,7 @@ class PaiementController extends Controller
         $signature = sha1($rawData);
 
         return $this->render('paiement/new.html.twig',array(
-            'prixtotal' => $prixtotal,
+            'test' => $test,
             'prixPayzen' => $prixPayzen,
             'vads_action_mode' => $vads_action_mode,
             'vads_capture_delay' => $vads_capture_delay,

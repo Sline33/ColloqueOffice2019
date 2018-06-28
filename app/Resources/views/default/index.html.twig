@@ -20,6 +20,13 @@
           {% endfor %}
       </div>
   {% endif %}
+  {% if app.session.flashBag.has('promovalide') %}
+    <div class="d-flex justify-content-center">
+        {% for msg in app.session.flashBag.get('promovalide') %}
+            <p class="alert alert-success">{{ msg }}</p>
+        {% endfor %}
+    </div>
+{% endif %}
         <div class="d-flex justify-content-center">
             <h1>Un territoire phœnix Du noir au vert</h1>
         </div>

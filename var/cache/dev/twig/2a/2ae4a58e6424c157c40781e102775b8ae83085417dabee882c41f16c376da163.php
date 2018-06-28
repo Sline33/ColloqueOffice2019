@@ -116,6 +116,29 @@ class __TwigTemplate_d3cb7817b858ce82dc7c7e83617b2ffa1cc87fea6e5bbcfb15db20d4299
   ";
         }
         // line 23
+        echo "  ";
+        if ($this->getAttribute($this->getAttribute($this->getAttribute(($context["app"] ?? $this->getContext($context, "app")), "session", array()), "flashBag", array()), "has", array(0 => "promovalide"), "method")) {
+            // line 24
+            echo "    <div class=\"d-flex justify-content-center\">
+        ";
+            // line 25
+            $context['_parent'] = $context;
+            $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getAttribute($this->getAttribute(($context["app"] ?? $this->getContext($context, "app")), "session", array()), "flashBag", array()), "get", array(0 => "promovalide"), "method"));
+            foreach ($context['_seq'] as $context["_key"] => $context["msg"]) {
+                // line 26
+                echo "            <p class=\"alert alert-success\">";
+                echo twig_escape_filter($this->env, $context["msg"], "html", null, true);
+                echo "</p>
+        ";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['msg'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 28
+            echo "    </div>
+";
+        }
+        // line 30
         echo "        <div class=\"d-flex justify-content-center\">
             <h1>Un territoire phœnix Du noir au vert</h1>
         </div>
@@ -125,31 +148,31 @@ class __TwigTemplate_d3cb7817b858ce82dc7c7e83617b2ffa1cc87fea6e5bbcfb15db20d4299
             <p class=\"text-center\"><em>Revitaliser un territoire relève de registres variés et échappe à l’habituelou/ou pour appréhender le et/et : la régénération urbaine, l’espace public,la mobilité, la qualité spatiale, environnementale et architecturale, maisaussi la dynamique culturelle, sociale, économique, ludique, … C’estaussi une articulation entre le top down et le bottom up, les actions descollectivités locales, la stimulation du privé et l’accueil d’initiativesrelevant de registres différents comme le démontre la labellisationEuralens qui salue tant une médiathèque originale qui relie un grandnombre d’actions, qu’un espace public dessiné par une artiste, ou un lieuimprobable dans une cité jardin qui offre des actions sociales,d’agriculture bio, d’accueil hôtelier spécifiques, … mais aussi unparcours VTT dans les terrils réaménagés ou encore et surtout lamobilisation de lycées techniques en lien avec le monde économique, laformation numérique, etc..</em><br></p>
         </div>
         ";
-        // line 31
+        // line 38
         if ($this->env->getExtension('Symfony\Bridge\Twig\Extension\SecurityExtension')->isGranted("IS_AUTHENTICATED_REMEMBERED")) {
-            // line 32
+            // line 39
             echo "        <div style=\"margin-top:25px;\">
           <a class=\"btn btn-primary\" role=\"button\" href=\"";
-            // line 33
+            // line 40
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("ticket_new");
             echo "\" style=\"font-size:27px;\">RESERVEZ</a>
         </div>
         ";
         } else {
-            // line 36
+            // line 43
             echo "        <div style=\"margin-top:25px;\">
           <a class=\"btn btn-primary\" role=\"button\" href=\"";
-            // line 37
+            // line 44
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("fos_user_security_popup");
             echo "\" style=\"font-size:27px;\">RESERVEZ</a>
         </div>
         ";
-            // line 39
+            // line 46
             $this->displayBlock('modal', $context, $blocks);
-            // line 41
+            // line 48
             echo "        ";
         }
-        // line 42
+        // line 49
         echo "    </section>
     <div style=\"margin-top:100px;margin-bottom:20px;\">
         <div class=\"container\">
@@ -203,7 +226,7 @@ class __TwigTemplate_d3cb7817b858ce82dc7c7e83617b2ffa1cc87fea6e5bbcfb15db20d4299
         <div class=\"container\">
             <div class=\"row\">
                 <div class=\"col-md-12 d-flex justify-content-center align-items-center\"><a class=\"btn btn-primary\" role=\"button\" href=\"";
-        // line 94
+        // line 101
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("files/ticket.pdf"), "html", null, true);
         echo "\" target=\"_blank\" style=\"margin-top:0px;font-size:25px;\">VOIR TOUT LE PROGRAMME</a></div>
             </div>
@@ -225,7 +248,7 @@ class __TwigTemplate_d3cb7817b858ce82dc7c7e83617b2ffa1cc87fea6e5bbcfb15db20d4299
 
     }
 
-    // line 39
+    // line 46
     public function block_modal($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
@@ -234,7 +257,7 @@ class __TwigTemplate_d3cb7817b858ce82dc7c7e83617b2ffa1cc87fea6e5bbcfb15db20d4299
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "modal"));
 
-        // line 40
+        // line 47
         echo "        ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -256,7 +279,7 @@ class __TwigTemplate_d3cb7817b858ce82dc7c7e83617b2ffa1cc87fea6e5bbcfb15db20d4299
 
     public function getDebugInfo()
     {
-        return array (  238 => 40,  229 => 39,  207 => 94,  153 => 42,  150 => 41,  148 => 39,  143 => 37,  140 => 36,  134 => 33,  131 => 32,  129 => 31,  119 => 23,  115 => 21,  106 => 19,  102 => 18,  99 => 17,  96 => 16,  92 => 14,  83 => 12,  79 => 11,  76 => 10,  74 => 9,  69 => 6,  60 => 5,  42 => 3,  11 => 1,);
+        return array (  261 => 47,  252 => 46,  230 => 101,  176 => 49,  173 => 48,  171 => 46,  166 => 44,  163 => 43,  157 => 40,  154 => 39,  152 => 38,  142 => 30,  138 => 28,  129 => 26,  125 => 25,  122 => 24,  119 => 23,  115 => 21,  106 => 19,  102 => 18,  99 => 17,  96 => 16,  92 => 14,  83 => 12,  79 => 11,  76 => 10,  74 => 9,  69 => 6,  60 => 5,  42 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -291,6 +314,13 @@ class __TwigTemplate_d3cb7817b858ce82dc7c7e83617b2ffa1cc87fea6e5bbcfb15db20d4299
           {% endfor %}
       </div>
   {% endif %}
+  {% if app.session.flashBag.has('promovalide') %}
+    <div class=\"d-flex justify-content-center\">
+        {% for msg in app.session.flashBag.get('promovalide') %}
+            <p class=\"alert alert-success\">{{ msg }}</p>
+        {% endfor %}
+    </div>
+{% endif %}
         <div class=\"d-flex justify-content-center\">
             <h1>Un territoire phœnix Du noir au vert</h1>
         </div>

@@ -71,11 +71,11 @@ class __TwigTemplate_f24e60885c8dfce0233f655922b08b34537139114d395116ab690cf6881
                 </div>
                 <div class=\"form-group\">
                     <label for=\"appbundle_customer_firstname\" class=\"form-control-label required\">Firstname</label>
-                    <input type=\"text\" id=\"appbundle_customer_firstname\" name=\"appbundle_customer[firstname]\" required=\"required\" maxlength=\"255\" class=\"form-control\"/>
+                    <input type=\"text\" pattern=\"[a-zA-Z]{1,}\" id=\"appbundle_customer_firstname\" name=\"appbundle_customer[firstname]\" required=\"required\" maxlength=\"255\" class=\"form-control\"/>
                 </div>
                 <div class=\"form-group\">
                     <label for=\"appbundle_customer_lastname\" class=\"form-control-label required\">Lastname</label>
-                    <input type=\"text\" id=\"appbundle_customer_lastname\" name=\"appbundle_customer[lastname]\" required=\"required\" maxlength=\"255\" class=\"form-control\"/>
+                    <input type=\"text\" pattern=\"[a-zA-Z]{1,}\" id=\"appbundle_customer_lastname\" name=\"appbundle_customer[lastname]\" required=\"required\" maxlength=\"255\" class=\"form-control\"/>
                 </div>
                 <div class=\"form-group\">
                     <label for=\"appbundle_customer_society\" class=\"form-control-label required\">Society</label>
@@ -87,7 +87,7 @@ class __TwigTemplate_f24e60885c8dfce0233f655922b08b34537139114d395116ab690cf6881
                 </div>
                 <div class=\"form-group\">
                     <label for=\"appbundle_customer_cp\" class=\"form-control-label required\">Cp</label>
-                    <input type=\"text\" id=\"appbundle_customer_cp\" name=\"appbundle_customer[cp]\" required=\"required\" class=\"form-control\"/>
+                    <input type=\"text\" pattern=\"[0-9]{5}\" id=\"appbundle_customer_cp\" name=\"appbundle_customer[cp]\" required=\"required\" class=\"form-control\"/>
                 </div>
                 <div class=\"form-group\">
                     <label for=\"appbundle_customer_town\" class=\"form-control-label required\">Town</label>
@@ -95,7 +95,7 @@ class __TwigTemplate_f24e60885c8dfce0233f655922b08b34537139114d395116ab690cf6881
                 </div>
                 <div class=\"form-group\">
                     <label for=\"appbundle_customer_phonenumber\" class=\"form-control-label required\">Phonenumber</label>
-                    <input type=\"text\" id=\"appbundle_customer_phonenumber\" name=\"appbundle_customer[phonenumber]\" required=\"required\" maxlength=\"255\" class=\"form-control\"/>
+                    <input type=\"tel\" pattern=\"[0-9]{10}\" id=\"appbundle_customer_phonenumber\" name=\"appbundle_customer[phonenumber]\" required=\"required\" class=\"form-control\"/>
                 </div>
             <input class=\"btn btn-primary float-right\" style=\"margin-top:30px;width:180px;\" type=\"submit\" value=\"Create\"/>
         </form>
@@ -158,11 +158,11 @@ class __TwigTemplate_f24e60885c8dfce0233f655922b08b34537139114d395116ab690cf6881
                 </div>
                 <div class=\"form-group\">
                     <label for=\"appbundle_customer_firstname\" class=\"form-control-label required\">Firstname</label>
-                    <input type=\"text\" id=\"appbundle_customer_firstname\" name=\"appbundle_customer[firstname]\" required=\"required\" maxlength=\"255\" class=\"form-control\"/>
+                    <input type=\"text\" pattern=\"[a-zA-Z]{1,}\" id=\"appbundle_customer_firstname\" name=\"appbundle_customer[firstname]\" required=\"required\" maxlength=\"255\" class=\"form-control\"/>
                 </div>
                 <div class=\"form-group\">
                     <label for=\"appbundle_customer_lastname\" class=\"form-control-label required\">Lastname</label>
-                    <input type=\"text\" id=\"appbundle_customer_lastname\" name=\"appbundle_customer[lastname]\" required=\"required\" maxlength=\"255\" class=\"form-control\"/>
+                    <input type=\"text\" pattern=\"[a-zA-Z]{1,}\" id=\"appbundle_customer_lastname\" name=\"appbundle_customer[lastname]\" required=\"required\" maxlength=\"255\" class=\"form-control\"/>
                 </div>
                 <div class=\"form-group\">
                     <label for=\"appbundle_customer_society\" class=\"form-control-label required\">Society</label>
@@ -174,7 +174,7 @@ class __TwigTemplate_f24e60885c8dfce0233f655922b08b34537139114d395116ab690cf6881
                 </div>
                 <div class=\"form-group\">
                     <label for=\"appbundle_customer_cp\" class=\"form-control-label required\">Cp</label>
-                    <input type=\"text\" id=\"appbundle_customer_cp\" name=\"appbundle_customer[cp]\" required=\"required\" class=\"form-control\"/>
+                    <input type=\"text\" pattern=\"[0-9]{5}\" id=\"appbundle_customer_cp\" name=\"appbundle_customer[cp]\" required=\"required\" class=\"form-control\"/>
                 </div>
                 <div class=\"form-group\">
                     <label for=\"appbundle_customer_town\" class=\"form-control-label required\">Town</label>
@@ -182,7 +182,7 @@ class __TwigTemplate_f24e60885c8dfce0233f655922b08b34537139114d395116ab690cf6881
                 </div>
                 <div class=\"form-group\">
                     <label for=\"appbundle_customer_phonenumber\" class=\"form-control-label required\">Phonenumber</label>
-                    <input type=\"text\" id=\"appbundle_customer_phonenumber\" name=\"appbundle_customer[phonenumber]\" required=\"required\" maxlength=\"255\" class=\"form-control\"/>
+                    <input type=\"tel\" pattern=\"[0-9]{10}\" id=\"appbundle_customer_phonenumber\" name=\"appbundle_customer[phonenumber]\" required=\"required\" class=\"form-control\"/>
                 </div>
             <input class=\"btn btn-primary float-right\" style=\"margin-top:30px;width:180px;\" type=\"submit\" value=\"Create\"/>
         </form>
