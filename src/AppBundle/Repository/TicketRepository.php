@@ -115,7 +115,18 @@ class TicketRepository extends EntityRepository
         }
 
     
+        public function findPaidTicketsByOption($optionName, $optionValue)
+        {
+        $optionNames = ['day1visite', 'day2visite', 'day3visite']; // compléter ce tableau avec le vrai nom des options
 
 
+        $queryBuilder = $this->createQueryBuilder('t')
+            ->join('t.facture', 'f')
+            ->where('f.status = 2')
+            ->andWhere('t.'.$optionName.' = :optionValue')
+            ->setParameter('optionValue', $optionValue)
+            ->getQuery();
 
+        return $queryBuilder->getResult();
+        }
 }

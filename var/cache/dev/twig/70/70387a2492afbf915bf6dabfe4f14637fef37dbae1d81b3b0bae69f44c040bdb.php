@@ -1,6 +1,6 @@
 <?php
 
-/* :default:index.html.twig */
+/* default/index.html.twig */
 class __TwigTemplate_27153992e2224efaf1fa3012d5d6df1177990fa9830c6e03345ae0db70866b2c extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -8,7 +8,7 @@ class __TwigTemplate_27153992e2224efaf1fa3012d5d6df1177990fa9830c6e03345ae0db708
         parent::__construct($env);
 
         // line 1
-        $this->parent = $this->loadTemplate("base.html.twig", ":default:index.html.twig", 1);
+        $this->parent = $this->loadTemplate("base.html.twig", "default/index.html.twig", 1);
         $this->blocks = array(
             'title' => array($this, 'block_title'),
             'body' => array($this, 'block_body'),
@@ -24,10 +24,10 @@ class __TwigTemplate_27153992e2224efaf1fa3012d5d6df1177990fa9830c6e03345ae0db708
     protected function doDisplay(array $context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":default:index.html.twig"));
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "default/index.html.twig"));
 
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":default:index.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "default/index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
@@ -69,85 +69,166 @@ class __TwigTemplate_27153992e2224efaf1fa3012d5d6df1177990fa9830c6e03345ae0db708
         echo "
 
     <header>
-        <div class=\"d-flex justify-content-center\">
+      ";
+        // line 9
+        if ($this->getAttribute($this->getAttribute($this->getAttribute(($context["app"] ?? $this->getContext($context, "app")), "session", array()), "flashBag", array()), "has", array(0 => "welcome"), "method")) {
+            // line 10
+            echo "        <div class=\"d-flex justify-content-center\">
+            ";
+            // line 11
+            $context['_parent'] = $context;
+            $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getAttribute($this->getAttribute(($context["app"] ?? $this->getContext($context, "app")), "session", array()), "flashBag", array()), "get", array(0 => "welcome"), "method"));
+            foreach ($context['_seq'] as $context["_key"] => $context["msg"]) {
+                // line 12
+                echo "                <p class=\"alert alert-success\">";
+                echo twig_escape_filter($this->env, $context["msg"], "html", null, true);
+                echo "</p>
+            ";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['msg'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 14
+            echo "        </div>
+    ";
+        }
+        // line 16
+        echo "    ";
+        if ($this->getAttribute($this->getAttribute($this->getAttribute(($context["app"] ?? $this->getContext($context, "app")), "session", array()), "flashBag", array()), "has", array(0 => "paiement"), "method")) {
+            // line 17
+            echo "      <div class=\"d-flex justify-content-center\">
+          ";
+            // line 18
+            $context['_parent'] = $context;
+            $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getAttribute($this->getAttribute(($context["app"] ?? $this->getContext($context, "app")), "session", array()), "flashBag", array()), "get", array(0 => "paiement"), "method"));
+            foreach ($context['_seq'] as $context["_key"] => $context["msg"]) {
+                // line 19
+                echo "              <p class=\"alert alert-success\">";
+                echo twig_escape_filter($this->env, $context["msg"], "html", null, true);
+                echo "</p>
+          ";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['msg'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 21
+            echo "      </div>
+  ";
+        }
+        // line 23
+        echo "  ";
+        if ($this->getAttribute($this->getAttribute($this->getAttribute(($context["app"] ?? $this->getContext($context, "app")), "session", array()), "flashBag", array()), "has", array(0 => "promovalide"), "method")) {
+            // line 24
+            echo "    <div class=\"d-flex justify-content-center\">
+        ";
+            // line 25
+            $context['_parent'] = $context;
+            $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getAttribute($this->getAttribute(($context["app"] ?? $this->getContext($context, "app")), "session", array()), "flashBag", array()), "get", array(0 => "promovalide"), "method"));
+            foreach ($context['_seq'] as $context["_key"] => $context["msg"]) {
+                // line 26
+                echo "            <p class=\"alert alert-success\">";
+                echo twig_escape_filter($this->env, $context["msg"], "html", null, true);
+                echo "</p>
+        ";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['msg'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 28
+            echo "    </div>
+";
+        }
+        // line 30
+        echo "        <div class=\"d-flex justify-content-center banner-title\">
             <h1>Un territoire phœnix Du noir au vert</h1>
         </div>
     </header>
     <section class=\"d-flex flex-column align-items-center\">
-        <div style=\"max-width:850PX;\">
-            <p class=\"text-center\"><em>Revitaliser un territoire relève de registres variés et échappe à l’habituelou/ou pour appréhender le et/et : la régénération urbaine, l’espace public,la mobilité, la qualité spatiale, environnementale et architecturale, maisaussi la dynamique culturelle, sociale, économique, ludique, … C’estaussi une articulation entre le top down et le bottom up, les actions descollectivités locales, la stimulation du privé et l’accueil d’initiativesrelevant de registres différents comme le démontre la labellisationEuralens qui salue tant une médiathèque originale qui relie un grandnombre d’actions, qu’un espace public dessiné par une artiste, ou un lieuimprobable dans une cité jardin qui offre des actions sociales,d’agriculture bio, d’accueil hôtelier spécifiques, … mais aussi unparcours VTT dans les terrils réaménagés ou encore et surtout lamobilisation de lycées techniques en lien avec le monde économique, laformation numérique, etc..</em><br></p>
+        <div class=\"text-center\" style=\"max-width:1000PX;font-size:20px;\">
+            <p>Revitaliser un territoire relève de registres variés et échappe à l’habituelou/ou pour appréhender le et/et : la régénération urbaine, l’espace public,la mobilité, la qualité spatiale, environnementale et architecturale, mais aussi la dynamique culturelle, sociale, économique, ludique, …</p>
+            <p> C’est aussi une articulation entre le top down et le bottom up, les actions des collectivités locales, la stimulation du privé et l’accueil d’initiativesrelevant de registres différents comme le démontre la labellisation Euralens qui salue tant une médiathèque originale qui relie un grand nombre d’actions, qu’un espace public dessiné par une artiste, ou un lieu improbable dans une cité jardin qui offre des actions sociales,d’agriculture bio, d’accueil hôtelier spécifiques, … mais aussi un parcours VTT dans les terrils réaménagés ou encore et surtout la mobilisation de lycées techniques en lien avec le monde économique, la formation numérique, etc..</p>
         </div>
         ";
-        // line 17
+        // line 39
         if ($this->env->getExtension('Symfony\Bridge\Twig\Extension\SecurityExtension')->isGranted("IS_AUTHENTICATED_REMEMBERED")) {
-            // line 18
+            // line 40
             echo "        <div style=\"margin-top:25px;\">
           <a class=\"btn btn-primary\" role=\"button\" href=\"";
-            // line 19
+            // line 41
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("ticket_new");
-            echo "\" style=\"font-size:27px;\">RESERVEZ</a>
+            echo "\" style=\"font-size:27px;\">RESERVEZ MAINTENANT</a>
         </div>
         ";
         } else {
-            // line 22
+            // line 44
             echo "        <div style=\"margin-top:25px;\">
           <a class=\"btn btn-primary\" role=\"button\" href=\"";
-            // line 23
+            // line 45
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("fos_user_security_popup");
-            echo "\" style=\"font-size:27px;\">RESERVEZ</a>
+            echo "\" style=\"font-size:27px;\">RESERVEZ MAINTENANT</a>
         </div>
         ";
-            // line 25
+            // line 47
             $this->displayBlock('modal', $context, $blocks);
-            // line 27
+            // line 49
             echo "        ";
         }
-        // line 28
+        // line 50
         echo "    </section>
-    <div style=\"margin-top:100px;margin-bottom:20px;\">
-        <div class=\"container\">
-            <div class=\"row\">
-                <div class=\"col-md-4 d-flex justify-content-between\"><img>
-                    <div>
-                        <h5>Conférences au&nbsp;<br>Louvre-Lens<br></h5>
-                        <p class=\"text-center\">eaeaeaaeeaeaeaaeeaeaea<br>eaeaeaaeeaeaeaaeeaea<br>eaeaeaaeeaeaeaaeeaeaea<br>ea<br></p>
-                    </div>
-                </div>
-                <div class=\"col-md-4 d-flex justify-content-between\"><img>
-                    <div>
-                        <h5>Une soirée d’exception<br></h5>
-                        <p class=\"text-center\">eaeaeaaeeaeaeaaeeaeaea<br>eaeaeaaeeaeaeaaeeaea<br>eaeaeaaeeaeaeaaeeaeaea<br>ea<br></p>
-                    </div>
-                </div>
-                <div class=\"col-md-4 d-flex justify-content-between\"><img>
-                    <div>
-                        <h5>Des visites inédites<br></h5>
-                        <p class=\"text-center\">eaeaeaaeeaeaeaaeeaeaea<br>eaeaeaaeeaeaeaaeeaea<br>eaeaeaaeeaeaeaaeeaeaea<br>ea<br></p>
-                    </div>
-                </div>
+    <div class=\"container-fluid\" style=\"margin-top:20px;\">
+        <div class=\"row  ligne1\">
+            <div class=\"col-md-4 text-center\">
+                <img src=\"";
+        // line 54
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("img/louvreLens.jpg"), "html", null, true);
+        echo "\" alt=\"Louvre Lens\">
+                <h5>Conférences au Louvre-Lens</h5>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium temporibus earum ipsam at. Iure fugiat dicta, ad amet, nesciunt modi, autem incidunt veritatis officia fugit sint quisquam illo eum animi?</p>
+            </div>
+            <div class=\"col-md-4 text-center\">
+                <img src=\"";
+        // line 59
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("img/soiree.jpg"), "html", null, true);
+        echo "\" alt=\"soirée Lens\">
+                <h5>Une soirée d’exception</h5>
+                <p class=\"\">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium temporibus earum ipsam at. Iure fugiat dicta, ad amet, nesciunt modi, autem incidunt veritatis officia fugit sint quisquam illo eum animi?</p>
+            </div>
+            <div class=\"col-md-4 text-center\">
+            <img src=\"";
+        // line 64
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("img/visites.jpg"), "html", null, true);
+        echo "\" alt=\"visites Arkéos\">
+                <h5>Des visites inédites</h5>
+                <p class=\"\">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium temporibus earum ipsam at. Iure fugiat dicta, ad amet, nesciunt modi, autem incidunt veritatis officia fugit sint quisquam illo eum animi?</p>
             </div>
         </div>
     </div>
     <div>
-        <div class=\"container\">
-            <div class=\"row\">
-                <div class=\"col-md-4 d-flex justify-content-between\"><img>
-                    <div>
-                        <h5>Villes invitées<br></h5>
-                        <p class=\"text-center\">eaeaeaaeeaeaeaaeeaeaea<br>eaeaeaaeeaeaeaaeeaea<br>eaeaeaaeeaeaeaaeeaeaea<br>ea<br></p>
-                    </div>
+        <div class=\"container-fluid\">
+            <div class=\"row ligne1\">
+                <div class=\"col-md-4 text-center\">
+                    <img src=\"";
+        // line 74
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("img/ville.jpg"), "html", null, true);
+        echo "\" alt=\"soirée Lens\">
+                    <h5>Villes invitées</h5>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium temporibus earum ipsam at. Iure fugiat dicta, ad amet, nesciunt modi, autem incidunt veritatis officia fugit sint quisquam illo eum animi?</p></p>
                 </div>
-                <div class=\"col-md-4 d-flex justify-content-between\"><img>
-                    <div>
-                        <h5>Tout un programme&nbsp;<br>de fêtes<br></h5>
-                        <p class=\"text-center\">eaeaeaaeeaeaeaaeeaeaea<br>eaeaeaaeeaeaeaaeeaea<br>eaeaeaaeeaeaeaaeeaeaea<br>ea<br></p>
-                    </div>
+                <div class=\"col-md-4  text-center\">
+                    <img src=\"";
+        // line 79
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("img/fete.jpg"), "html", null, true);
+        echo "\" alt=\"soirée Lens\">
+                    <h5>Tout un programme de fêtes</h5>
+                    <p class=\"text-center\"> <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium temporibus earum ipsam at. Iure fugiat dicta, ad amet, nesciunt modi, autem incidunt veritatis officia fugit sint quisquam illo eum animi?</p></p>
                 </div>
-                <div class=\"col-md-4 d-flex justify-content-between\"><img>
-                    <div>
-                        <h5>Des visites inédites<br></h5>
-                        <p class=\"text-center\">eaeaeaaeeaeaeaaeeaeaea<br>eaeaeaaeeaeaeaaeeaea<br>eaeaeaaeeaeaeaaeeaeaea<br>ea<br></p>
-                    </div>
+                <div class=\"col-md-4 text-center\">
+                    <img src=\"";
+        // line 84
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("img/visite2.JPG"), "html", null, true);
+        echo "\" alt=\"visite Lens\">
+                    <h5>Des visites inédites</h5>
+                    <p class=\"text-center\"> <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium temporibus earum ipsam at. Iure fugiat dicta, ad amet, nesciunt modi, autem incidunt veritatis officia fugit sint quisquam illo eum animi?</p></p>
                 </div>
             </div>
         </div>
@@ -155,7 +236,10 @@ class __TwigTemplate_27153992e2224efaf1fa3012d5d6df1177990fa9830c6e03345ae0db708
     <div style=\"margin-top:100px;\">
         <div class=\"container\">
             <div class=\"row\">
-                <div class=\"col-md-12 d-flex justify-content-center align-items-center\"><a class=\"btn btn-primary\" role=\"button\" href=\"#\" style=\"margin-top:0px;font-size:25px;\">VOIR TOUT LE PROGRAMME</a></div>
+                <div class=\"col-md-12 d-flex justify-content-center align-items-center\"><a class=\"btn btn-primary\" role=\"button\" href=\"";
+        // line 94
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("files/ticket.pdf"), "html", null, true);
+        echo "\" target=\"_blank\" style=\"margin-top:0px;font-size:25px;\">VOIR TOUT LE PROGRAMME</a></div>
             </div>
         </div>
     </div>
@@ -175,7 +259,7 @@ class __TwigTemplate_27153992e2224efaf1fa3012d5d6df1177990fa9830c6e03345ae0db708
 
     }
 
-    // line 25
+    // line 47
     public function block_modal($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
@@ -184,7 +268,7 @@ class __TwigTemplate_27153992e2224efaf1fa3012d5d6df1177990fa9830c6e03345ae0db708
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "modal"));
 
-        // line 26
+        // line 48
         echo "        ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -196,7 +280,7 @@ class __TwigTemplate_27153992e2224efaf1fa3012d5d6df1177990fa9830c6e03345ae0db708
 
     public function getTemplateName()
     {
-        return ":default:index.html.twig";
+        return "default/index.html.twig";
     }
 
     public function isTraitable()
@@ -206,7 +290,7 @@ class __TwigTemplate_27153992e2224efaf1fa3012d5d6df1177990fa9830c6e03345ae0db708
 
     public function getDebugInfo()
     {
-        return array (  188 => 26,  179 => 25,  106 => 28,  103 => 27,  101 => 25,  96 => 23,  93 => 22,  87 => 19,  84 => 18,  82 => 17,  69 => 6,  60 => 5,  42 => 3,  11 => 1,);
+        return array (  272 => 48,  263 => 47,  241 => 94,  228 => 84,  220 => 79,  212 => 74,  199 => 64,  191 => 59,  183 => 54,  177 => 50,  174 => 49,  172 => 47,  167 => 45,  164 => 44,  158 => 41,  155 => 40,  153 => 39,  142 => 30,  138 => 28,  129 => 26,  125 => 25,  122 => 24,  119 => 23,  115 => 21,  106 => 19,  102 => 18,  99 => 17,  96 => 16,  92 => 14,  83 => 12,  79 => 11,  76 => 10,  74 => 9,  69 => 6,  60 => 5,  42 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -227,70 +311,84 @@ class __TwigTemplate_27153992e2224efaf1fa3012d5d6df1177990fa9830c6e03345ae0db708
 
 
     <header>
+      {% if app.session.flashBag.has('welcome') %}
         <div class=\"d-flex justify-content-center\">
+            {% for msg in app.session.flashBag.get('welcome') %}
+                <p class=\"alert alert-success\">{{ msg }}</p>
+            {% endfor %}
+        </div>
+    {% endif %}
+    {% if app.session.flashBag.has('paiement') %}
+      <div class=\"d-flex justify-content-center\">
+          {% for msg in app.session.flashBag.get('paiement') %}
+              <p class=\"alert alert-success\">{{ msg }}</p>
+          {% endfor %}
+      </div>
+  {% endif %}
+  {% if app.session.flashBag.has('promovalide') %}
+    <div class=\"d-flex justify-content-center\">
+        {% for msg in app.session.flashBag.get('promovalide') %}
+            <p class=\"alert alert-success\">{{ msg }}</p>
+        {% endfor %}
+    </div>
+{% endif %}
+        <div class=\"d-flex justify-content-center banner-title\">
             <h1>Un territoire phœnix Du noir au vert</h1>
         </div>
     </header>
     <section class=\"d-flex flex-column align-items-center\">
-        <div style=\"max-width:850PX;\">
-            <p class=\"text-center\"><em>Revitaliser un territoire relève de registres variés et échappe à l’habituelou/ou pour appréhender le et/et : la régénération urbaine, l’espace public,la mobilité, la qualité spatiale, environnementale et architecturale, maisaussi la dynamique culturelle, sociale, économique, ludique, … C’estaussi une articulation entre le top down et le bottom up, les actions descollectivités locales, la stimulation du privé et l’accueil d’initiativesrelevant de registres différents comme le démontre la labellisationEuralens qui salue tant une médiathèque originale qui relie un grandnombre d’actions, qu’un espace public dessiné par une artiste, ou un lieuimprobable dans une cité jardin qui offre des actions sociales,d’agriculture bio, d’accueil hôtelier spécifiques, … mais aussi unparcours VTT dans les terrils réaménagés ou encore et surtout lamobilisation de lycées techniques en lien avec le monde économique, laformation numérique, etc..</em><br></p>
+        <div class=\"text-center\" style=\"max-width:1000PX;font-size:20px;\">
+            <p>Revitaliser un territoire relève de registres variés et échappe à l’habituelou/ou pour appréhender le et/et : la régénération urbaine, l’espace public,la mobilité, la qualité spatiale, environnementale et architecturale, mais aussi la dynamique culturelle, sociale, économique, ludique, …</p>
+            <p> C’est aussi une articulation entre le top down et le bottom up, les actions des collectivités locales, la stimulation du privé et l’accueil d’initiativesrelevant de registres différents comme le démontre la labellisation Euralens qui salue tant une médiathèque originale qui relie un grand nombre d’actions, qu’un espace public dessiné par une artiste, ou un lieu improbable dans une cité jardin qui offre des actions sociales,d’agriculture bio, d’accueil hôtelier spécifiques, … mais aussi un parcours VTT dans les terrils réaménagés ou encore et surtout la mobilisation de lycées techniques en lien avec le monde économique, la formation numérique, etc..</p>
         </div>
         {% if is_granted(\"IS_AUTHENTICATED_REMEMBERED\") %}
         <div style=\"margin-top:25px;\">
-          <a class=\"btn btn-primary\" role=\"button\" href=\"{{ path('ticket_new') }}\" style=\"font-size:27px;\">RESERVEZ</a>
+          <a class=\"btn btn-primary\" role=\"button\" href=\"{{ path('ticket_new') }}\" style=\"font-size:27px;\">RESERVEZ MAINTENANT</a>
         </div>
         {% else %}
         <div style=\"margin-top:25px;\">
-          <a class=\"btn btn-primary\" role=\"button\" href=\"{{ path('fos_user_security_popup') }}\" style=\"font-size:27px;\">RESERVEZ</a>
+          <a class=\"btn btn-primary\" role=\"button\" href=\"{{ path('fos_user_security_popup') }}\" style=\"font-size:27px;\">RESERVEZ MAINTENANT</a>
         </div>
         {% block modal %}
         {% endblock %}
         {% endif %}
     </section>
-    <div style=\"margin-top:100px;margin-bottom:20px;\">
-        <div class=\"container\">
-            <div class=\"row\">
-                <div class=\"col-md-4 d-flex justify-content-between\"><img>
-                    <div>
-                        <h5>Conférences au&nbsp;<br>Louvre-Lens<br></h5>
-                        <p class=\"text-center\">eaeaeaaeeaeaeaaeeaeaea<br>eaeaeaaeeaeaeaaeeaea<br>eaeaeaaeeaeaeaaeeaeaea<br>ea<br></p>
-                    </div>
-                </div>
-                <div class=\"col-md-4 d-flex justify-content-between\"><img>
-                    <div>
-                        <h5>Une soirée d’exception<br></h5>
-                        <p class=\"text-center\">eaeaeaaeeaeaeaaeeaeaea<br>eaeaeaaeeaeaeaaeeaea<br>eaeaeaaeeaeaeaaeeaeaea<br>ea<br></p>
-                    </div>
-                </div>
-                <div class=\"col-md-4 d-flex justify-content-between\"><img>
-                    <div>
-                        <h5>Des visites inédites<br></h5>
-                        <p class=\"text-center\">eaeaeaaeeaeaeaaeeaeaea<br>eaeaeaaeeaeaeaaeeaea<br>eaeaeaaeeaeaeaaeeaeaea<br>ea<br></p>
-                    </div>
-                </div>
+    <div class=\"container-fluid\" style=\"margin-top:20px;\">
+        <div class=\"row  ligne1\">
+            <div class=\"col-md-4 text-center\">
+                <img src=\"{{ asset('img/louvreLens.jpg') }}\" alt=\"Louvre Lens\">
+                <h5>Conférences au Louvre-Lens</h5>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium temporibus earum ipsam at. Iure fugiat dicta, ad amet, nesciunt modi, autem incidunt veritatis officia fugit sint quisquam illo eum animi?</p>
+            </div>
+            <div class=\"col-md-4 text-center\">
+                <img src=\"{{ asset('img/soiree.jpg') }}\" alt=\"soirée Lens\">
+                <h5>Une soirée d’exception</h5>
+                <p class=\"\">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium temporibus earum ipsam at. Iure fugiat dicta, ad amet, nesciunt modi, autem incidunt veritatis officia fugit sint quisquam illo eum animi?</p>
+            </div>
+            <div class=\"col-md-4 text-center\">
+            <img src=\"{{ asset('img/visites.jpg') }}\" alt=\"visites Arkéos\">
+                <h5>Des visites inédites</h5>
+                <p class=\"\">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium temporibus earum ipsam at. Iure fugiat dicta, ad amet, nesciunt modi, autem incidunt veritatis officia fugit sint quisquam illo eum animi?</p>
             </div>
         </div>
     </div>
     <div>
-        <div class=\"container\">
-            <div class=\"row\">
-                <div class=\"col-md-4 d-flex justify-content-between\"><img>
-                    <div>
-                        <h5>Villes invitées<br></h5>
-                        <p class=\"text-center\">eaeaeaaeeaeaeaaeeaeaea<br>eaeaeaaeeaeaeaaeeaea<br>eaeaeaaeeaeaeaaeeaeaea<br>ea<br></p>
-                    </div>
+        <div class=\"container-fluid\">
+            <div class=\"row ligne1\">
+                <div class=\"col-md-4 text-center\">
+                    <img src=\"{{ asset('img/ville.jpg') }}\" alt=\"soirée Lens\">
+                    <h5>Villes invitées</h5>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium temporibus earum ipsam at. Iure fugiat dicta, ad amet, nesciunt modi, autem incidunt veritatis officia fugit sint quisquam illo eum animi?</p></p>
                 </div>
-                <div class=\"col-md-4 d-flex justify-content-between\"><img>
-                    <div>
-                        <h5>Tout un programme&nbsp;<br>de fêtes<br></h5>
-                        <p class=\"text-center\">eaeaeaaeeaeaeaaeeaeaea<br>eaeaeaaeeaeaeaaeeaea<br>eaeaeaaeeaeaeaaeeaeaea<br>ea<br></p>
-                    </div>
+                <div class=\"col-md-4  text-center\">
+                    <img src=\"{{ asset('img/fete.jpg') }}\" alt=\"soirée Lens\">
+                    <h5>Tout un programme de fêtes</h5>
+                    <p class=\"text-center\"> <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium temporibus earum ipsam at. Iure fugiat dicta, ad amet, nesciunt modi, autem incidunt veritatis officia fugit sint quisquam illo eum animi?</p></p>
                 </div>
-                <div class=\"col-md-4 d-flex justify-content-between\"><img>
-                    <div>
-                        <h5>Des visites inédites<br></h5>
-                        <p class=\"text-center\">eaeaeaaeeaeaeaaeeaeaea<br>eaeaeaaeeaeaeaaeeaea<br>eaeaeaaeeaeaeaaeeaeaea<br>ea<br></p>
-                    </div>
+                <div class=\"col-md-4 text-center\">
+                    <img src=\"{{ asset('img/visite2.JPG') }}\" alt=\"visite Lens\">
+                    <h5>Des visites inédites</h5>
+                    <p class=\"text-center\"> <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium temporibus earum ipsam at. Iure fugiat dicta, ad amet, nesciunt modi, autem incidunt veritatis officia fugit sint quisquam illo eum animi?</p></p>
                 </div>
             </div>
         </div>
@@ -298,7 +396,7 @@ class __TwigTemplate_27153992e2224efaf1fa3012d5d6df1177990fa9830c6e03345ae0db708
     <div style=\"margin-top:100px;\">
         <div class=\"container\">
             <div class=\"row\">
-                <div class=\"col-md-12 d-flex justify-content-center align-items-center\"><a class=\"btn btn-primary\" role=\"button\" href=\"#\" style=\"margin-top:0px;font-size:25px;\">VOIR TOUT LE PROGRAMME</a></div>
+                <div class=\"col-md-12 d-flex justify-content-center align-items-center\"><a class=\"btn btn-primary\" role=\"button\" href=\"{{ asset('files/ticket.pdf') }}\" target=\"_blank\" style=\"margin-top:0px;font-size:25px;\">VOIR TOUT LE PROGRAMME</a></div>
             </div>
         </div>
     </div>
@@ -310,6 +408,6 @@ class __TwigTemplate_27153992e2224efaf1fa3012d5d6df1177990fa9830c6e03345ae0db708
         </div>
     </div>
 {% endblock %}
-", ":default:index.html.twig", "/var/www/html/ColloqueOfficeBen/app/Resources/views/default/index.html.twig");
+", "default/index.html.twig", "/var/www/html/ColloqueOfficeWorking/app/Resources/views/default/index.html.twig");
     }
 }

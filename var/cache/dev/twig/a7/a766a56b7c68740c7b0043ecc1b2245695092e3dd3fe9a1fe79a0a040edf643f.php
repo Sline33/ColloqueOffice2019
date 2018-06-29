@@ -1,6 +1,6 @@
 <?php
 
-/* :ticket:new.html.twig */
+/* ticket/new.html.twig */
 class __TwigTemplate_acfe4e3ae63f2c44e06fdc71e1b3304d805528f247436e2b2c08e9369565cf6c extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -8,7 +8,7 @@ class __TwigTemplate_acfe4e3ae63f2c44e06fdc71e1b3304d805528f247436e2b2c08e936956
         parent::__construct($env);
 
         // line 1
-        $this->parent = $this->loadTemplate("base.html.twig", ":ticket:new.html.twig", 1);
+        $this->parent = $this->loadTemplate("base.html.twig", "ticket/new.html.twig", 1);
         $this->blocks = array(
             'body' => array($this, 'block_body'),
         );
@@ -22,10 +22,10 @@ class __TwigTemplate_acfe4e3ae63f2c44e06fdc71e1b3304d805528f247436e2b2c08e936956
     protected function doDisplay(array $context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":ticket:new.html.twig"));
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "ticket/new.html.twig"));
 
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":ticket:new.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "ticket/new.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
@@ -74,11 +74,11 @@ class __TwigTemplate_acfe4e3ae63f2c44e06fdc71e1b3304d805528f247436e2b2c08e936956
                         <label for=\"fos_user_registration_form_societe\">Societe(*)</label>
                         <input class=\"form-control\" type=\"text\" id=\"appbundle_ticket_society\" name=\"appbundle_ticket[society]\" required=\"required\" value=\"\"/>
                     </div>
-                    
+
                     <br/>
                     <p class=\"text-center\" style=\"font-size:20px;font-weight:600;\">Jour 1 :</p>
                     <div class=\"field\">
-                        <label for=\"fos_user_registration_form_day1transporttrain\">Vous souhaitez bénéficier du transport de la gare SNCF de Lens à la Scène</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <label for=\"appbundle_ticket_day1TransportTrain\">Vous souhaitez bénéficier du transport de la gare SNCF de Lens à la Scène</label>&nbsp;&nbsp;&nbsp;&nbsp;
                         <input class=\"form\" type=\"checkbox\" id=\"appbundle_ticket_day1TransportTrain\" name=\"appbundle_ticket[day1TransportTrain]\" value=\"\"/>
                     </div>
                     <br/>
@@ -86,68 +86,68 @@ class __TwigTemplate_acfe4e3ae63f2c44e06fdc71e1b3304d805528f247436e2b2c08e936956
                     <br/>
                     <p>Pique-nique :(*)</p>
                     <div class=\"field\">
-                        <label for=\"fos_user_registration_form_day1Breakfast\">Choix 1</label>
+                        <label for=\"appbundle_ticket_day1Breakfast1\">Choix 1</label>
                         <input class=\"form\" type=\"checkbox\" id=\"appbundle_ticket_day1Breakfast1\" name=\"appbundle_ticket[day1Breakfast]\" value=\"1\"/>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <label for=\"fos_user_registration_form_day1Breakfast\">Choix 2</label>
+                        <label for=\"appbundle_ticket_day1Breakfast2\">Choix 2</label>
                         <input class=\"form\" type=\"checkbox\" id=\"appbundle_ticket_day1Breakfast2\" name=\"appbundle_ticket[day1Breakfast]\" value=\"2\"/>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <label for=\"fos_user_registration_form_day1Breakfast\">Choix 3</label>
+                        <label for=\"appbundle_ticket_day1Breakfast3\">Choix 3</label>
                         <input class=\"form\" type=\"checkbox\" id=\"appbundle_ticket_day1Breakfast3\" name=\"appbundle_ticket[day1Breakfast]\" value=\"3\"/>
                     </div>
                     <br/>
                     <p>Visite après-midi :(*)</p>
                     <div class=\"field\">
-                        <label for=\"fos_user_registration_form_day1Visite\">Choix 1</label>
+                        <label for=\"appbundle_ticket_day1Visite1\">Choix 1</label>
                         <input class=\"form\" type=\"checkbox\" id=\"appbundle_ticket_day1Visite1\" name=\"appbundle_ticket[day1Visite]\" value=\"1\"/>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <label for=\"fos_user_registration_form_day1Visite\">Choix 2</label>
+                        <label for=\"appbundle_ticket_day1Visite2\">Choix 2</label>
                         <input class=\"form\" type=\"checkbox\" id=\"appbundle_ticket_day1Visite2\" name=\"appbundle_ticket[day1Visite]\" value=\"2\"/>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <label for=\"fos_user_registration_form_day1Visite\">Choix 3</label>
+                        <label for=\"appbundle_ticket_day1Visite3\">Choix 3</label>
                         <input class=\"form\" type=\"checkbox\" id=\"appbundle_ticket_day1Visite3\" name=\"appbundle_ticket[day1Visite]\" value=\"3\"/>
                     </div>
                     <br/>
                     <div class=\"field\">
-                        <label for=\"fos_user_registration_form_day1TransportBus\">Vous souhaitez bénéficier des transports aller-retour vers les hébergements</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <label for=\"appbundle_ticket_day1TransportBus\">Vous souhaitez bénéficier des transports aller-retour vers les hébergements</label>&nbsp;&nbsp;&nbsp;&nbsp;
                         <input class=\"form\" type=\"checkbox\" id=\"appbundle_ticket_day1TransportBus\" name=\"appbundle_ticket[day1TransportBus]\" value=\"\"/>
                     </div>
                     <br/>
                     <p class=\"text-center\" style=\"font-size:20px;font-weight:600;\">Jour 2 :</p>
                     <div class=\"field\">
-                        <label for=\"fos_user_registration_form_day2TransportBus\">Vous souhaitez bénéficier des transports aller-retour vers les hébergements</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <label for=\"appbundle_ticket_day2TransportBus\">Vous souhaitez bénéficier des transports aller-retour vers les hébergements</label>&nbsp;&nbsp;&nbsp;&nbsp;
                         <input class=\"form\" type=\"checkbox\" id=\"appbundle_ticket_day2TransportBus\" name=\"appbundle_ticket[day2TransportBus]\" value=\"\"/>
                     </div>
                     <br/>
                     <p>Matin 9h-12h visite :(*)</p>
                     <div class=\"field\">
-                        <label for=\"fos_user_registration_form_day2Visite\">Choix 1</label>
+                        <label for=\"appbundle_ticket_day2Visite1\">Choix 1</label>
                         <input class=\"form\" type=\"checkbox\" id=\"appbundle_ticket_day2Visite1\" name=\"appbundle_ticket[day2Visite]\" value=\"1\"/>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <label for=\"fos_user_registration_form_day2Visite\">Choix 2</label>
+                        <label for=\"appbundle_ticket_day2Visite2\">Choix 2</label>
                         <input class=\"form\" type=\"checkbox\" id=\"appbundle_ticket_day2Visite2\" name=\"appbundle_ticket[day2Visite]\" value=\"2\"/>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <label for=\"fos_user_registration_form_day2Visite\">Choix 3</label>
+                        <label for=\"appbundle_ticket_day2Visite3\">Choix 3</label>
                         <input class=\"form\" type=\"checkbox\" id=\"appbundle_ticket_day2Visite3\" name=\"appbundle_ticket[day2Visite]\" value=\"3\"/>
                     </div>
                     <br/>
                     <p>Pique-nique :(*)</p>
                     <div class=\"field\">
-                        <label for=\"fos_user_registration_form_day2Breakfast\">Choix 1</label>
+                        <label for=\"appbundle_ticket_day2Breakfast1\">Choix 1</label>
                         <input class=\"form\" type=\"checkbox\" id=\"appbundle_ticket_day2Breakfast1\" name=\"appbundle_ticket[day2Breakfast]\" value=\"1\"/>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <label for=\"fos_user_registration_form_day2Breakfast\">Choix 2</label>
+                        <label for=\"appbundle_ticket_day2Breakfast2\">Choix 2</label>
                         <input class=\"form\" type=\"checkbox\" id=\"appbundle_ticket_day2Breakfast2\" name=\"appbundle_ticket[day2Breakfast]\" value=\"2\"/>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <label for=\"fos_user_registration_form_day2Breakfast\">Choix 3</label>
+                        <label for=\"appbundle_ticket_day2Breakfast3\">Choix 3</label>
                         <input class=\"form\" type=\"checkbox\" id=\"appbundle_ticket_day2Breakfast3\" name=\"appbundle_ticket[day2Breakfast]\" value=\"3\"/>
                     </div>
                     <br/>
                     <p>Après-midi : allocutions en salle à La Scène du Louvre-Lens</p>
                     <div class=\"field\">
-                        <label for=\"fos_user_registration_form_day2TransportTrain\">Vous souhaitez bénéficier du transport de la Scène à la gare SNCF de Lens</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <label for=\"appbundle_ticket_day2TransportTrain\">Vous souhaitez bénéficier du transport de la Scène à la gare SNCF de Lens</label>&nbsp;&nbsp;&nbsp;&nbsp;
                         <input class=\"form\" type=\"checkbox\" id=\"appbundle_ticket_day2TransportTrain\" name=\"appbundle_ticket[day2TransportTrain]\" value=\"\"/>
                     </div>
                     <br/>
                     <div class=\"field\">
-                        <label for=\"fos_user_registration_form_day2Night\">Soirée au Louvre-Lens (19h30-00 :30) : 40 €</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <label for=\"appbundle_ticket_day2Night\">Soirée au Louvre-Lens (19h30-00 :30) : 40 €</label>&nbsp;&nbsp;&nbsp;&nbsp;
                         <input class=\"form\" type=\"checkbox\" id=\"appbundle_ticket_day2Night\" name=\"appbundle_ticket[day2Night]\" value=\"\"/>
                     </div>
                     <br/>
                     <div class=\"field\">
-                        <label for=\"fos_user_registration_form_day2TransportBusNight\">Vous souhaitez bénéficier les transports aller-retour vers les hébergements</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <label for=\"appbundle_ticket_day2TransportBusNight\">Vous souhaitez bénéficier les transports aller-retour vers les hébergements</label>&nbsp;&nbsp;&nbsp;&nbsp;
                         <input class=\"form\" type=\"checkbox\" id=\"appbundle_ticket_day2TransportBusNight\" name=\"appbundle_ticket[day2TransportBusNight]\" value=\"\"/>
                     </div>
                     <br/>
@@ -157,38 +157,38 @@ class __TwigTemplate_acfe4e3ae63f2c44e06fdc71e1b3304d805528f247436e2b2c08e936956
                     <br/>
                     <p>Matin visite :</p>
                     <div class=\"field\">
-                        <label for=\"fos_user_registration_form_optionVisite\">Choix 1</label>
+                        <label for=\"appbundle_ticket_optionVisite1\">Choix 1</label>
                         <input class=\"form\" type=\"checkbox\" id=\"appbundle_ticket_optionVisite1\" name=\"appbundle_ticket[optionVisite]\" value=\"1\"/>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <label for=\"fos_user_registration_form_optionVisite\">Choix 2</label>
+                        <label for=\"appbundle_ticket_optionVisite2\">Choix 2</label>
                         <input class=\"form\" type=\"checkbox\" id=\"appbundle_ticket_optionVisite2\" name=\"appbundle_ticket[optionVisite]\" value=\"2\"/>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <label for=\"fos_user_registration_form_optionVisite\">Choix 3</label>
+                        <label for=\"appbundle_ticket_optionVisite3\">Choix 3</label>
                         <input class=\"form\" type=\"checkbox\" id=\"appbundle_ticket_optionVisite3\" name=\"appbundle_ticket[optionVisite]\" value=\"3\"/>
                     </div>
                     <br/>
                     <p>Entrée à l’exposition temporaire du Louvre-Lens (9 €)</p>
                     <div class=\"field\">
-                        <label for=\"appbundle_ticket_optionExpo\">Samedi 8 juin 2019</label>
+                        <label for=\"appbundle_ticket_optionExpo1\">Samedi 8 juin 2019</label>
                         <input class=\"form\" type=\"checkbox\" id=\"appbundle_ticket_optionExpo1\" name=\"appbundle_ticket[optionExpo]\" value=\"1\"/>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <label for=\"appbundle_ticket_optionExpo\">Dimanche 9 juin 2019</label>
+                        <label for=\"appbundle_ticket_optionExpo2\">Dimanche 9 juin 2019</label>
                         <input class=\"form\" type=\"checkbox\" id=\"appbundle_ticket_optionExpo2\" name=\"appbundle_ticket[optionExpo]\" value=\"2\"/>
                     </div>
                     <br/>
                     <p>Visite guidée Lens, mine d’Art déco à 14h30 (6 €)</p>
                     <div class=\"field\">
-                        <label for=\"fos_user_registration_form_optionArtDeco\">Samedi 8 juin 2019</label>
+                        <label for=\"appbundle_ticket_optionArtDeco1\">Samedi 8 juin 2019</label>
                         <input class=\"form\" type=\"checkbox\" id=\"appbundle_ticket_optionArtDeco1\" name=\"appbundle_ticket[optionArtDeco]\" value=\"1\"/>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <label for=\"fos_user_registration_form_optionArtDeco\">Dimanche 9 juin 2019</label>
+                        <label for=\"appbundle_ticket_optionArtDeco2\">Dimanche 9 juin 2019</label>
                         <input class=\"form\" type=\"checkbox\" id=\"appbundle_ticket_optionArtDeco2\" name=\"appbundle_ticket[optionArtDeco]\" value=\"2\"/>
                     </div>
                     <br/>
                     <div class=\"field\">
-                        <label for=\"fos_user_registration_form_optionDecouverte\">Visite guidée A la découverte des Terrils, trésors du Patrimoine mondial :<br/>
+                        <label for=\"appbundle_ticket_optionDecouverte\">Visite guidée A la découverte des Terrils, trésors du Patrimoine mondial :<br/>
                             Dimanche 9 juin à 14h30 (9 €)</label>
                         <input class=\"form\" type=\"checkbox\" id=\"appbundle_ticket_optionDecouverte\" name=\"appbundle_ticket[optionDecouverte]\" value=\"\"/>
                     </div>
                     <br/>
                     <div class=\"field\">
-                        <label for=\"fos_user_registration_form_day1optionGrandSite\">Visite guidée Notre-Dame-de-Lorette, grand site de la Mémoire :<br/>
+                        <label for=\"appbundle_ticket_optionGrandSite\">Visite guidée Notre-Dame-de-Lorette, grand site de la Mémoire :<br/>
                             dimanche 9 juin à 15h (6 €)</label>
                         <input class=\"form\" type=\"checkbox\" id=\"appbundle_ticket_optionGrandSite\" name=\"appbundle_ticket[optionGrandSite]\" value=\"\"/>
                     </div>
@@ -219,7 +219,7 @@ class __TwigTemplate_acfe4e3ae63f2c44e06fdc71e1b3304d805528f247436e2b2c08e936956
 
     public function getTemplateName()
     {
-        return ":ticket:new.html.twig";
+        return "ticket/new.html.twig";
     }
 
     public function isTraitable()
@@ -267,11 +267,11 @@ class __TwigTemplate_acfe4e3ae63f2c44e06fdc71e1b3304d805528f247436e2b2c08e936956
                         <label for=\"fos_user_registration_form_societe\">Societe(*)</label>
                         <input class=\"form-control\" type=\"text\" id=\"appbundle_ticket_society\" name=\"appbundle_ticket[society]\" required=\"required\" value=\"\"/>
                     </div>
-                    
+
                     <br/>
                     <p class=\"text-center\" style=\"font-size:20px;font-weight:600;\">Jour 1 :</p>
                     <div class=\"field\">
-                        <label for=\"fos_user_registration_form_day1transporttrain\">Vous souhaitez bénéficier du transport de la gare SNCF de Lens à la Scène</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <label for=\"appbundle_ticket_day1TransportTrain\">Vous souhaitez bénéficier du transport de la gare SNCF de Lens à la Scène</label>&nbsp;&nbsp;&nbsp;&nbsp;
                         <input class=\"form\" type=\"checkbox\" id=\"appbundle_ticket_day1TransportTrain\" name=\"appbundle_ticket[day1TransportTrain]\" value=\"\"/>
                     </div>
                     <br/>
@@ -279,68 +279,68 @@ class __TwigTemplate_acfe4e3ae63f2c44e06fdc71e1b3304d805528f247436e2b2c08e936956
                     <br/>
                     <p>Pique-nique :(*)</p>
                     <div class=\"field\">
-                        <label for=\"fos_user_registration_form_day1Breakfast\">Choix 1</label>
+                        <label for=\"appbundle_ticket_day1Breakfast1\">Choix 1</label>
                         <input class=\"form\" type=\"checkbox\" id=\"appbundle_ticket_day1Breakfast1\" name=\"appbundle_ticket[day1Breakfast]\" value=\"1\"/>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <label for=\"fos_user_registration_form_day1Breakfast\">Choix 2</label>
+                        <label for=\"appbundle_ticket_day1Breakfast2\">Choix 2</label>
                         <input class=\"form\" type=\"checkbox\" id=\"appbundle_ticket_day1Breakfast2\" name=\"appbundle_ticket[day1Breakfast]\" value=\"2\"/>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <label for=\"fos_user_registration_form_day1Breakfast\">Choix 3</label>
+                        <label for=\"appbundle_ticket_day1Breakfast3\">Choix 3</label>
                         <input class=\"form\" type=\"checkbox\" id=\"appbundle_ticket_day1Breakfast3\" name=\"appbundle_ticket[day1Breakfast]\" value=\"3\"/>
                     </div>
                     <br/>
                     <p>Visite après-midi :(*)</p>
                     <div class=\"field\">
-                        <label for=\"fos_user_registration_form_day1Visite\">Choix 1</label>
+                        <label for=\"appbundle_ticket_day1Visite1\">Choix 1</label>
                         <input class=\"form\" type=\"checkbox\" id=\"appbundle_ticket_day1Visite1\" name=\"appbundle_ticket[day1Visite]\" value=\"1\"/>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <label for=\"fos_user_registration_form_day1Visite\">Choix 2</label>
+                        <label for=\"appbundle_ticket_day1Visite2\">Choix 2</label>
                         <input class=\"form\" type=\"checkbox\" id=\"appbundle_ticket_day1Visite2\" name=\"appbundle_ticket[day1Visite]\" value=\"2\"/>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <label for=\"fos_user_registration_form_day1Visite\">Choix 3</label>
+                        <label for=\"appbundle_ticket_day1Visite3\">Choix 3</label>
                         <input class=\"form\" type=\"checkbox\" id=\"appbundle_ticket_day1Visite3\" name=\"appbundle_ticket[day1Visite]\" value=\"3\"/>
                     </div>
                     <br/>
                     <div class=\"field\">
-                        <label for=\"fos_user_registration_form_day1TransportBus\">Vous souhaitez bénéficier des transports aller-retour vers les hébergements</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <label for=\"appbundle_ticket_day1TransportBus\">Vous souhaitez bénéficier des transports aller-retour vers les hébergements</label>&nbsp;&nbsp;&nbsp;&nbsp;
                         <input class=\"form\" type=\"checkbox\" id=\"appbundle_ticket_day1TransportBus\" name=\"appbundle_ticket[day1TransportBus]\" value=\"\"/>
                     </div>
                     <br/>
                     <p class=\"text-center\" style=\"font-size:20px;font-weight:600;\">Jour 2 :</p>
                     <div class=\"field\">
-                        <label for=\"fos_user_registration_form_day2TransportBus\">Vous souhaitez bénéficier des transports aller-retour vers les hébergements</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <label for=\"appbundle_ticket_day2TransportBus\">Vous souhaitez bénéficier des transports aller-retour vers les hébergements</label>&nbsp;&nbsp;&nbsp;&nbsp;
                         <input class=\"form\" type=\"checkbox\" id=\"appbundle_ticket_day2TransportBus\" name=\"appbundle_ticket[day2TransportBus]\" value=\"\"/>
                     </div>
                     <br/>
                     <p>Matin 9h-12h visite :(*)</p>
                     <div class=\"field\">
-                        <label for=\"fos_user_registration_form_day2Visite\">Choix 1</label>
+                        <label for=\"appbundle_ticket_day2Visite1\">Choix 1</label>
                         <input class=\"form\" type=\"checkbox\" id=\"appbundle_ticket_day2Visite1\" name=\"appbundle_ticket[day2Visite]\" value=\"1\"/>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <label for=\"fos_user_registration_form_day2Visite\">Choix 2</label>
+                        <label for=\"appbundle_ticket_day2Visite2\">Choix 2</label>
                         <input class=\"form\" type=\"checkbox\" id=\"appbundle_ticket_day2Visite2\" name=\"appbundle_ticket[day2Visite]\" value=\"2\"/>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <label for=\"fos_user_registration_form_day2Visite\">Choix 3</label>
+                        <label for=\"appbundle_ticket_day2Visite3\">Choix 3</label>
                         <input class=\"form\" type=\"checkbox\" id=\"appbundle_ticket_day2Visite3\" name=\"appbundle_ticket[day2Visite]\" value=\"3\"/>
                     </div>
                     <br/>
                     <p>Pique-nique :(*)</p>
                     <div class=\"field\">
-                        <label for=\"fos_user_registration_form_day2Breakfast\">Choix 1</label>
+                        <label for=\"appbundle_ticket_day2Breakfast1\">Choix 1</label>
                         <input class=\"form\" type=\"checkbox\" id=\"appbundle_ticket_day2Breakfast1\" name=\"appbundle_ticket[day2Breakfast]\" value=\"1\"/>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <label for=\"fos_user_registration_form_day2Breakfast\">Choix 2</label>
+                        <label for=\"appbundle_ticket_day2Breakfast2\">Choix 2</label>
                         <input class=\"form\" type=\"checkbox\" id=\"appbundle_ticket_day2Breakfast2\" name=\"appbundle_ticket[day2Breakfast]\" value=\"2\"/>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <label for=\"fos_user_registration_form_day2Breakfast\">Choix 3</label>
+                        <label for=\"appbundle_ticket_day2Breakfast3\">Choix 3</label>
                         <input class=\"form\" type=\"checkbox\" id=\"appbundle_ticket_day2Breakfast3\" name=\"appbundle_ticket[day2Breakfast]\" value=\"3\"/>
                     </div>
                     <br/>
                     <p>Après-midi : allocutions en salle à La Scène du Louvre-Lens</p>
                     <div class=\"field\">
-                        <label for=\"fos_user_registration_form_day2TransportTrain\">Vous souhaitez bénéficier du transport de la Scène à la gare SNCF de Lens</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <label for=\"appbundle_ticket_day2TransportTrain\">Vous souhaitez bénéficier du transport de la Scène à la gare SNCF de Lens</label>&nbsp;&nbsp;&nbsp;&nbsp;
                         <input class=\"form\" type=\"checkbox\" id=\"appbundle_ticket_day2TransportTrain\" name=\"appbundle_ticket[day2TransportTrain]\" value=\"\"/>
                     </div>
                     <br/>
                     <div class=\"field\">
-                        <label for=\"fos_user_registration_form_day2Night\">Soirée au Louvre-Lens (19h30-00 :30) : 40 €</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <label for=\"appbundle_ticket_day2Night\">Soirée au Louvre-Lens (19h30-00 :30) : 40 €</label>&nbsp;&nbsp;&nbsp;&nbsp;
                         <input class=\"form\" type=\"checkbox\" id=\"appbundle_ticket_day2Night\" name=\"appbundle_ticket[day2Night]\" value=\"\"/>
                     </div>
                     <br/>
                     <div class=\"field\">
-                        <label for=\"fos_user_registration_form_day2TransportBusNight\">Vous souhaitez bénéficier les transports aller-retour vers les hébergements</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <label for=\"appbundle_ticket_day2TransportBusNight\">Vous souhaitez bénéficier les transports aller-retour vers les hébergements</label>&nbsp;&nbsp;&nbsp;&nbsp;
                         <input class=\"form\" type=\"checkbox\" id=\"appbundle_ticket_day2TransportBusNight\" name=\"appbundle_ticket[day2TransportBusNight]\" value=\"\"/>
                     </div>
                     <br/>
@@ -350,38 +350,38 @@ class __TwigTemplate_acfe4e3ae63f2c44e06fdc71e1b3304d805528f247436e2b2c08e936956
                     <br/>
                     <p>Matin visite :</p>
                     <div class=\"field\">
-                        <label for=\"fos_user_registration_form_optionVisite\">Choix 1</label>
+                        <label for=\"appbundle_ticket_optionVisite1\">Choix 1</label>
                         <input class=\"form\" type=\"checkbox\" id=\"appbundle_ticket_optionVisite1\" name=\"appbundle_ticket[optionVisite]\" value=\"1\"/>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <label for=\"fos_user_registration_form_optionVisite\">Choix 2</label>
+                        <label for=\"appbundle_ticket_optionVisite2\">Choix 2</label>
                         <input class=\"form\" type=\"checkbox\" id=\"appbundle_ticket_optionVisite2\" name=\"appbundle_ticket[optionVisite]\" value=\"2\"/>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <label for=\"fos_user_registration_form_optionVisite\">Choix 3</label>
+                        <label for=\"appbundle_ticket_optionVisite3\">Choix 3</label>
                         <input class=\"form\" type=\"checkbox\" id=\"appbundle_ticket_optionVisite3\" name=\"appbundle_ticket[optionVisite]\" value=\"3\"/>
                     </div>
                     <br/>
                     <p>Entrée à l’exposition temporaire du Louvre-Lens (9 €)</p>
                     <div class=\"field\">
-                        <label for=\"appbundle_ticket_optionExpo\">Samedi 8 juin 2019</label>
+                        <label for=\"appbundle_ticket_optionExpo1\">Samedi 8 juin 2019</label>
                         <input class=\"form\" type=\"checkbox\" id=\"appbundle_ticket_optionExpo1\" name=\"appbundle_ticket[optionExpo]\" value=\"1\"/>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <label for=\"appbundle_ticket_optionExpo\">Dimanche 9 juin 2019</label>
+                        <label for=\"appbundle_ticket_optionExpo2\">Dimanche 9 juin 2019</label>
                         <input class=\"form\" type=\"checkbox\" id=\"appbundle_ticket_optionExpo2\" name=\"appbundle_ticket[optionExpo]\" value=\"2\"/>
                     </div>
                     <br/>
                     <p>Visite guidée Lens, mine d’Art déco à 14h30 (6 €)</p>
                     <div class=\"field\">
-                        <label for=\"fos_user_registration_form_optionArtDeco\">Samedi 8 juin 2019</label>
+                        <label for=\"appbundle_ticket_optionArtDeco1\">Samedi 8 juin 2019</label>
                         <input class=\"form\" type=\"checkbox\" id=\"appbundle_ticket_optionArtDeco1\" name=\"appbundle_ticket[optionArtDeco]\" value=\"1\"/>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <label for=\"fos_user_registration_form_optionArtDeco\">Dimanche 9 juin 2019</label>
+                        <label for=\"appbundle_ticket_optionArtDeco2\">Dimanche 9 juin 2019</label>
                         <input class=\"form\" type=\"checkbox\" id=\"appbundle_ticket_optionArtDeco2\" name=\"appbundle_ticket[optionArtDeco]\" value=\"2\"/>
                     </div>
                     <br/>
                     <div class=\"field\">
-                        <label for=\"fos_user_registration_form_optionDecouverte\">Visite guidée A la découverte des Terrils, trésors du Patrimoine mondial :<br/>
+                        <label for=\"appbundle_ticket_optionDecouverte\">Visite guidée A la découverte des Terrils, trésors du Patrimoine mondial :<br/>
                             Dimanche 9 juin à 14h30 (9 €)</label>
                         <input class=\"form\" type=\"checkbox\" id=\"appbundle_ticket_optionDecouverte\" name=\"appbundle_ticket[optionDecouverte]\" value=\"\"/>
                     </div>
                     <br/>
                     <div class=\"field\">
-                        <label for=\"fos_user_registration_form_day1optionGrandSite\">Visite guidée Notre-Dame-de-Lorette, grand site de la Mémoire :<br/>
+                        <label for=\"appbundle_ticket_optionGrandSite\">Visite guidée Notre-Dame-de-Lorette, grand site de la Mémoire :<br/>
                             dimanche 9 juin à 15h (6 €)</label>
                         <input class=\"form\" type=\"checkbox\" id=\"appbundle_ticket_optionGrandSite\" name=\"appbundle_ticket[optionGrandSite]\" value=\"\"/>
                     </div>
@@ -399,6 +399,6 @@ class __TwigTemplate_acfe4e3ae63f2c44e06fdc71e1b3304d805528f247436e2b2c08e936956
     </div>
 <script src=\"{{ asset('js/ticket.js') }}\"></script>
 {% endblock %}
-", ":ticket:new.html.twig", "/var/www/html/ColloqueOfficeBen/app/Resources/views/ticket/new.html.twig");
+", "ticket/new.html.twig", "/var/www/html/ColloqueOfficeWorking/app/Resources/views/ticket/new.html.twig");
     }
 }

@@ -34,16 +34,16 @@ class FactureRepository extends EntityRepository
         return $queryBuilder->getResult();
 
     }
-    public function findByFacture(Customer $customer) {
+    // public function findByFacture(Customer $customer) {
 
-        $query = $this->createQueryBuilder('f')
-        ->join('t.facture', 'f')
-        ->where('f.id = :factureId')
-        ->setParameter('factureId', $factureId)
-        ->getQuery();
+    //     $query = $this->createQueryBuilder('f')
+    //     ->join('t.facture', 'f')
+    //     ->where('f.id = :factureId')
+    //     ->setParameter('factureId', $factureId)
+    //     ->getQuery();
 
-        return $query->getSingleScalarResult();
-    }
+    //     return $query->getSingleScalarResult();
+    // }
 
 
     public function findFactureStatus2(Customer $customer)
@@ -58,7 +58,7 @@ class FactureRepository extends EntityRepository
 
     }
 
-    public function test(Customer $customer) {
+    public function findByPrice(Customer $customer) {
 
         $query = $this->createQueryBuilder('f')
         ->select('f.price AS ticket_price')

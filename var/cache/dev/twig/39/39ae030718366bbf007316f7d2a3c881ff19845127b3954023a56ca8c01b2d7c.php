@@ -1,6 +1,6 @@
 <?php
 
-/* :admin:adminUtilisateurs.html.twig */
+/* admin/adminUtilisateurs.html.twig */
 class __TwigTemplate_50b1ef14719febe97154accb68113d52f82cbd1fd351ff0f2e2bf17a73d02416 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -8,7 +8,7 @@ class __TwigTemplate_50b1ef14719febe97154accb68113d52f82cbd1fd351ff0f2e2bf17a73d
         parent::__construct($env);
 
         // line 1
-        $this->parent = $this->loadTemplate("base.html.twig", ":admin:adminUtilisateurs.html.twig", 1);
+        $this->parent = $this->loadTemplate("base.html.twig", "admin/adminUtilisateurs.html.twig", 1);
         $this->blocks = array(
             'body' => array($this, 'block_body'),
         );
@@ -22,10 +22,10 @@ class __TwigTemplate_50b1ef14719febe97154accb68113d52f82cbd1fd351ff0f2e2bf17a73d
     protected function doDisplay(array $context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":admin:adminUtilisateurs.html.twig"));
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "admin/adminUtilisateurs.html.twig"));
 
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":admin:adminUtilisateurs.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "admin/adminUtilisateurs.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
@@ -46,309 +46,103 @@ class __TwigTemplate_50b1ef14719febe97154accb68113d52f82cbd1fd351ff0f2e2bf17a73d
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
-        echo "<header>
-        <div class=\"col-lg-11 col-xl-12 d-flex justify-content-center\" style=\"padding:0px;\">
-            <div class=\"d-flex justify-content-center\" style=\"margin-top:20px;\">
-                <div class=\"d-flex flex-row-reverse justify-content-center align-items-center\"><i class=\"fa fa-long-arrow-left d-flex align-items-center\" style=\"font-size:70px;width:69px;\"></i><a href=\"index.html\" class=\"reservation-link\" style=\"font-size:25px\">ACCUEIL</a></div>
-                <div><i class=\"fa fa-circle-o\" style=\"font-size:201px;\"></i></div>
-                <div class=\"d-flex flex-row-reverse justify-content-center align-items-center\"><a href=\"admin.html\" class=\"reservation-link\" style=\"font-size:25px\">RETOUR</a><i class=\"fa fa-long-arrow-right d-flex align-items-center\" style=\"font-size:70px;width:69px;\"></i></div>
-            </div>
-        </div>
-    </header>
-    <div style=\"margin-left:150px;margin-right:150px;margin-top:100px;\">
-        <div class=\"container border-util\" style=\"margin:0;margin-left:0;margin-right:0;padding:0;margin-top:0px;\">
-            <div class=\"row d-flex flex-row border-util\" style=\"margin:0;margin-right:0;margin-left:0;\">
-                <div class=\"col offset-xl-0\" style=\"padding:0;margin-left:0;\">
-                    <p class=\"text-center\">Civilite</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">Nom</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">Prenom</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">Societe</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">Email</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">Adresse</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">CP</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">Ville</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">Telephone</p>
-                </div>
-            </div>
-            <div class=\"row d-flex flex-row\" style=\"margin:0;margin-right:0;margin-left:0;\">
-                <div class=\"col offset-xl-0\" style=\"padding:0;margin-left:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-            </div>
-            <div class=\"row d-flex flex-row\" style=\"margin:0;margin-right:0;margin-left:0;\">
-                <div class=\"col offset-xl-0\" style=\"padding:0;margin-left:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-            </div>
-            <div class=\"row d-flex flex-row\" style=\"margin:0;margin-right:0;margin-left:0;\">
-                <div class=\"col offset-xl-0\" style=\"padding:0;margin-left:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-            </div>
-            <div class=\"row d-flex flex-row\" style=\"margin:0;margin-right:0;margin-left:0;\">
-                <div class=\"col offset-xl-0\" style=\"padding:0;margin-left:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-            </div>
-            <div class=\"row d-flex flex-row\" style=\"margin:0;margin-right:0;margin-left:0;\">
-                <div class=\"col offset-xl-0\" style=\"padding:0;margin-left:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-            </div>
-            <div class=\"row d-flex flex-row\" style=\"margin:0;margin-right:0;margin-left:0;\">
-                <div class=\"col offset-xl-0\" style=\"padding:0;margin-left:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-            </div>
-            <div class=\"row d-flex flex-row\" style=\"margin:0;margin-right:0;margin-left:0;\">
-                <div class=\"col offset-xl-0\" style=\"padding:0;margin-left:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-            </div>
-            <div class=\"row d-flex flex-row\" style=\"margin:0;margin-right:0;margin-left:0;\">
-                <div class=\"col offset-xl-0\" style=\"padding:0;margin-left:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-            </div>
-            <div class=\"row d-flex flex-row\" style=\"margin:0;margin-right:0;margin-left:0;\">
-                <div class=\"col offset-xl-0\" style=\"padding:0;margin-left:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-            </div>
-        </div>
+        echo "    <div style=\"text-align:center;\">
+         <a class=\"nav-link\" href=\"";
+        // line 5
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("admin_page");
+        echo "\" style=\"font-size:25px;color:black;\">Retour</a>
     </div>
+    <div style=\"margin-left:40px;margin-right:40px;margin-top:100px;\">
+        <div class=\"container-fluid border-util\">
+            <div class=\"row d-flex flex-row\" style=\"margin:0;margin-right:0;margin-left:0;\">
+              <table id=\"table\" class=\"col-md-12\">
+                <thead class=\"user_form2\">
+                  <tr>
+                    <th class=\"user_form\" data-sort=\"string\">Civilite</th>
+                    <th class=\"user_form\" data-sort=\"string\">Nom</th>
+                    <th class=\"user_form\" data-sort=\"string\">Prenom</th>
+                    <th class=\"user_form\" data-sort=\"string\">Societe</th>
+                    <th class=\"user_form\" data-sort=\"string\">Email</th>
+                    <th class=\"user_form\" data-sort=\"string\">Adresse</th>
+                    <th class=\"user_form\" data-sort=\"int\">CP</th>
+                    <th class=\"user_form\" data-sort=\"string\">Ville</th>
+                    <th class=\"user_form\" data-sort=\"string\">Telephone</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    ";
+        // line 26
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(($context["customers"] ?? $this->getContext($context, "customers")));
+        foreach ($context['_seq'] as $context["_key"] => $context["customer"]) {
+            // line 27
+            echo "                    <td style=\"padding-top:5px;\">";
+            if (($this->getAttribute($context["customer"], "sexe", array()) == 0)) {
+                echo "Mme";
+            } elseif (($this->getAttribute($context["customer"], "sexe", array()) == 1)) {
+                echo "Mr";
+            }
+            echo "</td>
+                    <td>";
+            // line 28
+            echo twig_escape_filter($this->env, $this->getAttribute($context["customer"], "lastname", array()), "html", null, true);
+            echo "</td>
+                    <td>";
+            // line 29
+            echo twig_escape_filter($this->env, $this->getAttribute($context["customer"], "firstname", array()), "html", null, true);
+            echo "</td>
+                    <td>";
+            // line 30
+            echo twig_escape_filter($this->env, $this->getAttribute($context["customer"], "society", array()), "html", null, true);
+            echo "</td>
+                    <td>";
+            // line 31
+            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["customer"], "user", array()), "email", array()), "html", null, true);
+            echo "</td>
+                    <td>";
+            // line 32
+            echo twig_escape_filter($this->env, $this->getAttribute($context["customer"], "adress", array()), "html", null, true);
+            echo "</td>
+                    <td>";
+            // line 33
+            echo twig_escape_filter($this->env, $this->getAttribute($context["customer"], "cp", array()), "html", null, true);
+            echo "</td>
+                    <td>";
+            // line 34
+            echo twig_escape_filter($this->env, $this->getAttribute($context["customer"], "town", array()), "html", null, true);
+            echo "</td>
+                    <td>";
+            // line 35
+            echo twig_escape_filter($this->env, $this->getAttribute($context["customer"], "phonenumber", array()), "html", null, true);
+            echo "</td>
+                  </tr>
+                  ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['customer'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 38
+        echo "                </tbody>
+              </table>
+            </div>
+        </div>
+      </div>
+      <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js\" integrity=\"sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ\" crossorigin=\"anonymous\"></script>
+      <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js\" integrity=\"sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm\" crossorigin=\"anonymous\"></script>
+      <script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\" integrity=\"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo\" crossorigin=\"anonymous\"></script>
+      <script src=\"";
+        // line 46
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/stupidtable.js"), "html", null, true);
+        echo "\"></script>
+      <script src=\"";
+        // line 47
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/stupidtable.min.js"), "html", null, true);
+        echo "\"></script>
+      <script src=\"";
+        // line 48
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/sort.js"), "html", null, true);
+        echo "\"></script>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -360,7 +154,7 @@ class __TwigTemplate_50b1ef14719febe97154accb68113d52f82cbd1fd351ff0f2e2bf17a73d
 
     public function getTemplateName()
     {
-        return ":admin:adminUtilisateurs.html.twig";
+        return "admin/adminUtilisateurs.html.twig";
     }
 
     public function isTraitable()
@@ -370,7 +164,7 @@ class __TwigTemplate_50b1ef14719febe97154accb68113d52f82cbd1fd351ff0f2e2bf17a73d
 
     public function getDebugInfo()
     {
-        return array (  49 => 4,  40 => 3,  11 => 1,);
+        return array (  144 => 48,  140 => 47,  136 => 46,  126 => 38,  117 => 35,  113 => 34,  109 => 33,  105 => 32,  101 => 31,  97 => 30,  93 => 29,  89 => 28,  80 => 27,  76 => 26,  52 => 5,  49 => 4,  40 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -386,309 +180,52 @@ class __TwigTemplate_50b1ef14719febe97154accb68113d52f82cbd1fd351ff0f2e2bf17a73d
         return new Twig_Source("{% extends 'base.html.twig' %}
 
 {% block body %}
-<header>
-        <div class=\"col-lg-11 col-xl-12 d-flex justify-content-center\" style=\"padding:0px;\">
-            <div class=\"d-flex justify-content-center\" style=\"margin-top:20px;\">
-                <div class=\"d-flex flex-row-reverse justify-content-center align-items-center\"><i class=\"fa fa-long-arrow-left d-flex align-items-center\" style=\"font-size:70px;width:69px;\"></i><a href=\"index.html\" class=\"reservation-link\" style=\"font-size:25px\">ACCUEIL</a></div>
-                <div><i class=\"fa fa-circle-o\" style=\"font-size:201px;\"></i></div>
-                <div class=\"d-flex flex-row-reverse justify-content-center align-items-center\"><a href=\"admin.html\" class=\"reservation-link\" style=\"font-size:25px\">RETOUR</a><i class=\"fa fa-long-arrow-right d-flex align-items-center\" style=\"font-size:70px;width:69px;\"></i></div>
-            </div>
-        </div>
-    </header>
-    <div style=\"margin-left:150px;margin-right:150px;margin-top:100px;\">
-        <div class=\"container border-util\" style=\"margin:0;margin-left:0;margin-right:0;padding:0;margin-top:0px;\">
-            <div class=\"row d-flex flex-row border-util\" style=\"margin:0;margin-right:0;margin-left:0;\">
-                <div class=\"col offset-xl-0\" style=\"padding:0;margin-left:0;\">
-                    <p class=\"text-center\">Civilite</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">Nom</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">Prenom</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">Societe</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">Email</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">Adresse</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">CP</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">Ville</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">Telephone</p>
-                </div>
-            </div>
-            <div class=\"row d-flex flex-row\" style=\"margin:0;margin-right:0;margin-left:0;\">
-                <div class=\"col offset-xl-0\" style=\"padding:0;margin-left:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-            </div>
-            <div class=\"row d-flex flex-row\" style=\"margin:0;margin-right:0;margin-left:0;\">
-                <div class=\"col offset-xl-0\" style=\"padding:0;margin-left:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-            </div>
-            <div class=\"row d-flex flex-row\" style=\"margin:0;margin-right:0;margin-left:0;\">
-                <div class=\"col offset-xl-0\" style=\"padding:0;margin-left:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-            </div>
-            <div class=\"row d-flex flex-row\" style=\"margin:0;margin-right:0;margin-left:0;\">
-                <div class=\"col offset-xl-0\" style=\"padding:0;margin-left:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-            </div>
-            <div class=\"row d-flex flex-row\" style=\"margin:0;margin-right:0;margin-left:0;\">
-                <div class=\"col offset-xl-0\" style=\"padding:0;margin-left:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-            </div>
-            <div class=\"row d-flex flex-row\" style=\"margin:0;margin-right:0;margin-left:0;\">
-                <div class=\"col offset-xl-0\" style=\"padding:0;margin-left:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-            </div>
-            <div class=\"row d-flex flex-row\" style=\"margin:0;margin-right:0;margin-left:0;\">
-                <div class=\"col offset-xl-0\" style=\"padding:0;margin-left:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-            </div>
-            <div class=\"row d-flex flex-row\" style=\"margin:0;margin-right:0;margin-left:0;\">
-                <div class=\"col offset-xl-0\" style=\"padding:0;margin-left:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-            </div>
-            <div class=\"row d-flex flex-row\" style=\"margin:0;margin-right:0;margin-left:0;\">
-                <div class=\"col offset-xl-0\" style=\"padding:0;margin-left:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-                <div class=\"col\" style=\"padding:0;\">
-                    <p class=\"text-center\">XXX</p>
-                </div>
-            </div>
-        </div>
+    <div style=\"text-align:center;\">
+         <a class=\"nav-link\" href=\"{{ path('admin_page') }}\" style=\"font-size:25px;color:black;\">Retour</a>
     </div>
-{% endblock %}", ":admin:adminUtilisateurs.html.twig", "/var/www/html/ColloqueOfficeBen/app/Resources/views/admin/adminUtilisateurs.html.twig");
+    <div style=\"margin-left:40px;margin-right:40px;margin-top:100px;\">
+        <div class=\"container-fluid border-util\">
+            <div class=\"row d-flex flex-row\" style=\"margin:0;margin-right:0;margin-left:0;\">
+              <table id=\"table\" class=\"col-md-12\">
+                <thead class=\"user_form2\">
+                  <tr>
+                    <th class=\"user_form\" data-sort=\"string\">Civilite</th>
+                    <th class=\"user_form\" data-sort=\"string\">Nom</th>
+                    <th class=\"user_form\" data-sort=\"string\">Prenom</th>
+                    <th class=\"user_form\" data-sort=\"string\">Societe</th>
+                    <th class=\"user_form\" data-sort=\"string\">Email</th>
+                    <th class=\"user_form\" data-sort=\"string\">Adresse</th>
+                    <th class=\"user_form\" data-sort=\"int\">CP</th>
+                    <th class=\"user_form\" data-sort=\"string\">Ville</th>
+                    <th class=\"user_form\" data-sort=\"string\">Telephone</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    {% for customer in customers %}
+                    <td style=\"padding-top:5px;\">{% if customer.sexe == 0 %}Mme{% elseif customer.sexe == 1 %}Mr{% endif %}</td>
+                    <td>{{customer.lastname}}</td>
+                    <td>{{customer.firstname}}</td>
+                    <td>{{customer.society}}</td>
+                    <td>{{customer.user.email}}</td>
+                    <td>{{customer.adress}}</td>
+                    <td>{{customer.cp}}</td>
+                    <td>{{customer.town}}</td>
+                    <td>{{customer.phonenumber}}</td>
+                  </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+            </div>
+        </div>
+      </div>
+      <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js\" integrity=\"sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ\" crossorigin=\"anonymous\"></script>
+      <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js\" integrity=\"sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm\" crossorigin=\"anonymous\"></script>
+      <script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\" integrity=\"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo\" crossorigin=\"anonymous\"></script>
+      <script src=\"{{ asset('js/stupidtable.js') }}\"></script>
+      <script src=\"{{ asset('js/stupidtable.min.js') }}\"></script>
+      <script src=\"{{ asset('js/sort.js') }}\"></script>
+{% endblock %}
+", "admin/adminUtilisateurs.html.twig", "/var/www/html/ColloqueOfficeWorking/app/Resources/views/admin/adminUtilisateurs.html.twig");
     }
 }

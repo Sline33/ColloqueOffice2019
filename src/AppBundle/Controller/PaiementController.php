@@ -29,8 +29,8 @@ class PaiementController extends Controller
         $customer =   $em->getRepository('AppBundle:Customer')->findByUser($user)[0];
         $facture = $em->getRepository('AppBundle:Facture')->findOneByCustomer($customer);
         $prixtotal =  $em->getRepository('AppBundle:Ticket')->computeSum($facture);
-        $test =  $em->getRepository('AppBundle:Facture')->test($customer);
-        $prixPayzen = $test * 100;
+        $price =  $em->getRepository('AppBundle:Facture')->findByPrice($customer);
+        $prixPayzen = $price * 100;
 
 
 
@@ -84,7 +84,7 @@ class PaiementController extends Controller
         $signature = sha1($rawData);
 
         return $this->render('paiement/new.html.twig',array(
-            'test' => $test,
+            'price' => $price,
             'prixPayzen' => $prixPayzen,
             'vads_action_mode' => $vads_action_mode,
             'vads_capture_delay' => $vads_capture_delay,

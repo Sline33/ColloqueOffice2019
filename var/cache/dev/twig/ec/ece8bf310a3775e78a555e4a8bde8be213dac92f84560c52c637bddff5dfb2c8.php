@@ -1,6 +1,6 @@
 <?php
 
-/* :admin:adminColloque.html.twig */
+/* admin/adminColloque.html.twig */
 class __TwigTemplate_4a66898768e8c94d9b27acdfc9b0ee85adf5ca597072611b16972962eb92d8b3 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -8,7 +8,7 @@ class __TwigTemplate_4a66898768e8c94d9b27acdfc9b0ee85adf5ca597072611b16972962eb9
         parent::__construct($env);
 
         // line 1
-        $this->parent = $this->loadTemplate("base.html.twig", ":admin:adminColloque.html.twig", 1);
+        $this->parent = $this->loadTemplate("base.html.twig", "admin/adminColloque.html.twig", 1);
         $this->blocks = array(
             'body' => array($this, 'block_body'),
         );
@@ -22,10 +22,10 @@ class __TwigTemplate_4a66898768e8c94d9b27acdfc9b0ee85adf5ca597072611b16972962eb9
     protected function doDisplay(array $context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":admin:adminColloque.html.twig"));
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "admin/adminColloque.html.twig"));
 
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":admin:adminColloque.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "admin/adminColloque.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
@@ -46,7 +46,7 @@ class __TwigTemplate_4a66898768e8c94d9b27acdfc9b0ee85adf5ca597072611b16972962eb9
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
-        echo "<div class=\"container-fuild\" style=\"margin-top:35px\">
+        echo "<div class=\"container-fluid\" style=\"margin-top:35px\">
     <div class=\"row\">
         <div class=\"col-md-3\">
             <div class=\"d-flex justify-content-center\">
@@ -99,58 +99,140 @@ class __TwigTemplate_4a66898768e8c94d9b27acdfc9b0ee85adf5ca597072611b16972962eb9
                 </div>
             </div>
         </div>
+
+
         <div class=\"col-md-9\" style=\"min-height:auto;\">
             <div class=\"row d-flex bordertitleadmin\">
                 <div class=\"col-xl-12 d-flex justify-content-between\">
                     <p id=\"jour\" style=\"font-weight:bold;font-size:22px;\">Toutes les réservations</p>
                     <p id=\"evenement\" style=\"font-size:22px;font-weight:bold;\"></p>
-                    <p style=\"font-size:22px;font-weight:bold;\">TOTAL : XXX Personnes</p>
+                    <p id=\"personNumber\" style=\"font-size:22px;font-weight:bold;\">";
+        // line 64
+        echo twig_escape_filter($this->env, ($context["personNumber"] ?? $this->getContext($context, "personNumber")), "html", null, true);
+        echo "</p>
                 </div>
             </div>
-            <div class=\"row\">
-                <div class=\"col\">
-                    <a href=\"admincolloque.php?nom=<?= \$sortInverse['nom']?>\" class=\"text-center\">Nom</a>
-                </div>
-                <div class=\"col\">
-                    <a href=\"admincolloque.php?prenom=<?= \$sortInverse['prenom']?>\" class=\"text-center\">Prenom</a>
-                </div>
-                <div class=\"col\">
-                    <a href=\"admincolloque.php?id=<?= \$sortInverse['id']?>\" class=\"text-center\">Societe</a>
-                </div>
-                <div class=\"col\">
-                    <p class=\"text-center\">N° de Reservation</p>
-                </div>
-                <div class=\"col border-left-admin\">
-                    <p class=\"text-center\">Paiement</p>
-                </div>
-            </div>
-                <div class=\"row\">
-                    <div class=\"col\">
-                        <p><?php echo \$items['nom']; ?></p>
-                    </div>
-                    <div class=\"col\">
-                        <p><?php echo \$items['prenom']; ?></p>
-                    </div>
-                    <div class=\"col\">
-                        <p class=\"text-center\"><?php echo \$items['id']; ?></p>
-                    </div>
-                    <div class=\"col\">
-                        <p class=\"text-center\">XXX</p>
-                    </div>
-                    <div class=\"col border-left-admin\">
-                        <p class=\"text-center\">XXX</p>
-                    </div>
-                </div>
 
-            <div class=\"row d-flex bordertitleadmin\">
+        <table id=\"table\" class=\"col-md-12\">
+          <thead class=\"user_form2\">
+            <tr>
+              <th class=\"user_form\" data-sort=\"string\">Nom</th>
+              <th class=\"user_form\" data-sort=\"string\">Prenom</th>
+              <th class=\"user_form\" data-sort=\"string\">Societe</th>
+              <th class=\"user_form\" data-sort=\"string\">N° de Ticket</th>
+              <th class=\"user_form\" data-sort=\"string\">Prix</th>
+            </tr>
+          </thead>
+          <tbody>
+            ";
+        // line 79
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(($context["tickets"] ?? $this->getContext($context, "tickets")));
+        foreach ($context['_seq'] as $context["_key"] => $context["ticket"]) {
+            // line 80
+            echo "            <tr>
+              <td style=\"padding-top:5px;\">";
+            // line 81
+            echo twig_escape_filter($this->env, $this->getAttribute($context["ticket"], "firstName", array()), "html", null, true);
+            echo "</td>
+              <td>";
+            // line 82
+            echo twig_escape_filter($this->env, $this->getAttribute($context["ticket"], "LastName", array()), "html", null, true);
+            echo "</td>
+              <td>";
+            // line 83
+            echo twig_escape_filter($this->env, $this->getAttribute($context["ticket"], "society", array()), "html", null, true);
+            echo "</td>
+              <td>";
+            // line 84
+            echo twig_escape_filter($this->env, $this->getAttribute($context["ticket"], "ticketNumber", array()), "html", null, true);
+            echo "</td>
+              <td>";
+            // line 85
+            echo twig_escape_filter($this->env, $this->getAttribute($context["ticket"], "price", array()), "html", null, true);
+            echo "</td>
+              <td hidden>";
+            // line 86
+            echo twig_escape_filter($this->env, $this->getAttribute($context["ticket"], "day1TransportTrain", array()), "html", null, true);
+            echo "</td>
+              <td hidden>";
+            // line 87
+            echo twig_escape_filter($this->env, $this->getAttribute($context["ticket"], "day1Breakfast", array()), "html", null, true);
+            echo "</td>
+              <td hidden>";
+            // line 88
+            echo twig_escape_filter($this->env, $this->getAttribute($context["ticket"], "day1Visite", array()), "html", null, true);
+            echo "</td>
+              <td hidden>";
+            // line 89
+            echo twig_escape_filter($this->env, $this->getAttribute($context["ticket"], "day1TransportBus", array()), "html", null, true);
+            echo "</td>
+              <td hidden>";
+            // line 90
+            echo twig_escape_filter($this->env, $this->getAttribute($context["ticket"], "day2TransportBus", array()), "html", null, true);
+            echo "</td>
+              <td hidden>";
+            // line 91
+            echo twig_escape_filter($this->env, $this->getAttribute($context["ticket"], "day2Visite", array()), "html", null, true);
+            echo "</td>
+              <td hidden>";
+            // line 92
+            echo twig_escape_filter($this->env, $this->getAttribute($context["ticket"], "day2Breakfast", array()), "html", null, true);
+            echo "</td>
+              <td hidden>";
+            // line 93
+            echo twig_escape_filter($this->env, $this->getAttribute($context["ticket"], "day2TransportTrain", array()), "html", null, true);
+            echo "</td>
+              <td hidden>";
+            // line 94
+            echo twig_escape_filter($this->env, $this->getAttribute($context["ticket"], "day2Night", array()), "html", null, true);
+            echo "</td>
+              <td hidden>";
+            // line 95
+            echo twig_escape_filter($this->env, $this->getAttribute($context["ticket"], "day2TransportBusNight", array()), "html", null, true);
+            echo "</td>
+              <td hidden>";
+            // line 96
+            echo twig_escape_filter($this->env, $this->getAttribute($context["ticket"], "optionVisite", array()), "html", null, true);
+            echo "</td>
+              <td hidden>";
+            // line 97
+            echo twig_escape_filter($this->env, $this->getAttribute($context["ticket"], "optionExpo", array()), "html", null, true);
+            echo "</td>
+              <td hidden>";
+            // line 98
+            echo twig_escape_filter($this->env, $this->getAttribute($context["ticket"], "optionArtDeco", array()), "html", null, true);
+            echo "</td>
+              <td hidden>";
+            // line 99
+            echo twig_escape_filter($this->env, $this->getAttribute($context["ticket"], "optionDecouverte", array()), "html", null, true);
+            echo "</td>
+              <td hidden>";
+            // line 100
+            echo twig_escape_filter($this->env, $this->getAttribute($context["ticket"], "optionGrandSite", array()), "html", null, true);
+            echo "</td>
+            </td>
+            </tr>
+            ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['ticket'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 104
+        echo "          </tbody>
+        </table>
+<div class=\"row d-flex bordertitleadmin\">
                 <div class=\"col-xl-12 d-flex justify-content-center totalprix\">
-                    <p style=\"margin-bottom:0px;font-size:25px;font-weight:bold;\">TOTAL : XXX €</p>
+                    <p style=\"margin-bottom:0px;font-size:25px;font-weight:bold;\">TOTAL : ";
+        // line 108
+        echo twig_escape_filter($this->env, ($context["prixTotal"] ?? $this->getContext($context, "prixTotal")), "html", null, true);
+        echo " €</p>
                 </div>
             </div>
         </div>
     </div>
 
-        
+
     </div>
 
     <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js\" integrity=\"sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ\" crossorigin=\"anonymous\"></script>
@@ -168,7 +250,7 @@ class __TwigTemplate_4a66898768e8c94d9b27acdfc9b0ee85adf5ca597072611b16972962eb9
 
     public function getTemplateName()
     {
-        return ":admin:adminColloque.html.twig";
+        return "admin/adminColloque.html.twig";
     }
 
     public function isTraitable()
@@ -178,7 +260,7 @@ class __TwigTemplate_4a66898768e8c94d9b27acdfc9b0ee85adf5ca597072611b16972962eb9
 
     public function getDebugInfo()
     {
-        return array (  49 => 4,  40 => 3,  11 => 1,);
+        return array (  228 => 108,  222 => 104,  212 => 100,  208 => 99,  204 => 98,  200 => 97,  196 => 96,  192 => 95,  188 => 94,  184 => 93,  180 => 92,  176 => 91,  172 => 90,  168 => 89,  164 => 88,  160 => 87,  156 => 86,  152 => 85,  148 => 84,  144 => 83,  140 => 82,  136 => 81,  133 => 80,  129 => 79,  111 => 64,  49 => 4,  40 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -194,7 +276,7 @@ class __TwigTemplate_4a66898768e8c94d9b27acdfc9b0ee85adf5ca597072611b16972962eb9
         return new Twig_Source("{% extends 'base.html.twig' %}
 
 {% block body %}
-<div class=\"container-fuild\" style=\"margin-top:35px\">
+<div class=\"container-fluid\" style=\"margin-top:35px\">
     <div class=\"row\">
         <div class=\"col-md-3\">
             <div class=\"d-flex justify-content-center\">
@@ -247,64 +329,71 @@ class __TwigTemplate_4a66898768e8c94d9b27acdfc9b0ee85adf5ca597072611b16972962eb9
                 </div>
             </div>
         </div>
+
+
         <div class=\"col-md-9\" style=\"min-height:auto;\">
             <div class=\"row d-flex bordertitleadmin\">
                 <div class=\"col-xl-12 d-flex justify-content-between\">
                     <p id=\"jour\" style=\"font-weight:bold;font-size:22px;\">Toutes les réservations</p>
                     <p id=\"evenement\" style=\"font-size:22px;font-weight:bold;\"></p>
-                    <p style=\"font-size:22px;font-weight:bold;\">TOTAL : XXX Personnes</p>
+                    <p id=\"personNumber\" style=\"font-size:22px;font-weight:bold;\">{{personNumber}}</p>
                 </div>
             </div>
-            <div class=\"row\">
-                <div class=\"col\">
-                    <a href=\"admincolloque.php?nom=<?= \$sortInverse['nom']?>\" class=\"text-center\">Nom</a>
-                </div>
-                <div class=\"col\">
-                    <a href=\"admincolloque.php?prenom=<?= \$sortInverse['prenom']?>\" class=\"text-center\">Prenom</a>
-                </div>
-                <div class=\"col\">
-                    <a href=\"admincolloque.php?id=<?= \$sortInverse['id']?>\" class=\"text-center\">Societe</a>
-                </div>
-                <div class=\"col\">
-                    <p class=\"text-center\">N° de Reservation</p>
-                </div>
-                <div class=\"col border-left-admin\">
-                    <p class=\"text-center\">Paiement</p>
-                </div>
-            </div>
-                <div class=\"row\">
-                    <div class=\"col\">
-                        <p><?php echo \$items['nom']; ?></p>
-                    </div>
-                    <div class=\"col\">
-                        <p><?php echo \$items['prenom']; ?></p>
-                    </div>
-                    <div class=\"col\">
-                        <p class=\"text-center\"><?php echo \$items['id']; ?></p>
-                    </div>
-                    <div class=\"col\">
-                        <p class=\"text-center\">XXX</p>
-                    </div>
-                    <div class=\"col border-left-admin\">
-                        <p class=\"text-center\">XXX</p>
-                    </div>
-                </div>
 
-            <div class=\"row d-flex bordertitleadmin\">
+        <table id=\"table\" class=\"col-md-12\">
+          <thead class=\"user_form2\">
+            <tr>
+              <th class=\"user_form\" data-sort=\"string\">Nom</th>
+              <th class=\"user_form\" data-sort=\"string\">Prenom</th>
+              <th class=\"user_form\" data-sort=\"string\">Societe</th>
+              <th class=\"user_form\" data-sort=\"string\">N° de Ticket</th>
+              <th class=\"user_form\" data-sort=\"string\">Prix</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for ticket in tickets %}
+            <tr>
+              <td style=\"padding-top:5px;\">{{ticket.firstName}}</td>
+              <td>{{ticket.LastName}}</td>
+              <td>{{ticket.society}}</td>
+              <td>{{ticket.ticketNumber}}</td>
+              <td>{{ticket.price}}</td>
+              <td hidden>{{ ticket.day1TransportTrain}}</td>
+              <td hidden>{{ ticket.day1Breakfast }}</td>
+              <td hidden>{{ ticket.day1Visite }}</td>
+              <td hidden>{{ ticket.day1TransportBus }}</td>
+              <td hidden>{{ ticket.day2TransportBus }}</td>
+              <td hidden>{{ ticket.day2Visite }}</td>
+              <td hidden>{{ ticket.day2Breakfast }}</td>
+              <td hidden>{{ ticket.day2TransportTrain }}</td>
+              <td hidden>{{ ticket.day2Night }}</td>
+              <td hidden>{{ ticket.day2TransportBusNight}}</td>
+              <td hidden>{{ ticket.optionVisite }}</td>
+              <td hidden>{{ ticket.optionExpo }}</td>
+              <td hidden>{{ ticket.optionArtDeco }}</td>
+              <td hidden>{{ ticket.optionDecouverte}}</td>
+              <td hidden>{{ ticket.optionGrandSite }}</td>
+            </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+<div class=\"row d-flex bordertitleadmin\">
                 <div class=\"col-xl-12 d-flex justify-content-center totalprix\">
-                    <p style=\"margin-bottom:0px;font-size:25px;font-weight:bold;\">TOTAL : XXX €</p>
+                    <p style=\"margin-bottom:0px;font-size:25px;font-weight:bold;\">TOTAL : {{prixTotal}} €</p>
                 </div>
             </div>
         </div>
     </div>
 
-        
+
     </div>
 
     <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js\" integrity=\"sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ\" crossorigin=\"anonymous\"></script>
         <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js\" integrity=\"sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm\" crossorigin=\"anonymous\"></script>
         <script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\" integrity=\"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo\" crossorigin=\"anonymous\"></script>
 
-{% endblock %}", ":admin:adminColloque.html.twig", "/var/www/html/ColloqueOfficeBen/app/Resources/views/admin/adminColloque.html.twig");
+{% endblock %}
+", "admin/adminColloque.html.twig", "/var/www/html/ColloqueOfficeWorking/app/Resources/views/admin/adminColloque.html.twig");
     }
 }

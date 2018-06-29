@@ -3,6 +3,26 @@
   color:inherit;
 }
 
+.banner-title{
+  background-image: url("../img/Infos3.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 350px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+.banner-title h1 {
+  padding: 20px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 25px;
+}
+.ligne1 img {
+  height: 300px;
+  width: auto;
+}
+
 .foo {
   float: left;
   width: 20px;

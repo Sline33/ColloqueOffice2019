@@ -32,7 +32,7 @@ class PostPaiementController extends Controller
       $customer =   $em->getRepository('AppBundle:Customer')->findByUser($user)[0];
       $facture = $em->getRepository('AppBundle:Facture')->findOneByCustomer($customer);
       $prixtotal =  $em->getRepository('AppBundle:Ticket')->computeSum($facture);
-      $test =  $em->getRepository('AppBundle:Facture')->test($customer);
+      $price =  $em->getRepository('AppBundle:Facture')->findByPrice($customer);
       $prixPayzen = $prixtotal * 100;
 
       if ($request->request->has('codepromo')) {
