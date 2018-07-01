@@ -148,40 +148,50 @@ class __TwigTemplate_20e0610c2f449405d6c2ac07357585c42706deb85ca7c032cb320a4d2f1
         $this->displayBlock('body', $context, $blocks);
         // line 70
         echo "        </div>
-        <footer style=\"margin-top:20px;\">
-            <div>
-                <p class=\"text-center\" style=\"font-size:20px;\">Euralens - Colloque2019</p>
+        <footer class=\"container-fluid\" style=\"margin-top:20px;\">
+            <div class=\"row footer_row_1\">
+                <div class=\"col-md-6\">                                                
+                    <a href=\"#\"><p class=\"text-center\" style=\"font-size:20px;\">Qui sommes nous ?</p></a>
+                </div>
+                <div class=\"col-md-6\">                                                
+                    <a href=\"#\"><p class=\"text-center\" style=\"font-size:20px;\">Nous contacter ?</p></a>
+                </div>
+            </div>
+            <div class=\"row footer_row_2\">
+                <div class=\"col-md-12\">                                                
+                    <p class=\"text-center\" style=\"font-size:20px;\"><em>Euralens - Colloque2019</em></p>
+                <div>
             </div>
         </footer>
         <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js\" integrity=\"sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ\" crossorigin=\"anonymous\"></script>
         <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js\" integrity=\"sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm\" crossorigin=\"anonymous\"></script>
         <script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\" integrity=\"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo\" crossorigin=\"anonymous\"></script>
         <script src=\"";
-        // line 79
+        // line 89
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/stupidtable.js"), "html", null, true);
         echo "\"></script>
         <script src=\"";
-        // line 80
+        // line 90
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/stupidtable.min.js"), "html", null, true);
         echo "\"></script>
         <script src=\"";
-        // line 81
+        // line 91
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/admin4.js"), "html", null, true);
         echo "\"></script>
         <script src=\"";
-        // line 82
+        // line 92
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/adminColloque.js"), "html", null, true);
         echo "\"></script>
         <script src=\"";
-        // line 83
+        // line 93
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/admin3.js"), "html", null, true);
         echo "\"></script>
         <script src=\"";
-        // line 84
+        // line 94
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/sort.js"), "html", null, true);
         echo "\"></script>
         <script src=\"";
-        // line 85
+        // line 95
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/paiement.js"), "html", null, true);
         echo "\"></script>
     </body>
@@ -241,7 +251,7 @@ class __TwigTemplate_20e0610c2f449405d6c2ac07357585c42706deb85ca7c032cb320a4d2f1
 
     public function getDebugInfo()
     {
-        return array (  216 => 69,  199 => 5,  185 => 85,  181 => 84,  177 => 83,  173 => 82,  169 => 81,  165 => 80,  161 => 79,  150 => 70,  148 => 69,  142 => 65,  135 => 61,  129 => 58,  121 => 53,  117 => 51,  110 => 47,  104 => 44,  96 => 39,  92 => 37,  85 => 33,  79 => 30,  71 => 25,  67 => 23,  65 => 22,  52 => 12,  48 => 11,  44 => 10,  40 => 9,  35 => 6,  33 => 5,  27 => 1,);
+        return array (  226 => 69,  209 => 5,  195 => 95,  191 => 94,  187 => 93,  183 => 92,  179 => 91,  175 => 90,  171 => 89,  150 => 70,  148 => 69,  142 => 65,  135 => 61,  129 => 58,  121 => 53,  117 => 51,  110 => 47,  104 => 44,  96 => 39,  92 => 37,  85 => 33,  79 => 30,  71 => 25,  67 => 23,  65 => 22,  52 => 12,  48 => 11,  44 => 10,  40 => 9,  35 => 6,  33 => 5,  27 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -324,9 +334,19 @@ class __TwigTemplate_20e0610c2f449405d6c2ac07357585c42706deb85ca7c032cb320a4d2f1
         <div style=\"flex:1;\">
             {% block body %}{% endblock %}
         </div>
-        <footer style=\"margin-top:20px;\">
-            <div>
-                <p class=\"text-center\" style=\"font-size:20px;\">Euralens - Colloque2019</p>
+        <footer class=\"container-fluid\" style=\"margin-top:20px;\">
+            <div class=\"row footer_row_1\">
+                <div class=\"col-md-6\">                                                
+                    <a href=\"#\"><p class=\"text-center\" style=\"font-size:20px;\">Qui sommes nous ?</p></a>
+                </div>
+                <div class=\"col-md-6\">                                                
+                    <a href=\"#\"><p class=\"text-center\" style=\"font-size:20px;\">Nous contacter ?</p></a>
+                </div>
+            </div>
+            <div class=\"row footer_row_2\">
+                <div class=\"col-md-12\">                                                
+                    <p class=\"text-center\" style=\"font-size:20px;\"><em>Euralens - Colloque2019</em></p>
+                <div>
             </div>
         </footer>
         <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js\" integrity=\"sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ\" crossorigin=\"anonymous\"></script>

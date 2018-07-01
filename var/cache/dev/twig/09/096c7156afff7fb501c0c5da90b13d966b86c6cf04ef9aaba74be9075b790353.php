@@ -83,7 +83,7 @@ class __TwigTemplate_2a8f6398685752c2b1fc89fc9d6774998ed9c973243fdb2f999f5d430b7
         // line 25
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("fos_user_resetting_request");
         echo "\">Mot de passe oublié</a>
-      <input class=\"btn btn-primary\" type=\"submit\" id=\"_submit\" name=\"_submit\" value=\"";
+      <input class=\"btn btn-secondary\" type=\"submit\" id=\"_submit\" name=\"_submit\" value=\"";
         // line 26
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("Connexion", array(), "FOSUserBundle"), "html", null, true);
         echo "\" />
@@ -149,7 +149,7 @@ class __TwigTemplate_2a8f6398685752c2b1fc89fc9d6774998ed9c973243fdb2f999f5d430b7
 
     <div class=\"d-flex flex-row justify-content-between align-items-center align-content-center\"style=\"padding-top:10px;\">
       <a href=\"{{ path('fos_user_resetting_request') }}\">Mot de passe oublié</a>
-      <input class=\"btn btn-primary\" type=\"submit\" id=\"_submit\" name=\"_submit\" value=\"{{ 'Connexion'|trans }}\" />
+      <input class=\"btn btn-secondary\" type=\"submit\" id=\"_submit\" name=\"_submit\" value=\"{{ 'Connexion'|trans }}\" />
     </div>
   </form>
 </div>

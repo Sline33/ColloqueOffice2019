@@ -18,9 +18,14 @@
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 25px;
 }
+.ligne1 {
+  margin-top: 25px;
+}
 .ligne1 img {
+  border: 2px solid rgb(18, 185, 18);
   height: 300px;
   width: auto;
+  margin-bottom: 10px;
 }
 
 .foo {
@@ -39,8 +44,13 @@
   background: #1e7e34;
 }
 
-.red {
-  background: #dc3545;
+.orange {
+  background: rgb(255, 174, 0);
+  border: 1px solid rgb(219, 150, 0);
+}
+.orange:hover{
+  background: rgb(219, 150, 0);
+  border: 1px solid rgb(206, 141, 1);
 }
 
 
@@ -121,4 +131,30 @@ border-column-admin {
 
 .clear {
   clear:both;
+}
+
+footer{
+  border-top: 2px solid rgb(39, 39, 39);
+  background-color: rgb(77, 77, 77);
+}
+.footer_row_1 {
+  padding-top: 10px;
+  margin-bottom: -20px;
+}
+
+.footer_row_1 a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.footer_row_1 a:hover {
+  text-decoration: underline;
+}
+
+.footer_row_2 {
+  color: rgb(53, 52, 52);
+}
+.btn-secondary {
+  background-color: rgb(18, 185, 18);
 }

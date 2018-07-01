@@ -123,11 +123,11 @@ class __TwigTemplate_30e02951b20eeb7af504e22b19d45fd783aef7b1df133ddc83897ec6203
                         <a href=\"";
         // line 42
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("fos_user_change_password");
-        echo "\"><input type=\"submit\" value=\"Modifier Password\" class=\"btn btn-success\"></a>
+        echo "\"><input type=\"submit\" value=\"Modifier Password\" class=\"btn btn-secondary\"></a>
                         <a href=\"";
         // line 43
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("fos_user_profile_edit");
-        echo "\"><input type=\"submit\" value=\"Modifier Email\" class=\"btn btn-success\"></a>
+        echo "\"><input type=\"submit\" value=\"Modifier Email\" class=\"btn btn-secondary\"></a>
                     </div>
                 </div>
             </div>
@@ -144,7 +144,7 @@ class __TwigTemplate_30e02951b20eeb7af504e22b19d45fd783aef7b1df133ddc83897ec6203
                       <p><strong>Paiement Effectué</strong></p>
                       <div class=\"foo green\"></div>
                       <p><strong>Commande En Cours</strong></p>
-                      <div class=\"foo red\"></div>
+                      <div class=\"foo orange\"></div>
                     </div>
                 </div>
             </div>
@@ -200,7 +200,7 @@ $context["ticket"], "facture", array()), "status", array()) == 1)) {
                         ";
             } else {
                 // line 77
-                echo "                        <a class=\"btn btn-danger collapseclient\" data-toggle=\"collapse\" aria-expanded=\"false\" aria-controls=\"collapse-1\" role=\"button\" href=\"#collapse-";
+                echo "                        <a class=\"btn btn-danger orange collapseclient\" data-toggle=\"collapse\" aria-expanded=\"false\" aria-controls=\"collapse-1\" role=\"button\" href=\"#collapse-";
                 echo twig_escape_filter($this->env, $this->getAttribute($context["ticket"], "id", array()), "html", null, true);
                 echo "\">
                         Recapitulatif de réservation : N°";
@@ -579,8 +579,8 @@ $context["ticket"], "optionVisite", array()) == 2)) {
                         <input type=\"text\" value=\"{{ user.email }}\" style=\"width:329px;margin-top:7px;margin-left:22px;\">
                     </div>
                     <div class=\"d-flex justify-content-between\" style=\"width:329px;margin-left:22px;\">
-                        <a href=\"{{ path('fos_user_change_password') }}\"><input type=\"submit\" value=\"Modifier Password\" class=\"btn btn-success\"></a>
-                        <a href=\"{{ path('fos_user_profile_edit') }}\"><input type=\"submit\" value=\"Modifier Email\" class=\"btn btn-success\"></a>
+                        <a href=\"{{ path('fos_user_change_password') }}\"><input type=\"submit\" value=\"Modifier Password\" class=\"btn btn-secondary\"></a>
+                        <a href=\"{{ path('fos_user_profile_edit') }}\"><input type=\"submit\" value=\"Modifier Email\" class=\"btn btn-secondary\"></a>
                     </div>
                 </div>
             </div>
@@ -597,7 +597,7 @@ $context["ticket"], "optionVisite", array()) == 2)) {
                       <p><strong>Paiement Effectué</strong></p>
                       <div class=\"foo green\"></div>
                       <p><strong>Commande En Cours</strong></p>
-                      <div class=\"foo red\"></div>
+                      <div class=\"foo orange\"></div>
                     </div>
                 </div>
             </div>
@@ -614,7 +614,7 @@ $context["ticket"], "optionVisite", array()) == 2)) {
                         Recapitulatif de réservation : N°{{ ticket.ticketNumber }} &nbsp; &nbsp; &nbsp; &nbsp;Nom: {{ ticket.lastName }} &nbsp; &nbsp; &nbsp;Prénom: {{ ticket.firstName }} &nbsp; &nbsp; &nbsp; &nbsp; ST/ADM: {{ ticket.society }} &nbsp; &nbsp;Montant TTC : {{ ticket.price }}€<br>
                         </a>
                         {% else %}
-                        <a class=\"btn btn-danger collapseclient\" data-toggle=\"collapse\" aria-expanded=\"false\" aria-controls=\"collapse-1\" role=\"button\" href=\"#collapse-{{ ticket.id }}\">
+                        <a class=\"btn btn-danger orange collapseclient\" data-toggle=\"collapse\" aria-expanded=\"false\" aria-controls=\"collapse-1\" role=\"button\" href=\"#collapse-{{ ticket.id }}\">
                         Recapitulatif de réservation : N°{{ ticket.ticketNumber }} &nbsp; &nbsp; &nbsp; &nbsp;Nom: {{ ticket.lastName }} &nbsp; &nbsp; &nbsp;Prénom: {{ ticket.firstName }} &nbsp; &nbsp; &nbsp; &nbsp; ST/ADM: {{ ticket.society }} &nbsp; &nbsp;Montant TTC : {{ ticket.price }}€<br>
                         </a>
                         {% endif %}

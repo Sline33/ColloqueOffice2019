@@ -27,9 +27,11 @@
         {% endfor %}
     </div>
 {% endif %}
-        <div class="d-flex justify-content-center banner-title">
-            <h1>Un territoire phœnix Du noir au vert</h1>
-        </div>
+        <a href="google.fr">
+            <div class="d-flex justify-content-center banner-title">
+                <h1>Un territoire phœnix Du noir au vert</h1>
+            </div>
+        </a>
     </header>
     <section class="d-flex flex-column align-items-center">
         <div class="text-center" style="max-width:1000PX;font-size:20px;">
@@ -38,11 +40,11 @@
         </div>
         {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
         <div style="margin-top:25px;">
-          <a class="btn btn-primary" role="button" href="{{ path('ticket_new') }}" style="font-size:27px;">RESERVEZ MAINTENANT</a>
+          <a class="btn btn-secondary" role="button" href="{{ path('ticket_new') }}" style="font-size:27px;">RESERVEZ MAINTENANT</a>
         </div>
         {% else %}
         <div style="margin-top:25px;">
-          <a class="btn btn-primary" role="button" href="{{ path('fos_user_security_popup') }}" style="font-size:27px;">RESERVEZ MAINTENANT</a>
+          <a class="btn btn-secondary" role="button" href="{{ path('fos_user_security_popup') }}" style="font-size:27px;">RESERVEZ MAINTENANT</a>
         </div>
         {% block modal %}
         {% endblock %}
@@ -75,30 +77,29 @@
                     <h5>Villes invitées</h5>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium temporibus earum ipsam at. Iure fugiat dicta, ad amet, nesciunt modi, autem incidunt veritatis officia fugit sint quisquam illo eum animi?</p></p>
                 </div>
+                <div class="col-md-4 text-center">
+                    <iframe width="550" height="300" allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/djasM0VS8uo"></iframe>
+                    <h5>Euralens chaine des parcs (Video)</h5>
+                </div>
                 <div class="col-md-4  text-center">
                     <img src="{{ asset('img/fete.jpg') }}" alt="soirée Lens">
                     <h5>Tout un programme de fêtes</h5>
                     <p class="text-center"> <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium temporibus earum ipsam at. Iure fugiat dicta, ad amet, nesciunt modi, autem incidunt veritatis officia fugit sint quisquam illo eum animi?</p></p>
                 </div>
-                <div class="col-md-4 text-center">
-                    <img src="{{ asset('img/visite2.JPG') }}" alt="visite Lens">
-                    <h5>Des visites inédites</h5>
-                    <p class="text-center"> <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium temporibus earum ipsam at. Iure fugiat dicta, ad amet, nesciunt modi, autem incidunt veritatis officia fugit sint quisquam illo eum animi?</p></p>
-                </div>
             </div>
         </div>
     </div>
     <div style="margin-top:100px;">
         <div class="container">
             <div class="row">
-                <div class="col-md-12 d-flex justify-content-center align-items-center"><a class="btn btn-primary" role="button" href="{{ asset('files/ticket.pdf') }}" target="_blank" style="margin-top:0px;font-size:25px;">VOIR TOUT LE PROGRAMME</a></div>
+                <div class="col-md-12 d-flex justify-content-center align-items-center"><a class="btn btn-secondary" role="button" href="{{ asset('files/Livret_A5_Odyssée.pdf') }}" target="_blank" style="margin-top:0px;font-size:25px;">VOIR TOUT LE PROGRAMME</a></div>
             </div>
         </div>
     </div>
     <div style="margin-top:100px;">
         <div class="container">
             <div class="row">
-                <div class="col-md-4 col-xl-12 d-flex justify-content-center"><iframe width="560" height="315" allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/djasM0VS8uo"></iframe></div>
+                <div class="col-md-4 col-xl-12 d-flex justify-content-center"></div>
             </div>
         </div>
     </div>
