@@ -123,11 +123,11 @@ class __TwigTemplate_30e02951b20eeb7af504e22b19d45fd783aef7b1df133ddc83897ec6203
                         <a href=\"";
         // line 42
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("fos_user_change_password");
-        echo "\"><input type=\"submit\" value=\"Modifier Password\" class=\"btn btn-secondary\"></a>
+        echo "\"><input type=\"submit\" value=\"Modifier Password\" class=\"btn btn-primary\"></a>
                         <a href=\"";
         // line 43
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("fos_user_profile_edit");
-        echo "\"><input type=\"submit\" value=\"Modifier Email\" class=\"btn btn-secondary\"></a>
+        echo "\"><input type=\"submit\" value=\"Modifier Email\" class=\"btn btn-primary\"></a>
                     </div>
                 </div>
             </div>
@@ -579,8 +579,8 @@ $context["ticket"], "optionVisite", array()) == 2)) {
                         <input type=\"text\" value=\"{{ user.email }}\" style=\"width:329px;margin-top:7px;margin-left:22px;\">
                     </div>
                     <div class=\"d-flex justify-content-between\" style=\"width:329px;margin-left:22px;\">
-                        <a href=\"{{ path('fos_user_change_password') }}\"><input type=\"submit\" value=\"Modifier Password\" class=\"btn btn-secondary\"></a>
-                        <a href=\"{{ path('fos_user_profile_edit') }}\"><input type=\"submit\" value=\"Modifier Email\" class=\"btn btn-secondary\"></a>
+                        <a href=\"{{ path('fos_user_change_password') }}\"><input type=\"submit\" value=\"Modifier Password\" class=\"btn btn-primary\"></a>
+                        <a href=\"{{ path('fos_user_profile_edit') }}\"><input type=\"submit\" value=\"Modifier Email\" class=\"btn btn-primary\"></a>
                     </div>
                 </div>
             </div>
