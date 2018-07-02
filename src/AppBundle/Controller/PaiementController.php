@@ -35,6 +35,7 @@ class PaiementController extends Controller
 
 
 
+
         $random = random_int(100000,999999);
 
         date_default_timezone_set('Europe/Paris');
@@ -53,10 +54,11 @@ class PaiementController extends Controller
         $vads_cust_title = "978";
         $vads_page_action = "PAYMENT";
         $vads_payment_config = "SINGLE";
+        $vads_return_mode = "POST";
         $vads_site_id = "34880966";
         $vads_trans_date = $date;
         $vads_trans_id = "$random";
-        $vads_url_return ="http://saaammmmm.com/Symfony/web";
+        $vads_url_return ="http://localhost/ColloqueOffice2019/web/app_dev.php/return";
         $vads_version ="V2";
         $certificate = "2532840209385675";
 
@@ -74,6 +76,7 @@ class PaiementController extends Controller
         $vads_cust_title."+".
         $vads_page_action."+".
         $vads_payment_config."+".
+        $vads_return_mode."+".
         $vads_site_id."+".
         $vads_trans_date."+".
         $vads_trans_id."+".
@@ -82,6 +85,11 @@ class PaiementController extends Controller
         $certificate;
 
         $signature = sha1($rawData);
+
+        $facture->setSignature($signature);
+        $em->persist($facture);
+        $em->flush();
+
 
         return $this->render('paiement/new.html.twig',array(
             'price' => $price,
@@ -99,6 +107,7 @@ class PaiementController extends Controller
             'vads_cust_title' => $vads_cust_title,
             'vads_page_action' => $vads_page_action,
             'vads_payment_config' => $vads_payment_config,
+            'vads_return_mode' => $vads_return_mode,
             'vads_site_id' => $vads_site_id,
             'vads_trans_date' => $vads_trans_date,
             'vads_trans_id' => $vads_trans_id,

@@ -81,7 +81,7 @@ class TicketRepository extends EntityRepository
     }
 
 
-        public function findTicketsByStatus2(Customer $customer)
+        public function findTicketsByStatus2()
         {
             $queryBuilder = $this->createQueryBuilder('t')
                 ->join('t.facture', 'f')
@@ -91,7 +91,7 @@ class TicketRepository extends EntityRepository
             return $queryBuilder->getResult();
         }
 
-        public function computeSumStatus2(Customer $customer) {
+        public function computeSumStatus2() {
 
             $query = $this->createQueryBuilder('t')
             ->select('SUM(t.price) AS ticket_price')
@@ -103,7 +103,7 @@ class TicketRepository extends EntityRepository
         }
 
 
-        public function computeCountPersonNumber(Customer $customer) {
+        public function computeCountPersonNumber() {
 
             $query = $this->createQueryBuilder('t')
             ->select('COUNT(t) AS tickets')
@@ -114,19 +114,22 @@ class TicketRepository extends EntityRepository
             return $query->getSingleScalarResult();
         }
 
-    
+
         public function findPaidTicketsByOption($optionName, $optionValue)
         {
-        $optionNames = ['day1visite', 'day2visite', 'day3visite']; // compléter ce tableau avec le vrai nom des options
+            $optionNames = ['day1Visite', 'day2Visite', 'day3Visite']; // compléter ce tableau avec le vrai nom des options
 
+            // if (!in_array($optionName, $optionNames)) {
+            //     throw new Exception('Are you trying to fuck with me ?');
+            // }
 
-        $queryBuilder = $this->createQueryBuilder('t')
-            ->join('t.facture', 'f')
-            ->where('f.status = 2')
-            ->andWhere('t.'.$optionName.' = :optionValue')
-            ->setParameter('optionValue', $optionValue)
-            ->getQuery();
+            $queryBuilder = $this->createQueryBuilder('t')
+                ->join('t.facture', 'f')
+                ->where('f.status = 2')
+                ->andWhere('t.'.$optionName.' = :optionValue')
+                ->setParameter('optionValue', $optionValue)
+                ->getQuery();
 
-        return $queryBuilder->getResult();
+            return $queryBuilder->getResult();
         }
 }

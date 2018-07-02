@@ -108,11 +108,6 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         }
 
         elseif (0 === strpos($pathinfo, '/admin')) {
-            // admin_colloque
-            if ('/admin/colloque' === $pathinfo) {
-                return array (  '_controller' => 'AppBundle\\Controller\\AdminController::colloqueAction',  '_route' => 'admin_colloque',);
-            }
-
             // admin_utilisateurs
             if ('/admin/utilisateurs' === $pathinfo) {
                 return array (  '_controller' => 'AppBundle\\Controller\\AdminController::utilisateursAction',  '_route' => 'admin_utilisateurs',);
@@ -122,6 +117,18 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             if ('/admin/paiement' === $pathinfo) {
                 return array (  '_controller' => 'AppBundle\\Controller\\AdminController::paiementAction',  '_route' => 'admin_paiement',);
             }
+
+            // admin_colloque
+            if ('/admin/colloque' === $pathinfo) {
+                $ret = array (  '_controller' => 'AppBundle\\Controller\\AdminController::colloqueAction',  '_route' => 'admin_colloque',);
+                if (!in_array($canonicalMethod, array('GET'))) {
+                    $allow = array_merge($allow, array('GET'));
+                    goto not_admin_colloque;
+                }
+
+                return $ret;
+            }
+            not_admin_colloque:
 
             // admin_page
             if ('/admin' === $trimmedPathinfo) {
@@ -237,6 +244,33 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                     return $ret;
                 }
                 not_fos_user_security_recapitulatif:
+
+            }
+
+            elseif (0 === strpos($pathinfo, '/return')) {
+                // formreturn
+                if ('/return' === $pathinfo) {
+                    $ret = array (  '_controller' => 'AppBundle\\Controller\\FormReturnController::paiementReturnAction',  '_route' => 'formreturn',);
+                    if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                        $allow = array_merge($allow, array('GET', 'POST'));
+                        goto not_formreturn;
+                    }
+
+                    return $ret;
+                }
+                not_formreturn:
+
+                // formipnreturn
+                if ('/returnipn' === $pathinfo) {
+                    $ret = array (  '_controller' => 'AppBundle\\Controller\\FormReturnController::paiementIpnReturnAction',  '_route' => 'formipnreturn',);
+                    if (!in_array($requestMethod, array('POST'))) {
+                        $allow = array_merge($allow, array('POST'));
+                        goto not_formipnreturn;
+                    }
+
+                    return $ret;
+                }
+                not_formipnreturn:
 
             }
 

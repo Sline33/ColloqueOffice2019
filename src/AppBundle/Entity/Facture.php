@@ -41,7 +41,14 @@ class Facture
      * @ORM\Column(name="status", type="integer", nullable=false, unique=false)
      */
     private $status;
-    
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="signature", type="string", nullable=false, unique=true, length=255)
+     */
+    private $signature;
+
     /**
      * @var \AppBundle\Entity\Customer
      *
@@ -205,5 +212,29 @@ class Facture
     public function getStatus()
     {
         return $this->status;
+    }
+
+    /**
+     * Set signature
+     *
+     * @param string $signature
+     *
+     * @return Facture
+     */
+    public function setSignature($signature)
+    {
+        $this->signature = $signature;
+
+        return $this;
+    }
+
+    /**
+     * Get signature
+     *
+     * @return string
+     */
+    public function getSignature()
+    {
+        return $this->signature;
     }
 }

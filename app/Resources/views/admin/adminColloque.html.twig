@@ -12,8 +12,16 @@
                     <div class="justify-content-center">
                     <button value="28" style="margin-bottom:15px;" id="buttonallday1" class="btn btn-primary" data-toggle="collapse" aria-expanded="false" aria-controls="collapse-1" role="button" href="#collapse-1">Jour 1</button>
                         <div class="collapse" id="collapse-1">
-                            <div class="form-check"><input data-key="phrase-1" class="form-check-input" type="radio" id="formCheck-21" value="0" name='radio'><label class="form-check-label" for="formCheck-21">&nbsp;Visite 1</label></div>
+                        <a href="{{ path('admin_colloque' , {'optionName' : 'day1Visite','optionValue' : '1' }) }}">
+                          <div class="form-check">
+                            <input data-key="phrase-1" class="form-check-input" type="radio" id="formCheck-21" value="0" name='radio'>
+                            <label class="form-check-label"
+                          for="formCheck-21">&nbsp;Visite 1</label>
+                        </div>
+                        </a>
+                        <a href="{{ path('admin_colloque' , {'optionName' : 'day1Visite','optionValue' : '2' }) }}">
                             <div class="form-check"><input data-key="phrase-2" class="form-check-input" type="radio" id="formCheck-22" value="1" name='radio'><label class="form-check-label" for="formCheck-22">&nbsp;Visite 2</label></div>
+                            </a>
                             <div class="form-check"><input data-key="phrase-3" class="form-check-input" type="radio" id="formCheck-23" value="2" name='radio'><label class="form-check-label" for="formCheck-23">&nbsp;Visite 3</label></div>
                             <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-24" value="3" name='radio'><label class="form-check-label" for="formCheck-24">&nbsp;Repas 1</label></div>
                             <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-25" value="4" name='radio'><label class="form-check-label" for="formCheck-25">&nbsp;Repas 2</label></div>
@@ -43,7 +51,9 @@
                             <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-1" value="18" name='radio'><label class="form-check-label" for="formCheck-1">&nbsp;Visite 1</label></div>
                             <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-2" value="19" name='radio'><label class="form-check-label" for="formCheck-2">&nbsp;Visite 2</label></div>
                             <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-3" value="20" name='radio'><label class="form-check-label" for="formCheck-3">&nbsp;Visite 3</label></div>
+                            <a href="{{ path('admin_colloque' , {'optionName' : 'optionExpo','optionValue' : '1' }) }}">
                             <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-4" value="21" name='radio'><label class="form-check-label" for="formCheck-4">&nbsp;Exposition 8 JUIN | PRIX</label></div>
+                            </a>
                             <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-5" value="22" name='radio'><label class="form-check-label" for="formCheck-5">&nbsp;Exposition 9 JUIN | PRIX</label></div>
                             <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-6" value="23" name='radio'><label class="form-check-label" for="formCheck-6">&nbsp;Visite Art Déco 8 Juin  | PRIX</label></div>
                             <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-7" value="24" name='radio'><label class="form-check-label" for="formCheck-7">&nbsp;Visite Art Déco 9 Juin  | PRIX</label></div>
