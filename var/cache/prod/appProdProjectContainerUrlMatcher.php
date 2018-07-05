@@ -29,26 +29,6 @@ class appProdProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBundle\R
         }
 
         if (0 === strpos($pathinfo, '/admin')) {
-            if (0 === strpos($pathinfo, '/admin/colloque')) {
-                // admin_colloque
-                if ('/admin/colloque' === $pathinfo) {
-                    return array (  '_controller' => 'AppBundle\\Controller\\AdminController::colloqueAction',  '_route' => 'admin_colloque',);
-                }
-
-                // adminupdate
-                if (preg_match('#^/admin/colloque/(?P<optionName>[^/]++)/(?P<optionValue>[^/]++)$#sD', $pathinfo, $matches)) {
-                    $ret = $this->mergeDefaults(array_replace($matches, array('_route' => 'adminupdate')), array (  '_controller' => 'AppBundle\\Controller\\AdminController::colloqueUpdateAction',));
-                    if (!in_array($canonicalMethod, array('GET'))) {
-                        $allow = array_merge($allow, array('GET'));
-                        goto not_adminupdate;
-                    }
-
-                    return $ret;
-                }
-                not_adminupdate:
-
-            }
-
             // admin_utilisateurs
             if ('/admin/utilisateurs' === $pathinfo) {
                 return array (  '_controller' => 'AppBundle\\Controller\\AdminController::utilisateursAction',  '_route' => 'admin_utilisateurs',);
@@ -58,6 +38,18 @@ class appProdProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBundle\R
             if ('/admin/paiement' === $pathinfo) {
                 return array (  '_controller' => 'AppBundle\\Controller\\AdminController::paiementAction',  '_route' => 'admin_paiement',);
             }
+
+            // admin_colloque
+            if ('/admin/colloque' === $pathinfo) {
+                $ret = array (  '_controller' => 'AppBundle\\Controller\\AdminController::colloqueAction',  '_route' => 'admin_colloque',);
+                if (!in_array($canonicalMethod, array('GET'))) {
+                    $allow = array_merge($allow, array('GET'));
+                    goto not_admin_colloque;
+                }
+
+                return $ret;
+            }
+            not_admin_colloque:
 
             // admin_page
             if ('/admin' === $trimmedPathinfo) {
@@ -176,17 +168,32 @@ class appProdProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBundle\R
 
             }
 
-            // formreturn
-            if ('/return' === $pathinfo) {
-                $ret = array (  '_controller' => 'AppBundle\\Controller\\FormReturnController::paiementReturnAction',  '_route' => 'formreturn',);
-                if (!in_array($canonicalMethod, array('GET', 'POST'))) {
-                    $allow = array_merge($allow, array('GET', 'POST'));
-                    goto not_formreturn;
-                }
+            elseif (0 === strpos($pathinfo, '/return')) {
+                // formreturn
+                if ('/return' === $pathinfo) {
+                    $ret = array (  '_controller' => 'AppBundle\\Controller\\FormReturnController::paiementReturnAction',  '_route' => 'formreturn',);
+                    if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                        $allow = array_merge($allow, array('GET', 'POST'));
+                        goto not_formreturn;
+                    }
 
-                return $ret;
+                    return $ret;
+                }
+                not_formreturn:
+
+                // formipnreturn
+                if ('/returnipn' === $pathinfo) {
+                    $ret = array (  '_controller' => 'AppBundle\\Controller\\FormReturnController::paiementIpnReturnAction',  '_route' => 'formipnreturn',);
+                    if (!in_array($requestMethod, array('POST'))) {
+                        $allow = array_merge($allow, array('POST'));
+                        goto not_formipnreturn;
+                    }
+
+                    return $ret;
+                }
+                not_formipnreturn:
+
             }
-            not_formreturn:
 
             // fos_user_security_reservation
             if ('/reservation' === $pathinfo) {

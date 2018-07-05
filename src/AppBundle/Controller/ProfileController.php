@@ -26,11 +26,15 @@ class ProfileController extends Controller
         $user = $this->getUser();
         $em = $this->getDoctrine()->getManager();
 
-        $customer = $em->getRepository('AppBundle:Customer')->findByUser($user)[0];
-        if (!$customer){
+        $checkCustomer = $em->getRepository('AppBundle:Customer')->findByUser($user);
+        if (!$checkCustomer){
+            $request->getSession()
+                    ->getFlashBag()
+                    ->add('espaceClient', 'Merci de remplir le formulaire afin d\'acceder à l\'espace client.');
             return $this->redirectToRoute('customer_new');
         }
 
+        $customer = $em->getRepository('AppBundle:Customer')->findByUser($user)[0];
         $facture = $em->getRepository('AppBundle:Facture')->findByTickets($customer);
         $factures = new Collections\ArrayCollection($facture);
 
@@ -38,7 +42,8 @@ class ProfileController extends Controller
         $ticket = $em->getRepository('AppBundle:Ticket')->findByCustomer($customer);
 
         $tickets = new Collections\ArrayCollection($ticket);
-
+        // dump($factures);
+        // exit();
         return $this->render('@FOSUser/Profile/show_content.html.twig', array(
             'factures' => $factures,
             'customer' => $customer,

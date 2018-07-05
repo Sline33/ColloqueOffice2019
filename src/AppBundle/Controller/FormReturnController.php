@@ -7,7 +7,12 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Component\HttpFoundation\Response;
-
+use AppBundle\Entity\User;
+use AppBundle\Entity\Ticket;
+use AppBundle\Entity\Facture;
+use AppBundle\Entity\Customer;
+use Doctrine\ORM\EntityRepository;
+use Doctrine\Common\Collections;
 
 
 class FormReturnController extends Controller
@@ -41,6 +46,10 @@ class FormReturnController extends Controller
         $facture->setStatus(2);
         $em->persist($facture);
         $em->flush();
+
+        $request->getSession()
+                    ->getFlashBag()
+                    ->add('paiementok', 'Paiement accepté, au plaisir de vous voir à l\'événement');
 
         return $this->redirectToRoute('customer_show');
 

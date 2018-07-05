@@ -28,8 +28,7 @@ class PaiementController extends Controller
 
         $customer =   $em->getRepository('AppBundle:Customer')->findByUser($user)[0];
         $facture = $em->getRepository('AppBundle:Facture')->findOneByCustomer($customer);
-        $prixtotal =  $em->getRepository('AppBundle:Ticket')->computeSum($facture);
-        $price =  $em->getRepository('AppBundle:Facture')->findByPrice($customer);
+        $price =  $em->getRepository('AppBundle:Ticket')->computeSum($facture);
         $prixPayzen = $price * 100;
 
 
@@ -58,7 +57,7 @@ class PaiementController extends Controller
         $vads_site_id = "34880966";
         $vads_trans_date = $date;
         $vads_trans_id = "$random";
-        $vads_url_return ="http://localhost/ColloqueOffice2019/web/app_dev.php/return";
+        $vads_url_return ="http://localhost/ColloqueOfficeWorking/web/app_dev.php/return";
         $vads_version ="V2";
         $certificate = "2532840209385675";
 

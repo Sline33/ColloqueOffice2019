@@ -4,10 +4,10 @@
 }
 
 .banner-title{
-  background-image: url("../img/Infos3.jpg");
-  background-position: center;
+  background-image: url("../img/backheader.png");
+  background-position: 0 -65px;
   background-size: cover;
-  height: 350px;
+  height: 400px;
   margin-bottom: 15px;
   display: flex;
   align-items: center;
@@ -15,7 +15,7 @@
 .banner-title h1 {
   padding: 20px;
   color: white;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.8);
   border-radius: 25px;
 }
 .ligne1 {
@@ -114,11 +114,10 @@ border-column-admin {
   border:1px solid black;
 }
 
-.row.d-flex.bordertitleadmin {
-  border:1px solid black;
-  border-top:none;
-  border-left:none;
-  border-right:none;
+.bordertitleadmin {
+  margin-top: 10px;
+  border-top:1px solid black;
+  border-bottom:1px solid black;
 }
 
 .col-xl-12.d-flex.justify-content-center.totalprix {
@@ -132,7 +131,10 @@ border-column-admin {
 .clear {
   clear:both;
 }
-
+nav{
+  border-top: 2px solid rgb(39, 39, 39);
+  background-color: rgb(77, 77, 77);
+}
 footer{
   border-top: 2px solid rgb(39, 39, 39);
   background-color: rgb(77, 77, 77);
@@ -157,4 +159,45 @@ footer{
 }
 .btn-secondary {
   background-color: rgb(18, 185, 18);
+}
+
+.titre {
+  color: white;
+  background-color: rgb(18, 185, 18);
+  border-radius: 25px;
+  text-transform:uppercase;
+  font-size: 20px;
+  font-weight: 600;
+}
+.prix {
+  color: black;
+  text-transform:uppercase;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.recap {
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.5),rgba(255, 255, 255, 0.5)), url("../img/backRecap.jpg");
+  height: 100%;
+  background-size: cover;
+}
+.ticket {
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.5),rgba(255, 255, 255, 0.5)), url("../img/backTicket.jpg");
+  height: 100%;
+  background-size: cover;
+}
+
+.paiement {
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.5),rgba(255, 255, 255, 0.5)), url("../img/backPaiement.jpg");
+  height: 100%;
+  background-size: cover;
+  background-position: bottom;
+}
+.paiementPayZen {
+  position: absolute;
+  top: 140px;
+  left:70%;
+}
+.adresse_cheque li{
+  list-style-type: none;
 }

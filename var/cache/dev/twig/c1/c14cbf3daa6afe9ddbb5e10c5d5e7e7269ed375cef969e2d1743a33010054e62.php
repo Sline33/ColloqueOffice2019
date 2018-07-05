@@ -23,45 +23,44 @@ class __TwigTemplate_4f4e306d3c328044b64c9e0abc04dea9b6f6c2c79da9fabd0fbdc7e1d30
 
         // line 2
         echo "
-
 <div class=\"container\" style=\"width:700px;\">
-  <div class=\"row\">
-    <div class=\"col-md-12\">
-      <form action=\"";
-        // line 7
+    <div class=\"row\">
+        <div class=\"col-md-12\">
+            <form action=\"";
+        // line 6
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("fos_user_registration_register");
         echo "\" method=\"POST\" class=\"fos_user_registration_register m-signup--form flex-column\" style=\"margin-top:30px;\">
-        <ul class=\"errorLog\">
-          <div class=\"field\">
-            <label for=\"fos_user_registration_form_email\">Email</label>
-            ";
-        // line 11
+                <ul class=\"errorLog\">
+                    <div class=\"field\">
+                        <label for=\"fos_user_registration_form_email\">Email</label>
+                        ";
+        // line 10
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "email", array()), 'widget', array("label_attr" => array("class" => "form-control")));
         echo "
-          </div>
-          <div class=\"field\" style=\"margin-top:12px;\">
-            <label for=\"fos_user_registration_form_username\">Login</label>
-            ";
-        // line 15
+                    </div>
+                    <div class=\"field\" style=\"margin-top:12px;\">
+                        <label for=\"fos_user_registration_form_username\">Login</label>
+                        ";
+        // line 14
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "username", array()), 'widget', array("label_attr" => array("class" => "form-control")));
         echo "
-          </div>
-          <div class=\"field\" style=\"margin-top:12px;\">
-            ";
-        // line 18
+                    </div>
+                    <div class=\"field\" style=\"margin-top:12px;\">
+                        ";
+        // line 17
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "plainPassword", array()), 'widget', array("label_attr" => array("class" => "form-control")));
         echo "
-          </div>
-          <span>";
-        // line 20
+                    </div>
+                    <span>";
+        // line 19
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(($context["form"] ?? $this->getContext($context, "form")), 'widget');
         echo "</span>
-          <input type=\"submit\" class=\"btn btn-primary float-right\" style=\"margin-top:30px;width:180px;\" value=\"Suivant\" />
-        </form>
-      </div>
+                    <input type=\"submit\" class=\"btn btn-primary float-right\" style=\"margin-top:30px;width:180px;\" value=\"Suivant\"/>
+                </form>
+            </div>
+        </div>
     </div>
-  </div>
-";
+</div>";
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
 
@@ -82,7 +81,7 @@ class __TwigTemplate_4f4e306d3c328044b64c9e0abc04dea9b6f6c2c79da9fabd0fbdc7e1d30
 
     public function getDebugInfo()
     {
-        return array (  57 => 20,  52 => 18,  46 => 15,  39 => 11,  32 => 7,  25 => 2,);
+        return array (  56 => 19,  51 => 17,  45 => 14,  38 => 10,  31 => 6,  25 => 2,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -97,29 +96,28 @@ class __TwigTemplate_4f4e306d3c328044b64c9e0abc04dea9b6f6c2c79da9fabd0fbdc7e1d30
     {
         return new Twig_Source("{% trans_default_domain 'FOSUserBundle' %}
 
-
 <div class=\"container\" style=\"width:700px;\">
-  <div class=\"row\">
-    <div class=\"col-md-12\">
-      <form action=\"{{ path('fos_user_registration_register') }}\" method=\"POST\" class=\"fos_user_registration_register m-signup--form flex-column\" style=\"margin-top:30px;\">
-        <ul class=\"errorLog\">
-          <div class=\"field\">
-            <label for=\"fos_user_registration_form_email\">Email</label>
-            {{ form_widget(form.email, {label_attr: {class: 'form-control'} }) }}
-          </div>
-          <div class=\"field\" style=\"margin-top:12px;\">
-            <label for=\"fos_user_registration_form_username\">Login</label>
-            {{ form_widget(form.username, {label_attr: {class: 'form-control'} }) }}
-          </div>
-          <div class=\"field\" style=\"margin-top:12px;\">
-            {{ form_widget(form.plainPassword, {label_attr: {class: 'form-control'} }) }}
-          </div>
-          <span>{{ form_widget(form) }}</span>
-          <input type=\"submit\" class=\"btn btn-primary float-right\" style=\"margin-top:30px;width:180px;\" value=\"Suivant\" />
-        </form>
-      </div>
+    <div class=\"row\">
+        <div class=\"col-md-12\">
+            <form action=\"{{ path('fos_user_registration_register') }}\" method=\"POST\" class=\"fos_user_registration_register m-signup--form flex-column\" style=\"margin-top:30px;\">
+                <ul class=\"errorLog\">
+                    <div class=\"field\">
+                        <label for=\"fos_user_registration_form_email\">Email</label>
+                        {{ form_widget(form.email, {label_attr: {class: 'form-control'} }) }}
+                    </div>
+                    <div class=\"field\" style=\"margin-top:12px;\">
+                        <label for=\"fos_user_registration_form_username\">Login</label>
+                        {{ form_widget(form.username, {label_attr: {class: 'form-control'} }) }}
+                    </div>
+                    <div class=\"field\" style=\"margin-top:12px;\">
+                        {{ form_widget(form.plainPassword, {label_attr: {class: 'form-control'} }) }}
+                    </div>
+                    <span>{{ form_widget(form) }}</span>
+                    <input type=\"submit\" class=\"btn btn-primary float-right\" style=\"margin-top:30px;width:180px;\" value=\"Suivant\"/>
+                </form>
+            </div>
+        </div>
     </div>
-  </div>
-", "@FOSUser/Registration/register_content.html.twig", "/var/www/html/ColloqueOfficeWorking/app/Resources/FOSUserBundle/views/Registration/register_content.html.twig");
+</div>", "@FOSUser/Registration/register_content.html.twig", "/var/www/html/ColloqueOfficeWorking/app/Resources/FOSUserBundle/views/Registration/register_content.html.twig");
     }
 }

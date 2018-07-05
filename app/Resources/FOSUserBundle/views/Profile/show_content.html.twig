@@ -2,11 +2,18 @@
 {% extends '::base.html.twig' %}
 
 {% block body %}
-    <div class="container" style="padding-left:0px;">
+{% if app.session.flashBag.has('paiementok') %}
+    <div class="d-flex justify-content-center" style="margin-top:15px;">
+        {% for msg in app.session.flashBag.get('paiementok') %}
+            <p class="alert alert-success">{{ msg }}</p>
+        {% endfor %}
+    </div>
+{% endif %}
+    <div class="container" style="padding-left:0px;margin-top:15px;">
         <h4 style="font-size:25px;margin-top:4px;height:23px;">Mes coordonnées</h4>
     </div>
     <div>
-        <div class="container borderclient" style="padding-left:15px;">
+        <div class="container borderclient" style="padding-left:15px;padding-bottom:20px;">
             <div class="row">
                 <div class="col-md-6" style="padding-top:7px;padding-bottom:30px;padding-right:50px;padding-left:100px;height:280px;margin-bottom:0px;width:487px;">
                     <div class="d-flex" style="margin-top:8px;">
@@ -47,10 +54,13 @@
         </div>
     </div>
     <div>
-        <div class="container">
+        <div class="container" style="margin-top:15px;">
             <div class="row">
                 <div class="col-md-12 d-flex justify-content-between" style="padding-right:0px;padding-left:0px;margin-top:9px;margin-bottom:25px;">
                     <h4>Mes récapitulatifs</h4>
+                    <div>
+                        <a class="btn btn-primary" href="{{ path('recap_new') }}">Modifier/Payer Commande</a>
+                    </div>
                     <div class="d-flex">
                       <p><strong>Paiement En Attente</strong></p>
                       <div class="foo blue"></div>
@@ -67,16 +77,76 @@
                     <div class="collapseclient">
                       {% if ticket.facture.status == 2 %}
                         <a class="btn btn-success collapseclient" data-toggle="collapse" aria-expanded="false" aria-controls="collapse-1" role="button" href="#collapse-{{ ticket.id }}">
-                        Facture : {{ ticket.facture.number }} &nbsp; &nbsp; &nbsp; Recapitulatif de réservation : N°{{ ticket.ticketNumber }} &nbsp; &nbsp; &nbsp; &nbsp;Nom: {{ ticket.lastName }} &nbsp; &nbsp; &nbsp;Prénom: {{ ticket.firstName }} &nbsp; &nbsp; &nbsp; &nbsp; ST/ADM: {{ ticket.society }} &nbsp; &nbsp;Montant TTC : {{ ticket.price }}€<br>
+                        <div class="row">
+                            <div class="col-md-2">
+                            Facture : {{ ticket.facture.number }}
+                            </div>
+                            <div class="col-md-2">
+                            Réservation : N°{{ ticket.ticketNumber }}
+                            </div>
+                            <div class="col-md-2">
+                            Nom: {{ ticket.lastName }}
+                            </div>
+                            <div class="col-md-2">
+                            Prénom: {{ ticket.firstName }}
+                            </div>
+                            <div class="col-md-2">
+                            ST/ADM: {{ ticket.society }}
+                            </div>
+                            <div class="col-md-2">
+                            Montant TTC : {{ ticket.price }}€
+                            </div>
+                        </div>
                         </a>
                         {% elseif ticket.facture.status == 1 %}
                         <a class="btn btn-primary collapseclient" data-toggle="collapse" aria-expanded="false" aria-controls="collapse-1" role="button" href="#collapse-{{ ticket.id }}">
-                        Facture : {{ ticket.facture.number }} &nbsp; &nbsp; &nbsp; Recapitulatif de réservation : N°{{ ticket.ticketNumber }} &nbsp; &nbsp; &nbsp; &nbsp;Nom: {{ ticket.lastName }} &nbsp; &nbsp; &nbsp;Prénom: {{ ticket.firstName }} &nbsp; &nbsp; &nbsp; &nbsp; ST/ADM: {{ ticket.society }} &nbsp; &nbsp;Montant TTC : {{ ticket.price }}€<br>
+                        <div class="row">
+                            <div class="col-md-2">
+                            Facture : {{ ticket.facture.number }}
+                            </div>
+                            <div class="col-md-2">
+                            Réservation : N°{{ ticket.ticketNumber }}
+                            </div>
+                            <div class="col-md-2">
+                            Nom: {{ ticket.lastName }}
+                            </div>
+                            <div class="col-md-2">
+                            Prénom: {{ ticket.firstName }}
+                            </div>
+                            <div class="col-md-2">
+                            ST/ADM: {{ ticket.society }}
+                            </div>
+                            <div class="col-md-2">
+                            Montant TTC : {{ ticket.price }}€
+                            </div>
+                        </div>
                         </a>
                         {% else %}
-                        <a class="btn btn-danger orange collapseclient" data-toggle="collapse" aria-expanded="false" aria-controls="collapse-1" role="button" href="#collapse-{{ ticket.id }}">
-                        Facture : {{ ticket.facture.number }} &nbsp; &nbsp; &nbsp; Recapitulatif de réservation : N°{{ ticket.ticketNumber }} &nbsp; &nbsp; &nbsp; &nbsp;Nom: {{ ticket.lastName }} &nbsp; &nbsp; &nbsp;Prénom: {{ ticket.firstName }} &nbsp; &nbsp; &nbsp; &nbsp; ST/ADM: {{ ticket.society }} &nbsp; &nbsp;Montant TTC : {{ ticket.price }}€<br>
+                        <div class="d-flex">
+                            <a class="btn btn-danger orange collapseclient" data-toggle="collapse" aria-expanded="false" aria-controls="collapse-1" role="button" href="#collapse-{{ ticket.id }}">
+                           <div class="row">
+                            <div class="col-md-2">
+                            Facture : {{ ticket.facture.number }}
+                            </div>
+                            <div class="col-md-2">
+                            Réservation : N°{{ ticket.ticketNumber }}
+                            </div>
+                            <div class="col-md-2">
+                            Nom: {{ ticket.lastName }}
+                            </div>
+                            <div class="col-md-2">
+                            Prénom: {{ ticket.firstName }}
+                            </div>
+                            <div class="col-md-2">
+                            ST/ADM: {{ ticket.society }}
+                            </div>
+                            <div class="col-md-2">
+                            Montant TTC : {{ ticket.price }}€
+                            </div>
+                        </div>
                         </a>
+                            <a href="{{ path('ticket_edit',{'id': ticket.id}) }}" hidden><i class="fas fa-cogs"></i></a>
+                        </div>
                         {% endif %}
 
                         <div class="collapse" id="collapse-{{ ticket.id }}">
@@ -200,7 +270,7 @@
     </div>
 </div>
 <div>
-    <div class="container">
+    <div class="container" style="margin-bottom:20px;">
         <div class="row">
             <div class="col-md-12" style="padding:0px;margin-top:5px;">
                 <h4>Mes Factures</h4>

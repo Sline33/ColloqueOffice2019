@@ -51,7 +51,7 @@ class PostPaiementController extends Controller
 
         $request->getSession()
         ->getFlashBag()
-        ->add('promovalide', 'Votre code promo a etait valider , le montant de votre facture est de
+        ->add('promovalide', 'Votre code promo a été validé , le montant de votre facture est de
         0€ , Cependant vous recevrez vos billets lors de la validation par l\'organisateur.');
 
         return $this->redirectToRoute('fos_user_security_homepage');

@@ -76,7 +76,7 @@ class __TwigTemplate_3e1d218b7514ea9ac270bed2798222ecc4de92f3ff715842223e3470310
         </a>
     </header>
     <section class=\"d-flex flex-column align-items-center\">
-        <div class=\"text-center\" style=\"max-width:1000PX;font-size:20px;\">
+        <div style=\"max-width:1000PX;font-size:20px;\">
             <p>Revitaliser un territoire relève de registres variés et échappe à l’habituelou/ou pour appréhender le et/et : la régénération urbaine, l’espace public,la mobilité, la qualité spatiale, environnementale et architecturale, mais aussi la dynamique culturelle, sociale, économique, ludique, …</p>
             <p> C’est aussi une articulation entre le top down et le bottom up, les actions des collectivités locales, la stimulation du privé et l’accueil d’initiativesrelevant de registres différents comme le démontre la labellisation Euralens qui salue tant une médiathèque originale qui relie un grand nombre d’actions, qu’un espace public dessiné par une artiste, ou un lieu improbable dans une cité jardin qui offre des actions sociales,d’agriculture bio, d’accueil hôtelier spécifiques, … mais aussi un parcours VTT dans les terrils réaménagés ou encore et surtout la mobilisation de lycées techniques en lien avec le monde économique, la formation numérique, etc..</p>
         </div>
@@ -274,7 +274,7 @@ class __TwigTemplate_3e1d218b7514ea9ac270bed2798222ecc4de92f3ff715842223e3470310
         </a>
     </header>
     <section class=\"d-flex flex-column align-items-center\">
-        <div class=\"text-center\" style=\"max-width:1000PX;font-size:20px;\">
+        <div style=\"max-width:1000PX;font-size:20px;\">
             <p>Revitaliser un territoire relève de registres variés et échappe à l’habituelou/ou pour appréhender le et/et : la régénération urbaine, l’espace public,la mobilité, la qualité spatiale, environnementale et architecturale, mais aussi la dynamique culturelle, sociale, économique, ludique, …</p>
             <p> C’est aussi une articulation entre le top down et le bottom up, les actions des collectivités locales, la stimulation du privé et l’accueil d’initiativesrelevant de registres différents comme le démontre la labellisation Euralens qui salue tant une médiathèque originale qui relie un grand nombre d’actions, qu’un espace public dessiné par une artiste, ou un lieu improbable dans une cité jardin qui offre des actions sociales,d’agriculture bio, d’accueil hôtelier spécifiques, … mais aussi un parcours VTT dans les terrils réaménagés ou encore et surtout la mobilisation de lycées techniques en lien avec le monde économique, la formation numérique, etc..</p>
         </div>

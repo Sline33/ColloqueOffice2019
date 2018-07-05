@@ -78,7 +78,7 @@ class AdminController extends Controller
 
         $request->getSession()
         ->getFlashBag()
-        ->add('validationfacture', 'La Facture n° '.$facture->getNumber().' est valider');
+        ->add('validationfacture', 'La Facture n° '.$facture->getNumber().' est validée');
 
         return $this->render('admin/adminPaiement.html.twig', array(
             'customers' => $customers,
@@ -112,8 +112,7 @@ class AdminController extends Controller
       if ($optionName && $optionValue){
         $prixTotal = null;
         $tickets = $em->getRepository('AppBundle:Ticket')->findPaidTicketsByOption($optionName,$optionValue);
-        $personNumber = null;
-
+        $personNumber = $em->getRepository('AppBundle:Ticket')->computeCountPersonNumberByOption($optionName, $optionValue);
       } else {
 
         $tickets   =  $em->getRepository('AppBundle:Ticket')->findTicketsByStatus2();

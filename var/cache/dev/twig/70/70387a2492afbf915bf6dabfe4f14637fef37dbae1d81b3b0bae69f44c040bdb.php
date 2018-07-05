@@ -139,15 +139,15 @@ class __TwigTemplate_27153992e2224efaf1fa3012d5d6df1177990fa9830c6e03345ae0db708
 ";
         }
         // line 30
-        echo "        <a href=\"google.fr\">
+        echo "        <a href=\"http://google.fr\">
             <div class=\"d-flex justify-content-center banner-title\">
                 <h1>Un territoire phœnix Du noir au vert</h1>
             </div>
         </a>
     </header>
     <section class=\"d-flex flex-column align-items-center\">
-        <div class=\"text-center\" style=\"max-width:1000PX;font-size:20px;\">
-            <p>Revitaliser un territoire relève de registres variés et échappe à l’habituelou/ou pour appréhender le et/et : la régénération urbaine, l’espace public,la mobilité, la qualité spatiale, environnementale et architecturale, mais aussi la dynamique culturelle, sociale, économique, ludique, …</p>
+        <div style=\"max-width:1000PX;font-size:20px;\">
+            <p>Revitaliser un territoire relève de registres variés et échappe à l’habituel ou/ou pour appréhender le et/et : la régénération urbaine, l’espace public,la mobilité, la qualité spatiale, environnementale et architecturale, mais aussi la dynamique culturelle, sociale, économique, ludique, …</p>
             <p> C’est aussi une articulation entre le top down et le bottom up, les actions des collectivités locales, la stimulation du privé et l’accueil d’initiativesrelevant de registres différents comme le démontre la labellisation Euralens qui salue tant une médiathèque originale qui relie un grand nombre d’actions, qu’un espace public dessiné par une artiste, ou un lieu improbable dans une cité jardin qui offre des actions sociales,d’agriculture bio, d’accueil hôtelier spécifiques, … mais aussi un parcours VTT dans les terrils réaménagés ou encore et surtout la mobilisation de lycées techniques en lien avec le monde économique, la formation numérique, etc..</p>
         </div>
         ";
@@ -158,7 +158,7 @@ class __TwigTemplate_27153992e2224efaf1fa3012d5d6df1177990fa9830c6e03345ae0db708
           <a class=\"btn btn-secondary\" role=\"button\" href=\"";
             // line 43
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("ticket_new");
-            echo "\" style=\"font-size:27px;\">RESERVEZ MAINTENANT</a>
+            echo "\" style=\"font-size:27px;\">RESERVER MAINTENANT</a>
         </div>
         ";
         } else {
@@ -167,7 +167,7 @@ class __TwigTemplate_27153992e2224efaf1fa3012d5d6df1177990fa9830c6e03345ae0db708
           <a class=\"btn btn-secondary\" role=\"button\" href=\"";
             // line 47
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("fos_user_security_popup");
-            echo "\" style=\"font-size:27px;\">RESERVEZ MAINTENANT</a>
+            echo "\" style=\"font-size:27px;\">RESERVER MAINTENANT</a>
         </div>
         ";
             // line 49
@@ -231,20 +231,13 @@ class __TwigTemplate_27153992e2224efaf1fa3012d5d6df1177990fa9830c6e03345ae0db708
             </div>
         </div>
     </div>
-    <div style=\"margin-top:100px;\">
+    <div style=\"margin-top:50px;margin-bottom:50px;\">
         <div class=\"container\">
             <div class=\"row\">
                 <div class=\"col-md-12 d-flex justify-content-center align-items-center\"><a class=\"btn btn-secondary\" role=\"button\" href=\"";
         // line 95
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("files/Livret_A5_Odyssée.pdf"), "html", null, true);
         echo "\" target=\"_blank\" style=\"margin-top:0px;font-size:25px;\">VOIR TOUT LE PROGRAMME</a></div>
-            </div>
-        </div>
-    </div>
-    <div style=\"margin-top:100px;\">
-        <div class=\"container\">
-            <div class=\"row\">
-                <div class=\"col-md-4 col-xl-12 d-flex justify-content-center\"></div>
             </div>
         </div>
     </div>
@@ -288,7 +281,7 @@ class __TwigTemplate_27153992e2224efaf1fa3012d5d6df1177990fa9830c6e03345ae0db708
 
     public function getDebugInfo()
     {
-        return array (  270 => 50,  261 => 49,  239 => 95,  226 => 85,  214 => 76,  201 => 66,  193 => 61,  185 => 56,  179 => 52,  176 => 51,  174 => 49,  169 => 47,  166 => 46,  160 => 43,  157 => 42,  155 => 41,  142 => 30,  138 => 28,  129 => 26,  125 => 25,  122 => 24,  119 => 23,  115 => 21,  106 => 19,  102 => 18,  99 => 17,  96 => 16,  92 => 14,  83 => 12,  79 => 11,  76 => 10,  74 => 9,  69 => 6,  60 => 5,  42 => 3,  11 => 1,);
+        return array (  263 => 50,  254 => 49,  239 => 95,  226 => 85,  214 => 76,  201 => 66,  193 => 61,  185 => 56,  179 => 52,  176 => 51,  174 => 49,  169 => 47,  166 => 46,  160 => 43,  157 => 42,  155 => 41,  142 => 30,  138 => 28,  129 => 26,  125 => 25,  122 => 24,  119 => 23,  115 => 21,  106 => 19,  102 => 18,  99 => 17,  96 => 16,  92 => 14,  83 => 12,  79 => 11,  76 => 10,  74 => 9,  69 => 6,  60 => 5,  42 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -330,24 +323,24 @@ class __TwigTemplate_27153992e2224efaf1fa3012d5d6df1177990fa9830c6e03345ae0db708
         {% endfor %}
     </div>
 {% endif %}
-        <a href=\"google.fr\">
+        <a href=\"http://google.fr\">
             <div class=\"d-flex justify-content-center banner-title\">
                 <h1>Un territoire phœnix Du noir au vert</h1>
             </div>
         </a>
     </header>
     <section class=\"d-flex flex-column align-items-center\">
-        <div class=\"text-center\" style=\"max-width:1000PX;font-size:20px;\">
-            <p>Revitaliser un territoire relève de registres variés et échappe à l’habituelou/ou pour appréhender le et/et : la régénération urbaine, l’espace public,la mobilité, la qualité spatiale, environnementale et architecturale, mais aussi la dynamique culturelle, sociale, économique, ludique, …</p>
+        <div style=\"max-width:1000PX;font-size:20px;\">
+            <p>Revitaliser un territoire relève de registres variés et échappe à l’habituel ou/ou pour appréhender le et/et : la régénération urbaine, l’espace public,la mobilité, la qualité spatiale, environnementale et architecturale, mais aussi la dynamique culturelle, sociale, économique, ludique, …</p>
             <p> C’est aussi une articulation entre le top down et le bottom up, les actions des collectivités locales, la stimulation du privé et l’accueil d’initiativesrelevant de registres différents comme le démontre la labellisation Euralens qui salue tant une médiathèque originale qui relie un grand nombre d’actions, qu’un espace public dessiné par une artiste, ou un lieu improbable dans une cité jardin qui offre des actions sociales,d’agriculture bio, d’accueil hôtelier spécifiques, … mais aussi un parcours VTT dans les terrils réaménagés ou encore et surtout la mobilisation de lycées techniques en lien avec le monde économique, la formation numérique, etc..</p>
         </div>
         {% if is_granted(\"IS_AUTHENTICATED_REMEMBERED\") %}
         <div style=\"margin-top:25px;\">
-          <a class=\"btn btn-secondary\" role=\"button\" href=\"{{ path('ticket_new') }}\" style=\"font-size:27px;\">RESERVEZ MAINTENANT</a>
+          <a class=\"btn btn-secondary\" role=\"button\" href=\"{{ path('ticket_new') }}\" style=\"font-size:27px;\">RESERVER MAINTENANT</a>
         </div>
         {% else %}
         <div style=\"margin-top:25px;\">
-          <a class=\"btn btn-secondary\" role=\"button\" href=\"{{ path('fos_user_security_popup') }}\" style=\"font-size:27px;\">RESERVEZ MAINTENANT</a>
+          <a class=\"btn btn-secondary\" role=\"button\" href=\"{{ path('fos_user_security_popup') }}\" style=\"font-size:27px;\">RESERVER MAINTENANT</a>
         </div>
         {% block modal %}
         {% endblock %}
@@ -392,17 +385,10 @@ class __TwigTemplate_27153992e2224efaf1fa3012d5d6df1177990fa9830c6e03345ae0db708
             </div>
         </div>
     </div>
-    <div style=\"margin-top:100px;\">
+    <div style=\"margin-top:50px;margin-bottom:50px;\">
         <div class=\"container\">
             <div class=\"row\">
                 <div class=\"col-md-12 d-flex justify-content-center align-items-center\"><a class=\"btn btn-secondary\" role=\"button\" href=\"{{ asset('files/Livret_A5_Odyssée.pdf') }}\" target=\"_blank\" style=\"margin-top:0px;font-size:25px;\">VOIR TOUT LE PROGRAMME</a></div>
-            </div>
-        </div>
-    </div>
-    <div style=\"margin-top:100px;\">
-        <div class=\"container\">
-            <div class=\"row\">
-                <div class=\"col-md-4 col-xl-12 d-flex justify-content-center\"></div>
             </div>
         </div>
     </div>

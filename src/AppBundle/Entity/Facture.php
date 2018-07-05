@@ -45,7 +45,7 @@ class Facture
     /**
      * @var integer
      *
-     * @ORM\Column(name="signature", type="string", nullable=false, unique=true, length=255)
+     * @ORM\Column(name="signature", type="string", nullable=true, unique=true, length=255)
      */
     private $signature;
 

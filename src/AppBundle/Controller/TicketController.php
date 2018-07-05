@@ -60,6 +60,15 @@ class TicketController extends Controller
 
         $user = $this->getUser();
         $em = $this->getDoctrine()->getManager();
+
+        $checkCustomer = $em->getRepository('AppBundle:Customer')->findByUser($user);
+
+        if (!$checkCustomer){
+            $request->getSession()
+                    ->getFlashBag()
+                    ->add('espaceClient', 'Merci de remplir le formulaire afin de reserver un ticket.');
+            return $this->redirectToRoute('customer_new');
+        }
         $customer = $em->getRepository('AppBundle:Customer')->findByUser($user)[0];// @hack
 
         $ticket->setCustomer($customer);

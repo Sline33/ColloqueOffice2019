@@ -64,10 +64,10 @@ class Facture extends \AppBundle\Entity\Facture implements \Doctrine\ORM\Proxy\P
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'AppBundle\\Entity\\Facture' . "\0" . 'id', '' . "\0" . 'AppBundle\\Entity\\Facture' . "\0" . 'number', '' . "\0" . 'AppBundle\\Entity\\Facture' . "\0" . 'price', '' . "\0" . 'AppBundle\\Entity\\Facture' . "\0" . 'status', '' . "\0" . 'AppBundle\\Entity\\Facture' . "\0" . 'customer', '' . "\0" . 'AppBundle\\Entity\\Facture' . "\0" . 'tickets'];
+            return ['__isInitialized__', '' . "\0" . 'AppBundle\\Entity\\Facture' . "\0" . 'id', '' . "\0" . 'AppBundle\\Entity\\Facture' . "\0" . 'number', '' . "\0" . 'AppBundle\\Entity\\Facture' . "\0" . 'price', '' . "\0" . 'AppBundle\\Entity\\Facture' . "\0" . 'status', '' . "\0" . 'AppBundle\\Entity\\Facture' . "\0" . 'signature', '' . "\0" . 'AppBundle\\Entity\\Facture' . "\0" . 'customer', '' . "\0" . 'AppBundle\\Entity\\Facture' . "\0" . 'tickets'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'AppBundle\\Entity\\Facture' . "\0" . 'id', '' . "\0" . 'AppBundle\\Entity\\Facture' . "\0" . 'number', '' . "\0" . 'AppBundle\\Entity\\Facture' . "\0" . 'price', '' . "\0" . 'AppBundle\\Entity\\Facture' . "\0" . 'status', '' . "\0" . 'AppBundle\\Entity\\Facture' . "\0" . 'customer', '' . "\0" . 'AppBundle\\Entity\\Facture' . "\0" . 'tickets'];
+        return ['__isInitialized__', '' . "\0" . 'AppBundle\\Entity\\Facture' . "\0" . 'id', '' . "\0" . 'AppBundle\\Entity\\Facture' . "\0" . 'number', '' . "\0" . 'AppBundle\\Entity\\Facture' . "\0" . 'price', '' . "\0" . 'AppBundle\\Entity\\Facture' . "\0" . 'status', '' . "\0" . 'AppBundle\\Entity\\Facture' . "\0" . 'signature', '' . "\0" . 'AppBundle\\Entity\\Facture' . "\0" . 'customer', '' . "\0" . 'AppBundle\\Entity\\Facture' . "\0" . 'tickets'];
     }
 
     /**
@@ -307,6 +307,28 @@ class Facture extends \AppBundle\Entity\Facture implements \Doctrine\ORM\Proxy\P
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'getStatus', []);
 
         return parent::getStatus();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setSignature($signature)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setSignature', [$signature]);
+
+        return parent::setSignature($signature);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getSignature()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getSignature', []);
+
+        return parent::getSignature();
     }
 
 }

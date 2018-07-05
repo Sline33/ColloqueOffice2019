@@ -117,7 +117,7 @@ class TicketRepository extends EntityRepository
 
         public function findPaidTicketsByOption($optionName, $optionValue)
         {
-            $optionNames = ['day1Visite', 'day2Visite', 'day3Visite']; // compléter ce tableau avec le vrai nom des options
+            // $optionNames = ['day1Visite', 'day2Visite', 'day3Visite']; // compléter ce tableau avec le vrai nom des options
 
             // if (!in_array($optionName, $optionNames)) {
             //     throw new Exception('Are you trying to fuck with me ?');
@@ -131,5 +131,24 @@ class TicketRepository extends EntityRepository
                 ->getQuery();
 
             return $queryBuilder->getResult();
+        }
+
+        public function computeCountPersonNumberByOption($optionName, $optionValue)
+        {
+            // $optionNames = ['day1Visite', 'day2Visite', 'day3Visite']; // compléter ce tableau avec le vrai nom des options
+
+            // if (!in_array($optionName, $optionNames)) {
+            //     throw new Exception('Are you trying to fuck with me ?');
+            // }
+
+            $queryBuilder = $this->createQueryBuilder('t')
+                ->select('COUNT(t) AS tickets')
+                ->join('t.facture', 'f')
+                ->where('f.status = 2')
+                ->andWhere('t.'.$optionName.' = :optionValue')
+                ->setParameter('optionValue', $optionValue)
+                ->getQuery();
+
+            return $queryBuilder->getSingleScalarResult();
         }
 }

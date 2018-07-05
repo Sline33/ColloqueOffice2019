@@ -68,6 +68,11 @@ class __TwigTemplate_d1e203bc873bacedbfc66b0aa28cc356d9a1ed06539194b8efa4afb5df6
                 <p class=\"text-center\" style=\"margin:0px;\">Toutes les informations des paiements<br>concernant les réservations du colloque Euralens 2019<br></p>
             </div>
         </div>
+        <div class=\"row\" style=\"margin-top:50px\">
+            <div class=\"col-md-12 text-center\">
+                <button class=\"btn btn-primary\" desabled>Télécharger toutes les données</button>
+            </div>
+        </div>
     </div>
 </div>
 ";
@@ -118,6 +123,11 @@ class __TwigTemplate_d1e203bc873bacedbfc66b0aa28cc356d9a1ed06539194b8efa4afb5df6
             </div>
             <div class=\"col-md-4 col-xl-3 offset-xl-0 d-flex flex-column justify-content-around align-items-center border-column-admin\"><a class=\"btn btn-primary\" role=\"button\" href=\"{{ path('admin_paiement') }}\">Paiement et Verification</a>
                 <p class=\"text-center\" style=\"margin:0px;\">Toutes les informations des paiements<br>concernant les réservations du colloque Euralens 2019<br></p>
+            </div>
+        </div>
+        <div class=\"row\" style=\"margin-top:50px\">
+            <div class=\"col-md-12 text-center\">
+                <button class=\"btn btn-primary\" desabled>Télécharger toutes les données</button>
             </div>
         </div>
     </div>
